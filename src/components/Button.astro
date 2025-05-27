@@ -1,0 +1,35 @@
+---
+export interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary' | 'outline' | 'outline-white';
+  class?: string;
+}
+
+const { 
+  href, 
+  variant = 'primary', 
+  class: className = '' 
+} = Astro.props;
+
+const getVariantClasses = () => {
+  switch (variant) {
+    case 'primary':
+      return 'bg-primary text-white hover:bg-transparent hover:text-primary border-primary';
+    case 'secondary':
+      return 'bg-transparent text-primary hover:bg-primary hover:text-white border-primary';
+    case 'outline':
+      return 'bg-transparent text-primary hover:bg-primary hover:text-white border-primary';
+    case 'outline-white':
+      return 'bg-transparent text-white hover:bg-white hover:text-primary border-white';
+    default:
+      return 'bg-primary text-white hover:bg-transparent hover:text-primary border-primary';
+  }
+};
+---
+
+<a
+  href={href}
+  class={`inline-block py-3 px-6 border transition-colors duration-300 ${getVariantClasses()} ${className}`}
+>
+  <slot />
+</a>

@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout title="James — UX/UI Designer & Product Manager">
+  <section class="hero h-screen flex items-center">
+    <div class="container">
+      <div class="max-w-2xl">
+        <h1 class="text-5xl md:text-7xl font-display font-medium leading-none mb-6">
+          Hi, I'm James — UX/UI Designer & Product Manager.
+        </h1>
+        <p class="text-xl text-secondary mb-10 max-w-xl">
+          I create intuitive, beautiful user interfaces and lead product strategy to craft compelling digital experiences.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <Button href="/work" variant="primary">View Work</Button>
+          <Button href="mailto:james@yourdomain.com" variant="secondary">Contact Me</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-accent">
+    <div class="container">
+      <h2 class="text-3xl md:text-4xl font-display font-medium mb-16">Featured Projects</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <a href="/work/project-1" class="case-study-card">
+          <div class="img-hover aspect-[4/3] mb-5">
+            <img 
+              src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+              alt="Finance App UI Design" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-xl font-display font-medium">Finance App Redesign</h3>
+          <p class="text-muted mt-2">UX/UI Design, Product Strategy</p>
+        </a>
+        
+        <a href="/work/project-2" class="case-study-card">
+          <div class="img-hover aspect-[4/3] mb-5">
+            <img 
+              src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+              alt="E-commerce Platform" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-xl font-display font-medium">E-commerce Platform</h3>
+          <p class="text-muted mt-2">UX Research, UI Design, Product Management</p>
+        </a>
+      </div>
+      
+      <div class="flex justify-center mt-12">
+        <Button href="/work" variant="secondary">View All Projects</Button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="text-3xl md:text-4xl font-display font-medium mb-16">Photography</h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="img-hover">
+          <img 
+            src="https://images.pexels.com/photos/1738986/pexels-photo-1738986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Photography sample" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="img-hover">
+          <img 
+            src="https://images.pexels.com/photos/1274260/pexels-photo-1274260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Photography sample" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="img-hover">
+          <img 
+            src="https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Photography sample" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+      
+      <div class="flex justify-center mt-12">
+        <Button href="/photography" variant="secondary">View Gallery</Button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-primary text-white">
+    <div class="container">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-display font-medium mb-6">Let's Work Together</h2>
+        <p class="text-xl mb-10">
+          I'm always open to discussing product design work or partnership opportunities.
+        </p>
+        <Button href="mailto:james@yourdomain.com" variant="outline-white">Get In Touch</Button>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.97)),
+                url('https://images.pexels.com/photos/7135121/pexels-photo-7135121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .case-study-card {
+    @apply block transition-all duration-300;
+  }
+  
+  .case-study-card:hover {
+    @apply translate-y-[-5px];
+  }
+</style>

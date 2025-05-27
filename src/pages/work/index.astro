@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { caseStudies } from '../../data/caseStudies';
+---
+
+<Layout title="Work | James — UX/UI Designer & Product Manager">
+  <section class="section">
+    <div class="container">
+      <h1 class="text-4xl md:text-6xl font-display font-medium mb-16">Work</h1>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+        {caseStudies.map(project => (
+          <a href={`/work/${project.slug}`} class="case-study-card">
+            <div class="img-hover aspect-[4/3] mb-6">
+              <img 
+                src={project.thumbnail} 
+                alt={project.title} 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-2xl font-display font-medium">{project.title}</h3>
+            <p class="text-muted mt-2">{project.categories.join(', ')}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .case-study-card {
+    @apply block transition-all duration-300;
+  }
+  
+  .case-study-card:hover {
+    @apply translate-y-[-5px];
+  }
+</style>

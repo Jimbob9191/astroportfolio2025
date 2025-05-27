@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { photos } from '../data/photos';
+---
+
+<Layout title="Photography | James — UX/UI Designer & Product Manager">
+  <section class="section">
+    <div class="container">
+      <h1 class="text-4xl md:text-6xl font-display font-medium mb-16">Photography</h1>
+      
+      <div class="masonry-grid" id="gallery">
+        {photos.map((photo, index) => (
+          <a 
+            href={photo.large} 
+            class="masonry-item" 
+            data-pswp-width={photo.width}
+            data-pswp-height={photo.height}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img 
+              src={photo.thumbnail} 
+              alt={`Photography sample ${index + 1}`}
+              class="w-full h-auto"
+              loading="lazy"
+            />
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import PhotoSwipe from 'photoswipe';
+  import 'photoswipe/dist/photoswipe.css';
+
+  let lightbox;
+
+  const initPhotoSwipe = () => {
+    const gallery = document.querySelector('#gallery');
+    
+    if (!gallery) return;
+    
+    // Initialize PhotoSwipe
+    lightbox = new PhotoSwipe({
+      gallery: '#gallery',
+      children: 'a',
+      pswpModule: () => import('photoswipe')
+    });
+    
+    lightbox.init();
+  };
+
+  document.addEventListener('DOMContentLoaded', initPhotoSwipe);
+</script>
+
+<style>
+  .masonry-grid {
+    column-count: 1;
+    column-gap: 20px;
+  }
+  
+  @media (min-width: 640px) {
+    .masonry-grid {
+      column-count: 2;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .masonry-grid {
+      column-count: 3;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      column-count: 4;
+    }
+  }
+  
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    display: block;
+    transition: opacity 0.3s;
+  }
+  
+  .masonry-item:hover {
+    opacity: 0.9;
+  }
+</style>

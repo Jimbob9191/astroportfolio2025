@@ -1,0 +1,28 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="py-12 border-t border-gray-100">
+  <div class="container">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <div>
+        <p class="text-xl font-display mb-4">Let's connect</p>
+        <div class="social-links flex flex-col gap-2">
+          <a href="https://linkedin.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://dribbble.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">Dribbble</a>
+          <a href="https://twitter.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">Twitter</a>
+        </div>
+      </div>
+      
+      <div class="contact-info">
+        <p class="text-xl font-display mb-4">Say hello</p>
+        <a href="mailto:james@yourdomain.com" class="text-lg hover-underline">james@yourdomain.com</a>
+      </div>
+    </div>
+    
+    <div class="mt-12 pt-6 border-t border-gray-100">
+      <p class="text-sm text-muted">© {currentYear} James. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
