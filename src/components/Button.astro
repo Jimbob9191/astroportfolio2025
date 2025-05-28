@@ -14,15 +14,15 @@ const {
 const getVariantClasses = () => {
   switch (variant) {
     case 'primary':
-      return 'bg-primary text-white hover:bg-transparent hover:text-primary border-primary';
+      return 'bg-white text-primary hover:bg-transparent hover:text-white border-white';
     case 'secondary':
-      return 'bg-transparent text-primary hover:bg-primary hover:text-white border-primary';
+      return 'bg-transparent text-white hover:bg-white hover:text-primary border-white';
     case 'outline':
       return 'bg-transparent text-primary hover:bg-primary hover:text-white border-primary';
     case 'outline-white':
       return 'bg-transparent text-white hover:bg-white hover:text-primary border-white';
     default:
-      return 'bg-primary text-white hover:bg-transparent hover:text-primary border-primary';
+      return 'bg-white text-primary hover:bg-transparent hover:text-white border-white';
   }
 };
 ---

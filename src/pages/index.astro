@@ -4,18 +4,73 @@ import Button from '../components/Button.astro';
 ---
 
 <Layout title="James — UX/UI Designer & Product Manager">
-  <section class="hero h-screen flex items-center">
-    <div class="container">
+  <section class="hero min-h-[100dvh] max-h-[100dvh] flex md:items-start items-center relative overflow-hidden">
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline 
+      class="absolute inset-0 w-full h-full object-cover"
+      preload="auto"
+    >
+      <source src="https://player.vimeo.com/progressive_redirect/playback/517088067/rendition/1080p/file.mp4?loc=external&signature=64c33f62974656c1b53f5ae83c3656f0f8d2546c4c3f3c3c3a8944e2a9cd6430" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="container relative z-10 md:pt-[15vh]">
       <div class="max-w-2xl">
-        <h1 class="text-5xl md:text-7xl font-display font-medium leading-none mb-6">
+        <h1 class="text-5xl md:text-7xl font-display font-medium leading-none mb-6 text-white">
           Hi, I'm James — UX/UI Designer & Product Manager.
         </h1>
-        <p class="text-xl text-secondary mb-10 max-w-xl">
+        <p class="text-xl text-white/80 mb-10 max-w-xl">
           I create intuitive, beautiful user interfaces and lead product strategy to craft compelling digital experiences.
         </p>
         <div class="flex flex-wrap gap-4">
-          <Button href="/work" variant="primary">View Work</Button>
-          <Button href="mailto:james@yourdomain.com" variant="secondary">Contact Me</Button>
+          <Button href="/work" variant="primary" class="rounded-full inline-flex items-center">
+            <span>View Work</span>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="20" 
+              height="20" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              class="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+            >
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </Button>
+          <Button href="mailto:james@yourdomain.com" variant="secondary" class="rounded-full inline-flex items-center">
+            <span>Contact Me</span>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="20" 
+              height="20" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              class="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+            >
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </Button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container absolute bottom-8 right-0 z-10">
+      <div class="flex justify-end">
+        <div class="hidden md:flex flex-col gap-4 text-white">
+          <a href="https://linkedin.com/jamesmb" class="hover:text-white/80 transition-colors" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://dribbble.com/jamesmb" class="hover:text-white/80 transition-colors" target="_blank" rel="noopener">Dribbble</a>
+          <a href="mailto:james@yourdomain.com" class="hover:text-white/80 transition-colors">Email</a>
         </div>
       </div>
     </div>
@@ -105,14 +160,6 @@ import Button from '../components/Button.astro';
 </Layout>
 
 <style>
-  .hero {
-    background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.97)),
-                url('https://images.pexels.com/photos/7135121/pexels-photo-7135121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  
   .case-study-card {
     @apply block transition-all duration-300;
   }
