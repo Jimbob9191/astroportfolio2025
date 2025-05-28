@@ -16,7 +16,7 @@ body {
 }
 
 main {
-  @apply flex-grow pt-24;
+  @apply flex-grow;
 }
 
 .container {
