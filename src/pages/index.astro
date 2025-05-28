@@ -11,8 +11,9 @@ import Button from '../components/Button.astro';
       muted 
       playsinline 
       class="absolute inset-0 w-full h-full object-cover"
+      preload="auto"
     >
-      <source src="https://player.vimeo.com/external/517088067.hd.mp4?s=1c6d72b6ce73b4fd01753f13f96d8e6df0f9b19d&profile_id=175" type="video/mp4">
+      <source src="https://player.vimeo.com/progressive_redirect/playback/517088067/rendition/1080p/file.mp4?loc=external&signature=64c33f62974656c1b53f5ae83c3656f0f8d2546c4c3f3c3c3a8944e2a9cd6430" type="video/mp4">
     </video>
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="container relative z-10">
@@ -24,8 +25,8 @@ import Button from '../components/Button.astro';
           I create intuitive, beautiful user interfaces and lead product strategy to craft compelling digital experiences.
         </p>
         <div class="flex flex-wrap gap-4">
-          <Button href="/work" variant="primary" class="rounded-full group">
-            View Work
+          <Button href="/work" variant="primary" class="rounded-full inline-flex items-center">
+            <span>View Work</span>
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               width="20" 
@@ -42,8 +43,8 @@ import Button from '../components/Button.astro';
               <polyline points="7 7 17 7 17 17"></polyline>
             </svg>
           </Button>
-          <Button href="mailto:james@yourdomain.com" variant="secondary" class="rounded-full group">
-            Contact Me
+          <Button href="mailto:james@yourdomain.com" variant="secondary" class="rounded-full inline-flex items-center">
+            <span>Contact Me</span>
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               width="20" 
