@@ -76,62 +76,123 @@ import Button from '../components/Button.astro';
     </div>
   </section>
 
-  <section class="section bg-accent">
+  <section class="section">
     <div class="container">
-      <h2 class="text-3xl md:text-4xl font-display font-medium mb-16">Featured Projects</h2>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-medium">Featured Projects</h2>
+        <div class="hidden md:block">
+          <Button href="/work" variant="primary" class="rounded-full bg-gray-100 text-primary hover:bg-transparent hover:border-primary hover:text-black inline-flex items-center py-3 px-6">
+            <span>View All Projects</span>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="20" 
+              height="20" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              class="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+            >
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </Button>
+        </div>
+      </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <a href="/work/project-1" class="case-study-card">
-          <div class="img-hover aspect-[4/3] mb-5">
+          <div class="img-hover aspect-[4/3] mb-5 rounded-[1.25rem] overflow-hidden">
             <img 
               src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
               alt="Finance App UI Design" 
               class="w-full h-full object-cover"
             />
           </div>
+          <p class="text-muted mb-2">UX/UI Design, Product Strategy</p>
           <h3 class="text-xl font-display font-medium">Finance App Redesign</h3>
-          <p class="text-muted mt-2">UX/UI Design, Product Strategy</p>
         </a>
         
         <a href="/work/project-2" class="case-study-card">
-          <div class="img-hover aspect-[4/3] mb-5">
+          <div class="img-hover aspect-[4/3] mb-5 rounded-[1.25rem] overflow-hidden">
             <img 
               src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
               alt="E-commerce Platform" 
               class="w-full h-full object-cover"
             />
           </div>
+          <p class="text-muted mb-2">UX Research, UI Design, Product Management</p>
           <h3 class="text-xl font-display font-medium">E-commerce Platform</h3>
-          <p class="text-muted mt-2">UX Research, UI Design, Product Management</p>
         </a>
       </div>
       
-      <div class="flex justify-center mt-12">
-        <Button href="/work" variant="secondary">View All Projects</Button>
+      <div class="flex justify-center mt-12 md:hidden">
+        <Button href="/work" variant="primary" class="rounded-full bg-gray-100 text-primary hover:bg-transparent hover:border-primary hover:text-black inline-flex items-center py-3 px-6">
+          <span>View All Projects</span>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="20" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            class="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+          >
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </Button>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <h2 class="text-3xl md:text-4xl font-display font-medium mb-16">Photography</h2>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-medium">Photography</h2>
+        <div class="hidden md:block">
+          <Button href="/photography" variant="primary" class="rounded-full bg-gray-100 text-primary hover:bg-transparent hover:border-primary hover:text-black inline-flex items-center py-3 px-6">
+            <span>View Gallery</span>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="20" 
+              height="20" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              class="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+            >
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </Button>
+        </div>
+      </div>
       
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="img-hover">
+        <div class="img-hover rounded-[1.25rem] overflow-hidden">
           <img 
             src="https://images.pexels.com/photos/1738986/pexels-photo-1738986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
             alt="Photography sample" 
             class="w-full h-full object-cover"
           />
         </div>
-        <div class="img-hover">
+        <div class="img-hover rounded-[1.25rem] overflow-hidden">
           <img 
             src="https://images.pexels.com/photos/1274260/pexels-photo-1274260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
             alt="Photography sample" 
             class="w-full h-full object-cover"
           />
         </div>
-        <div class="img-hover">
+        <div class="img-hover rounded-[1.25rem] overflow-hidden">
           <img 
             src="https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
             alt="Photography sample" 
@@ -140,8 +201,25 @@ import Button from '../components/Button.astro';
         </div>
       </div>
       
-      <div class="flex justify-center mt-12">
-        <Button href="/photography" variant="secondary">View Gallery</Button>
+      <div class="flex justify-center mt-12 md:hidden">
+        <Button href="/photography" variant="primary" class="rounded-full bg-gray-100 text-primary hover:bg-transparent hover:border-primary hover:text-black inline-flex items-center py-3 px-6">
+          <span>View Gallery</span>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="20" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            class="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+          >
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </Button>
       </div>
     </div>
   </section>

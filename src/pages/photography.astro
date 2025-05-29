@@ -12,18 +12,20 @@ import { photos } from '../data/photos';
         {photos.map((photo, index) => (
           <a 
             href={photo.large} 
-            class="masonry-item" 
+            class="masonry-item case-study-card"
             data-pswp-width={photo.width}
             data-pswp-height={photo.height}
             target="_blank"
             rel="noreferrer"
           >
-            <img 
-              src={photo.thumbnail} 
-              alt={`Photography sample ${index + 1}`}
-              class="w-full h-auto"
-              loading="lazy"
-            />
+            <div class="img-hover rounded-[1.25rem] overflow-hidden">
+              <img 
+                src={photo.thumbnail} 
+                alt={`Photography sample ${index + 1}`}
+                class="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
           </a>
         ))}
       </div>
@@ -83,10 +85,5 @@ import { photos } from '../data/photos';
     break-inside: avoid;
     margin-bottom: 20px;
     display: block;
-    transition: opacity 0.3s;
-  }
-  
-  .masonry-item:hover {
-    opacity: 0.9;
   }
 </style>
