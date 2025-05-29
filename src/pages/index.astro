@@ -107,7 +107,24 @@ import Button from '../components/Button.astro';
       </div>
       
       <div class="flex justify-center mt-12">
-        <Button href="/work" variant="secondary">View All Projects</Button>
+        <Button href="/work" variant="primary" class="rounded-full bg-gray-100 text-primary hover:bg-gray-200 border-transparent inline-flex items-center">
+          <span>View All Projects</span>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="20" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            class="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+          >
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </Button>
       </div>
     </div>
   </section>
