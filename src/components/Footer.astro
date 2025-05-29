@@ -2,27 +2,50 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="py-12 border-t border-gray-100">
+<footer class="bg-black text-white py-20">
   <div class="container">
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
       <div>
-        <p class="text-xl font-display mb-4">Let's connect</p>
-        <div class="social-links flex flex-col gap-2">
-          <a href="https://linkedin.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://instagram.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://dribbble.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">Dribbble</a>
-          <a href="https://twitter.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">Twitter</a>
-        </div>
+        <h2 class="text-3xl md:text-4xl font-display font-medium mb-6">Let's Work Together</h2>
+        <p class="text-xl text-white/80 mb-8">
+          I'm always open to discussing product design work or partnership opportunities.
+        </p>
+        <a 
+          href="mailto:james@yourdomain.com" 
+          class="inline-flex items-center rounded-full py-3 px-6 border border-white text-white hover:bg-white hover:text-black transition-colors duration-300"
+        >
+          <span>Get In Touch</span>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="20" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            class="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+          >
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
       </div>
       
-      <div class="contact-info">
-        <p class="text-xl font-display mb-4">Say hello</p>
-        <a href="mailto:james@yourdomain.com" class="text-lg hover-underline">james@yourdomain.com</a>
+      <div>
+        <p class="text-xl font-display mb-4">Connect</p>
+        <div class="social-links flex flex-col gap-2">
+          <a href="https://linkedin.com/jamesmb" class="text-white/80 hover:text-white transition-colors" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/jamesmb" class="text-white/80 hover:text-white transition-colors" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://dribbble.com/jamesmb" class="text-white/80 hover:text-white transition-colors" target="_blank" rel="noopener">Dribbble</a>
+          <a href="https://twitter.com/jamesmb" class="text-white/80 hover:text-white transition-colors" target="_blank" rel="noopener">Twitter</a>
+        </div>
       </div>
     </div>
     
-    <div class="mt-12 pt-6 border-t border-gray-100">
-      <p class="text-sm text-muted">© {currentYear} James. All rights reserved.</p>
+    <div class="pt-8 border-t border-white/20">
+      <p class="text-sm text-white/60">© {currentYear} James. All rights reserved.</p>
     </div>
   </div>
 </footer>
