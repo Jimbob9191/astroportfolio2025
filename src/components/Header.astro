@@ -3,7 +3,8 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 const isHomePage = pathname === '/';
 const isCaseStudy = pathname.startsWith('/work/') && pathname !== '/work';
-const shouldBeWhite = isHomePage || isCaseStudy;
+const is404 = pathname === '/404';
+const shouldBeWhite = (isHomePage || isCaseStudy) && !is404;
 ---
 
 <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="header">
@@ -44,7 +45,8 @@ const shouldBeWhite = isHomePage || isCaseStudy;
   const pathname = window.location.pathname;
   const isHomePage = pathname === '/';
   const isCaseStudy = pathname.startsWith('/work/') && pathname !== '/work';
-  const shouldBeWhite = isHomePage || isCaseStudy;
+  const is404 = pathname === '/404';
+  const shouldBeWhite = (isHomePage || isCaseStudy) && !is404;
   
   const updateHeader = () => {
     if (window.scrollY > 50) {
