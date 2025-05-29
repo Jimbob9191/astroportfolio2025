@@ -153,7 +153,29 @@ import Button from '../components/Button.astro';
 
   <section class="section">
     <div class="container">
-      <h2 class="text-3xl md:text-4xl font-display font-medium mb-16">Photography</h2>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-medium">Photography</h2>
+        <div class="hidden md:block">
+          <Button href="/photography" variant="primary" class="rounded-full bg-gray-100 text-primary hover:bg-transparent hover:border-primary hover:text-black inline-flex items-center py-3 px-6">
+            <span>View Gallery</span>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="20" 
+              height="20" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              class="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+            >
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </Button>
+        </div>
+      </div>
       
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div class="img-hover rounded-[1.25rem] overflow-hidden">
@@ -179,7 +201,7 @@ import Button from '../components/Button.astro';
         </div>
       </div>
       
-      <div class="flex justify-center mt-12">
+      <div class="flex justify-center mt-12 md:hidden">
         <Button href="/photography" variant="primary" class="rounded-full bg-gray-100 text-primary hover:bg-transparent hover:border-primary hover:text-black inline-flex items-center py-3 px-6">
           <span>View Gallery</span>
           <svg 
