@@ -40,7 +40,6 @@ const galleryImages = [
           class="block img-hover rounded-lg overflow-hidden gallery-item"
           data-pswp-width={image.width}
           data-pswp-height={image.height}
-          data-pswp-src={image.large}
         >
           <img 
             src={image.thumbnail} 
@@ -71,12 +70,24 @@ const galleryImages = [
         
         const options = {
           gallery,
-          dataSource: Array.from(galleryItems).map(item => ({
-            src: item.getAttribute('data-pswp-src'),
-            width: parseInt(item.getAttribute('data-pswp-width')),
-            height: parseInt(item.getAttribute('data-pswp-height')),
+          dataSource: Array.from(galleryItems).map(galleryItem => ({
+            src: galleryItem.href,
+            w: parseInt(galleryItem.getAttribute('data-pswp-width')),
+            h: parseInt(galleryItem.getAttribute('data-pswp-height')),
+            msrc: galleryItem.querySelector('img').src
           })),
           index,
+          showHideAnimationType: 'fade',
+          showAnimationDuration: 300,
+          hideAnimationDuration: 300,
+          bgOpacity: 0.8,
+          spacing: 0.1,
+          allowPanToNext: true,
+          maxSpreadZoom: 2,
+          getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
+          pinchToClose: true,
+          closeOnScroll: false,
+          closeOnVerticalDrag: true,
           pswpModule: () => import('photoswipe')
         };
         
