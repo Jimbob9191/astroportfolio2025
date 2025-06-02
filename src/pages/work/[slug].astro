@@ -17,9 +17,9 @@ const getGalleryClass = (layout: string) => {
     case 'grid':
       return 'grid grid-cols-1 md:grid-cols-2 gap-8';
     case 'masonry':
-      return 'columns-1 md:columns-2 lg:columns-3 gap-8';
+      return 'columns-1 md:columns-2 lg:columns-3 gap-8 [&>*]:mb-8';
     case 'fullwidth':
-      return 'space-y-8';
+      return 'space-y-8 [&>*]:w-full';
     default:
       return 'grid grid-cols-1 md:grid-cols-2 gap-8';
   }
@@ -73,7 +73,7 @@ const galleryClass = getGalleryClass(layout);
       {galleryImages.map((image) => (
         <a 
           href={image.large}
-          class={`block img-hover rounded-lg overflow-hidden gallery-item ${layout === 'masonry' ? 'mb-8' : ''}`}
+          class="block img-hover rounded-lg overflow-hidden gallery-item w-full"
           data-pswp-width={image.width}
           data-pswp-height={image.height}
         >
