@@ -40,6 +40,7 @@ const galleryImages = [
           class="block img-hover rounded-lg overflow-hidden gallery-item"
           data-pswp-width={image.width}
           data-pswp-height={image.height}
+          data-pswp-src={image.large}
         >
           <img 
             src={image.thumbnail} 
@@ -68,13 +69,18 @@ const galleryImages = [
       item.addEventListener('click', (e) => {
         e.preventDefault();
         
-        const lightbox = new PhotoSwipe({
+        const options = {
           gallery,
-          children: '.gallery-item',
+          dataSource: Array.from(galleryItems).map(item => ({
+            src: item.getAttribute('data-pswp-src'),
+            w: parseInt(item.getAttribute('data-pswp-width')),
+            h: parseInt(item.getAttribute('data-pswp-height')),
+          })),
           index,
           pswpModule: () => import('photoswipe')
-        });
+        };
         
+        const lightbox = new PhotoSwipe(options);
         lightbox.init();
       });
     });
