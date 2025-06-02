@@ -11,6 +11,51 @@ export const caseStudies = [
     outcome: 'The redesign resulted in a 45% increase in daily active users, a 30% reduction in support tickets, and significantly improved user satisfaction scores.',
     role: 'Lead UX/UI Designer responsible for research, wireframing, prototyping, and final design implementation.',
     layout: 'grid',
+    timeline: '3 months',
+    client: 'FinTech Startup',
+    team: ['UX Designer', 'UI Designer', '2 Developers', 'Product Manager'],
+    tools: ['Figma', 'Maze', 'UserTesting', 'Principle'],
+    research: {
+      methods: ['User Interviews', 'Usability Testing', 'Analytics Review'],
+      findings: 'Through our research, we discovered that users struggled with complex financial terminology and found the transaction history difficult to navigate. The app's information architecture needed significant improvement.',
+      insights: [
+        '87% of users found the navigation confusing',
+        'Users wanted clearer transaction categorization',
+        'Mobile usage was increasing but the experience wasn't optimized'
+      ]
+    },
+    process: {
+      steps: [
+        {
+          title: 'Discovery',
+          description: 'Conducted stakeholder interviews and analyzed existing user data to understand pain points and opportunities.'
+        },
+        {
+          title: 'Research',
+          description: 'Performed user interviews and usability testing to gather insights about user needs and pain points.'
+        },
+        {
+          title: 'Design',
+          description: 'Created wireframes, prototypes, and high-fidelity designs based on research findings and user feedback.'
+        },
+        {
+          title: 'Testing',
+          description: 'Conducted iterative testing sessions to validate design decisions and gather feedback for improvements.'
+        }
+      ]
+    },
+    metrics: {
+      before: {
+        userSatisfaction: '65%',
+        dailyActiveUsers: '10,000',
+        supportTickets: '500/week'
+      },
+      after: {
+        userSatisfaction: '92%',
+        dailyActiveUsers: '14,500',
+        supportTickets: '150/week'
+      }
+    },
     galleryImages: [
       {
         thumbnail: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -40,6 +85,51 @@ export const caseStudies = [
     outcome: 'The new platform achieved a 60% increase in mobile conversions and a 25% overall increase in sales within the first three months.',
     role: 'Product Manager and UX Designer, overseeing the entire project from concept to launch.',
     layout: 'masonry',
+    timeline: '6 months',
+    client: 'Retail Chain',
+    team: ['Product Manager', 'UX Designer', '3 Developers', 'QA Engineer'],
+    tools: ['Shopify', 'Figma', 'Hotjar', 'Google Analytics'],
+    research: {
+      methods: ['A/B Testing', 'Heat Mapping', 'Customer Surveys'],
+      findings: 'Mobile users were abandoning carts due to a complicated checkout process and slow page load times. Desktop conversion rates were significantly higher than mobile.',
+      insights: [
+        'Mobile cart abandonment rate was 78%',
+        'Page load times exceeded 5 seconds on mobile',
+        'Users requested better product filtering options'
+      ]
+    },
+    process: {
+      steps: [
+        {
+          title: 'Analysis',
+          description: 'Analyzed existing platform performance and identified key areas for improvement.'
+        },
+        {
+          title: 'Strategy',
+          description: 'Developed a comprehensive strategy focusing on mobile optimization and conversion rate improvement.'
+        },
+        {
+          title: 'Implementation',
+          description: 'Rebuilt the platform with a mobile-first approach and optimized checkout flow.'
+        },
+        {
+          title: 'Optimization',
+          description: 'Continuously monitored performance metrics and made iterative improvements.'
+        }
+      ]
+    },
+    metrics: {
+      before: {
+        mobileConversion: '1.2%',
+        pageLoadTime: '5.2s',
+        cartAbandonment: '78%'
+      },
+      after: {
+        mobileConversion: '3.5%',
+        pageLoadTime: '2.1s',
+        cartAbandonment: '45%'
+      }
+    },
     galleryImages: [
       {
         thumbnail: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -69,6 +159,51 @@ export const caseStudies = [
     outcome: 'The dashboard reduced time spent on administrative tasks by 35% and improved data accuracy by consolidating previously disparate systems.',
     role: 'UX/UI Designer focused on information architecture and data visualization.',
     layout: 'fullwidth',
+    timeline: '4 months',
+    client: 'Healthcare Provider',
+    team: ['UX Designer', 'Data Scientist', '2 Developers'],
+    tools: ['Figma', 'D3.js', 'Amplitude', 'Miro'],
+    research: {
+      methods: ['Contextual Inquiry', 'Task Analysis', 'User Interviews'],
+      findings: 'Healthcare providers were spending excessive time switching between multiple systems and manually compiling patient data.',
+      insights: [
+        'Average of 45 minutes spent per day on data entry',
+        'High error rate in manual data transfer',
+        'Limited real-time patient monitoring capabilities'
+      ]
+    },
+    process: {
+      steps: [
+        {
+          title: 'Research',
+          description: 'Conducted on-site observations and interviews with healthcare providers.'
+        },
+        {
+          title: 'Information Architecture',
+          description: 'Developed a new system structure that consolidates critical patient information.'
+        },
+        {
+          title: 'Prototyping',
+          description: 'Created interactive prototypes focusing on efficient data visualization.'
+        },
+        {
+          title: 'Implementation',
+          description: 'Worked closely with developers to ensure accurate implementation of design specifications.'
+        }
+      ]
+    },
+    metrics: {
+      before: {
+        timeOnTasks: '45 min/day',
+        errorRate: '12%',
+        dataAccessTime: '5 min'
+      },
+      after: {
+        timeOnTasks: '15 min/day',
+        errorRate: '2%',
+        dataAccessTime: '30 sec'
+      }
+    },
     galleryImages: [
       {
         thumbnail: 'https://images.pexels.com/photos/6802069/pexels-photo-6802069.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -91,6 +226,51 @@ export const caseStudies = [
     outcome: 'The app achieved over 100,000 downloads in its first quarter and maintained a 4.7-star rating with high user retention.',
     role: 'Lead UX/UI Designer responsible for the app\'s visual design, interaction design, and prototyping.',
     layout: 'grid',
+    timeline: '5 months',
+    client: 'Travel Tech Startup',
+    team: ['UX Designer', 'UI Designer', '3 Developers', 'Content Strategist'],
+    tools: ['Figma', 'Principle', 'Firebase Analytics', 'Maze'],
+    research: {
+      methods: ['User Surveys', 'Competitor Analysis', 'User Journey Mapping'],
+      findings: 'Users spent an average of 10 hours planning a trip across multiple websites and apps, leading to decision fatigue.',
+      insights: [
+        'Users wanted personalized recommendations',
+        'Trip planning took multiple sessions',
+        'Integration with existing travel tools was important'
+      ]
+    },
+    process: {
+      steps: [
+        {
+          title: 'Research',
+          description: 'Analyzed user behavior and pain points in travel planning.'
+        },
+        {
+          title: 'Design System',
+          description: 'Created a comprehensive design system for consistent user experience.'
+        },
+        {
+          title: 'Prototyping',
+          description: 'Developed interactive prototypes for user testing and validation.'
+        },
+        {
+          title: 'Launch',
+          description: 'Coordinated with development team for successful app launch.'
+        }
+      ]
+    },
+    metrics: {
+      before: {
+        planningTime: '10 hours',
+        userSatisfaction: 'N/A',
+        retention: 'N/A'
+      },
+      after: {
+        planningTime: '2 hours',
+        userSatisfaction: '4.7/5',
+        retention: '65%'
+      }
+    },
     galleryImages: [
       {
         thumbnail: 'https://images.pexels.com/photos/6802073/pexels-photo-6802073.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -113,6 +293,51 @@ export const caseStudies = [
     outcome: 'Development time for new features decreased by 40%, and user satisfaction improved across all digital products.',
     role: 'Product Manager and UX/UI Designer, leading both the design and implementation strategy of the system.',
     layout: 'masonry',
+    timeline: '8 months',
+    client: 'Enterprise Software Company',
+    team: ['Design System Lead', '2 UX Designers', '3 Developers', 'Technical Writer'],
+    tools: ['Figma', 'Storybook', 'GitHub', 'Notion'],
+    research: {
+      methods: ['Component Audit', 'Developer Interviews', 'Usage Analytics'],
+      findings: 'Inconsistent UI patterns across products led to increased development time and maintenance costs.',
+      insights: [
+        'Over 200 button variations existed',
+        'Average component development took 2 weeks',
+        'Documentation was outdated or missing'
+      ]
+    },
+    process: {
+      steps: [
+        {
+          title: 'Audit',
+          description: 'Conducted comprehensive audit of existing components and patterns.'
+        },
+        {
+          title: 'Architecture',
+          description: 'Designed scalable component architecture and naming conventions.'
+        },
+        {
+          title: 'Development',
+          description: 'Built core components and established contribution guidelines.'
+        },
+        {
+          title: 'Documentation',
+          description: 'Created extensive documentation and usage guidelines.'
+        }
+      ]
+    },
+    metrics: {
+      before: {
+        componentCount: '1000+',
+        devTime: '2 weeks',
+        consistency: '45%'
+      },
+      after: {
+        componentCount: '200',
+        devTime: '2 days',
+        consistency: '95%'
+      }
+    },
     galleryImages: [
       {
         thumbnail: 'https://images.pexels.com/photos/6802080/pexels-photo-6802080.jpeg?auto=compress&cs=tinysrgb&w=600',

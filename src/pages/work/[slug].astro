@@ -10,7 +10,7 @@ export function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { title, slug, layout, galleryImages } = project;
+const { title, slug, layout, galleryImages, research, process, metrics } = project;
 
 const getGalleryClass = (layout: string) => {
   switch (layout) {
@@ -29,7 +29,46 @@ const galleryClass = getGalleryClass(layout);
 ---
 
 <CaseStudyLayout title={title} slug={slug}>
+  {research && (
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Research & Discovery</h2>
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xl font-medium mb-4">Research Methods</h3>
+          <p class="text-secondary">{research.methods.join(', ')}</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-4">Key Findings</h3>
+          <p class="text-secondary">{research.findings}</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-4">Key Insights</h3>
+          <ul class="list-disc list-inside text-secondary space-y-2">
+            {research.insights.map(insight => (
+              <li>{insight}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {process && (
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Process</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {process.steps.map(step => (
+          <div class="bg-gray-50 p-8 rounded-lg">
+            <h3 class="text-xl font-medium mb-4">{step.title}</h3>
+            <p class="text-secondary">{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
   <section class="mb-20">
+    <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Project Gallery</h2>
     <div class={galleryClass} id="gallery">
       {galleryImages.map((image) => (
         <a 
@@ -48,6 +87,36 @@ const galleryClass = getGalleryClass(layout);
       ))}
     </div>
   </section>
+
+  {metrics && (
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Impact & Results</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div>
+          <h3 class="text-xl font-medium mb-6">Before</h3>
+          <dl class="space-y-4">
+            {Object.entries(metrics.before).map(([key, value]) => (
+              <div>
+                <dt class="text-secondary">{key.replace(/([A-Z])/g, ' $1').trim()}</dt>
+                <dd class="text-2xl font-display font-medium">{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-6">After</h3>
+          <dl class="space-y-4">
+            {Object.entries(metrics.after).map(([key, value]) => (
+              <div>
+                <dt class="text-secondary">{key.replace(/([A-Z])/g, ' $1').trim()}</dt>
+                <dd class="text-2xl font-display font-medium">{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
+    </section>
+  )}
 </CaseStudyLayout>
 
 <script>
