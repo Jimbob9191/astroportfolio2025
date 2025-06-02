@@ -72,8 +72,8 @@ const galleryImages = [
           gallery,
           dataSource: Array.from(galleryItems).map(galleryItem => ({
             src: galleryItem.href,
-            w: parseInt(galleryItem.getAttribute('data-pswp-width')),
-            h: parseInt(galleryItem.getAttribute('data-pswp-height')),
+            width: parseInt(galleryItem.getAttribute('data-pswp-width')),
+            height: parseInt(galleryItem.getAttribute('data-pswp-height')),
             msrc: galleryItem.querySelector('img').src
           })),
           index,
@@ -88,6 +88,9 @@ const galleryImages = [
           pinchToClose: true,
           closeOnScroll: false,
           closeOnVerticalDrag: true,
+          wheelToZoom: true,
+          padding: { top: 20, bottom: 20, left: 20, right: 20 },
+          fit: 'contain',
           pswpModule: () => import('photoswipe')
         };
         
