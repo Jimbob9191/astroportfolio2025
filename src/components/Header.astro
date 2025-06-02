@@ -7,7 +7,7 @@ const is404 = pathname === '/404';
 const shouldBeWhite = (isHomePage || isCaseStudy) && !is404;
 ---
 
-<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="header">
+<header class={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${!shouldBeWhite ? 'bg-white/90 backdrop-blur-md shadow-sm' : ''}`} id="header">
   <div class="container py-4 flex items-center justify-between">
     <a href="/" class={`font-display font-medium text-xl transition-colors duration-300 header-text ${shouldBeWhite ? 'text-white' : 'text-primary'}`}>James</a>
     <nav>
