@@ -10,72 +10,31 @@ export function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { title, slug } = project;
+const { title, slug, layout, galleryImages } = project;
 
-const galleryImages = [
-  {
-    thumbnail: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=600',
-    large: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    width: 1260,
-    height: 750,
-    alt: 'Finance app dashboard design'
-  },
-  {
-    thumbnail: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=600',
-    large: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    width: 1260,
-    height: 750,
-    alt: 'Finance app mobile screens'
+const getGalleryClass = (layout: string) => {
+  switch (layout) {
+    case 'grid':
+      return 'grid grid-cols-1 md:grid-cols-2 gap-8';
+    case 'masonry':
+      return 'columns-1 md:columns-2 lg:columns-3 gap-8';
+    case 'fullwidth':
+      return 'space-y-8';
+    default:
+      return 'grid grid-cols-1 md:grid-cols-2 gap-8';
   }
-];
-
-const additionalGalleryImages = [
-  {
-    thumbnail: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=600',
-    large: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    width: 1260,
-    height: 750,
-    alt: 'Finance app user flow'
-  },
-  {
-    thumbnail: 'https://images.pexels.com/photos/6802062/pexels-photo-6802062.jpeg?auto=compress&cs=tinysrgb&w=600',
-    large: 'https://images.pexels.com/photos/6802062/pexels-photo-6802062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    width: 1260,
-    height: 750,
-    alt: 'Finance app wireframes'
-  },
-  {
-    thumbnail: 'https://images.pexels.com/photos/6802069/pexels-photo-6802069.jpeg?auto=compress&cs=tinysrgb&w=600',
-    large: 'https://images.pexels.com/photos/6802069/pexels-photo-6802069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    width: 1260,
-    height: 750,
-    alt: 'Finance app components'
-  },
-  {
-    thumbnail: 'https://images.pexels.com/photos/6802073/pexels-photo-6802073.jpeg?auto=compress&cs=tinysrgb&w=600',
-    large: 'https://images.pexels.com/photos/6802073/pexels-photo-6802073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    width: 1260,
-    height: 750,
-    alt: 'Finance app style guide'
-  }
-];
-
-const finalImage = {
-  thumbnail: 'https://images.pexels.com/photos/6802080/pexels-photo-6802080.jpeg?auto=compress&cs=tinysrgb&w=600',
-  large: 'https://images.pexels.com/photos/6802080/pexels-photo-6802080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  width: 1260,
-  height: 750,
-  alt: 'Finance app final presentation'
 };
+
+const galleryClass = getGalleryClass(layout);
 ---
 
 <CaseStudyLayout title={title} slug={slug}>
   <section class="mb-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="gallery1">
+    <div class={galleryClass} id="gallery">
       {galleryImages.map((image) => (
         <a 
           href={image.large}
-          class="block img-hover rounded-lg overflow-hidden gallery-item"
+          class={`block img-hover rounded-lg overflow-hidden gallery-item ${layout === 'masonry' ? 'mb-8' : ''}`}
           data-pswp-width={image.width}
           data-pswp-height={image.height}
         >
@@ -87,44 +46,6 @@ const finalImage = {
           />
         </a>
       ))}
-    </div>
-  </section>
-
-  <section class="mb-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="gallery2">
-      {additionalGalleryImages.map((image) => (
-        <a 
-          href={image.large}
-          class="block img-hover rounded-lg overflow-hidden gallery-item"
-          data-pswp-width={image.width}
-          data-pswp-height={image.height}
-        >
-          <img 
-            src={image.thumbnail} 
-            alt={image.alt}
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <section class="mb-20">
-    <div id="gallery3">
-      <a 
-        href={finalImage.large}
-        class="block img-hover rounded-lg overflow-hidden gallery-item"
-        data-pswp-width={finalImage.width}
-        data-pswp-height={finalImage.height}
-      >
-        <img 
-          src={finalImage.thumbnail} 
-          alt={finalImage.alt}
-          class="w-full h-full object-cover"
-          loading="lazy"
-        />
-      </a>
     </div>
   </section>
 </CaseStudyLayout>
@@ -133,8 +54,8 @@ const finalImage = {
   import PhotoSwipe from 'photoswipe';
   import 'photoswipe/dist/photoswipe.css';
 
-  const initPhotoSwipe = (galleryId: string) => {
-    const gallery = document.querySelector(`#${galleryId}`);
+  const initPhotoSwipe = () => {
+    const gallery = document.querySelector('#gallery');
     
     if (!gallery) return;
     
@@ -177,8 +98,6 @@ const finalImage = {
   };
 
   document.addEventListener('DOMContentLoaded', () => {
-    initPhotoSwipe('gallery1');
-    initPhotoSwipe('gallery2');
-    initPhotoSwipe('gallery3');
+    initPhotoSwipe();
   });
 </script>

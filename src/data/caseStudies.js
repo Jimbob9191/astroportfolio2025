@@ -10,6 +10,23 @@ export const caseStudies = [
     approach: 'I conducted extensive user research to identify pain points, created user flows and wireframes, and designed a new interface that prioritizes clarity and ease of use.',
     outcome: 'The redesign resulted in a 45% increase in daily active users, a 30% reduction in support tickets, and significantly improved user satisfaction scores.',
     role: 'Lead UX/UI Designer responsible for research, wireframing, prototyping, and final design implementation.',
+    layout: 'grid',
+    galleryImages: [
+      {
+        thumbnail: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=600',
+        large: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        width: 1260,
+        height: 750,
+        alt: 'Finance app dashboard design'
+      },
+      {
+        thumbnail: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=600',
+        large: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        width: 1260,
+        height: 750,
+        alt: 'Finance app mobile screens'
+      }
+    ]
   },
   {
     slug: 'ecommerce-platform',
@@ -22,6 +39,23 @@ export const caseStudies = [
     approach: 'I led a cross-functional team through the product development lifecycle, from research and prototyping to implementation and testing.',
     outcome: 'The new platform achieved a 60% increase in mobile conversions and a 25% overall increase in sales within the first three months.',
     role: 'Product Manager and UX Designer, overseeing the entire project from concept to launch.',
+    layout: 'masonry',
+    galleryImages: [
+      {
+        thumbnail: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=600',
+        large: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        width: 1260,
+        height: 750,
+        alt: 'E-commerce platform user flow'
+      },
+      {
+        thumbnail: 'https://images.pexels.com/photos/6802062/pexels-photo-6802062.jpeg?auto=compress&cs=tinysrgb&w=600',
+        large: 'https://images.pexels.com/photos/6802062/pexels-photo-6802062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        width: 1260,
+        height: 750,
+        alt: 'E-commerce platform wireframes'
+      }
+    ]
   },
   {
     slug: 'healthcare-dashboard',
@@ -34,6 +68,16 @@ export const caseStudies = [
     approach: 'I designed an intuitive dashboard that centralizes critical information, utilizing user-centered design principles and iterative testing.',
     outcome: 'The dashboard reduced time spent on administrative tasks by 35% and improved data accuracy by consolidating previously disparate systems.',
     role: 'UX/UI Designer focused on information architecture and data visualization.',
+    layout: 'fullwidth',
+    galleryImages: [
+      {
+        thumbnail: 'https://images.pexels.com/photos/6802069/pexels-photo-6802069.jpeg?auto=compress&cs=tinysrgb&w=600',
+        large: 'https://images.pexels.com/photos/6802069/pexels-photo-6802069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        width: 1260,
+        height: 750,
+        alt: 'Healthcare dashboard components'
+      }
+    ]
   },
   {
     slug: 'travel-app-design',
@@ -46,6 +90,16 @@ export const caseStudies = [
     approach: 'I created a streamlined, intuitive interface that guides users through the entire travel process while incorporating personalized recommendations.',
     outcome: 'The app achieved over 100,000 downloads in its first quarter and maintained a 4.7-star rating with high user retention.',
     role: 'Lead UX/UI Designer responsible for the app\'s visual design, interaction design, and prototyping.',
+    layout: 'grid',
+    galleryImages: [
+      {
+        thumbnail: 'https://images.pexels.com/photos/6802073/pexels-photo-6802073.jpeg?auto=compress&cs=tinysrgb&w=600',
+        large: 'https://images.pexels.com/photos/6802073/pexels-photo-6802073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        width: 1260,
+        height: 750,
+        alt: 'Travel app style guide'
+      }
+    ]
   },
   {
     slug: 'internal-design-system',
@@ -58,5 +112,15 @@ export const caseStudies = [
     approach: 'I led the creation of a unified design system, including component libraries, design principles, and documentation.',
     outcome: 'Development time for new features decreased by 40%, and user satisfaction improved across all digital products.',
     role: 'Product Manager and UX/UI Designer, leading both the design and implementation strategy of the system.',
-  },
+    layout: 'masonry',
+    galleryImages: [
+      {
+        thumbnail: 'https://images.pexels.com/photos/6802080/pexels-photo-6802080.jpeg?auto=compress&cs=tinysrgb&w=600',
+        large: 'https://images.pexels.com/photos/6802080/pexels-photo-6802080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        width: 1260,
+        height: 750,
+        alt: 'Design system final presentation'
+      }
+    ]
+  }
 ];
