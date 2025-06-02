@@ -11,7 +11,7 @@ import { caseStudies } from '../../data/caseStudies';
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         {caseStudies.map(project => (
           <a href={`/work/${project.slug}`} class="case-study-card">
-            <div class="img-hover aspect-[4/3] mb-6">
+            <div class="img-hover aspect-[4/3] mb-6 rounded-[1.25rem] overflow-hidden">
               <img 
                 src={project.thumbnail} 
                 alt={project.title} 

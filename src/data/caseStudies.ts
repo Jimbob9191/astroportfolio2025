@@ -1,4 +1,44 @@
-export const caseStudies = [
+export interface CaseStudy {
+  slug: string;
+  title: string;
+  thumbnail: string;
+  heroImage: string;
+  categories: string[];
+  overview: string;
+  problem: string;
+  approach: string;
+  outcome: string;
+  role: string;
+  layout: 'grid' | 'masonry' | 'fullwidth';
+  timeline: string;
+  client: string;
+  team: string[];
+  tools: string[];
+  research: {
+    methods: string[];
+    findings: string;
+    insights: string[];
+  };
+  process: {
+    steps: {
+      title: string;
+      description: string;
+    }[];
+  };
+  metrics: {
+    before: Record<string, string>;
+    after: Record<string, string>;
+  };
+  galleryImages: {
+    thumbnail: string;
+    large: string;
+    width: number;
+    height: number;
+    alt: string;
+  }[];
+}
+
+export const caseStudies: CaseStudy[] = [
   {
     slug: 'finance-app-redesign',
     title: 'Finance App Redesign',
