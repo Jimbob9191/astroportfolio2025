@@ -11,8 +11,65 @@ export function getStaticPaths() {
 
 const { project } = Astro.props;
 const { title, slug } = project;
+
+const galleryImages = [
+  {
+    thumbnail: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=600',
+    large: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    width: 1260,
+    height: 750,
+    alt: 'Finance app dashboard design'
+  },
+  {
+    thumbnail: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=600',
+    large: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    width: 1260,
+    height: 750,
+    alt: 'Finance app mobile screens'
+  }
+];
 ---
 
 <CaseStudyLayout title={title} slug={slug}>
-  <!-- Additional case study content can be added here if needed -->
+  <section class="mb-20">
+    <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Gallery</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="gallery">
+      {galleryImages.map((image) => (
+        <a 
+          href={image.large}
+          class="block img-hover rounded-lg overflow-hidden"
+          data-pswp-width={image.width}
+          data-pswp-height={image.height}
+        >
+          <img 
+            src={image.thumbnail} 
+            alt={image.alt}
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+      ))}
+    </div>
+  </section>
 </CaseStudyLayout>
+
+<script>
+  import PhotoSwipe from 'photoswipe';
+  import 'photoswipe/dist/photoswipe.css';
+
+  const initPhotoSwipe = () => {
+    const gallery = document.querySelector('#gallery');
+    
+    if (!gallery) return;
+    
+    const lightbox = new PhotoSwipe({
+      gallery,
+      children: 'a',
+      pswpModule: () => import('photoswipe')
+    });
+    
+    lightbox.init();
+  };
+
+  document.addEventListener('DOMContentLoaded', initPhotoSwipe);
+</script>
