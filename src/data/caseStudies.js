@@ -17,11 +17,11 @@ export const caseStudies = [
     tools: ['Figma', 'Maze', 'UserTesting', 'Principle'],
     research: {
       methods: ['User Interviews', 'Usability Testing', 'Analytics Review'],
-      findings: 'Through our research, we discovered that users struggled with complex financial terminology and found the transaction history difficult to navigate. The app's information architecture needed significant improvement.',
+      findings: 'Through our research, we discovered that users struggled with complex financial terminology and found the transaction history difficult to navigate. The app\'s information architecture needed significant improvement.',
       insights: [
         '87% of users found the navigation confusing',
         'Users wanted clearer transaction categorization',
-        'Mobile usage was increasing but the experience wasn't optimized'
+        'Mobile usage was increasing but the experience wasn\'t optimized'
       ]
     },
     process: {
