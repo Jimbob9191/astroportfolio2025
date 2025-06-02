@@ -37,7 +37,7 @@ const galleryImages = [
       {galleryImages.map((image) => (
         <a 
           href={image.large}
-          class="block img-hover rounded-lg overflow-hidden"
+          class="block img-hover rounded-lg overflow-hidden gallery-item"
           data-pswp-width={image.width}
           data-pswp-height={image.height}
         >
@@ -62,13 +62,22 @@ const galleryImages = [
     
     if (!gallery) return;
     
-    const lightbox = new PhotoSwipe({
-      gallery,
-      children: 'a',
-      pswpModule: () => import('photoswipe')
-    });
+    const galleryItems = document.querySelectorAll('.gallery-item');
     
-    lightbox.init();
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const lightbox = new PhotoSwipe({
+          gallery,
+          children: '.gallery-item',
+          index,
+          pswpModule: () => import('photoswipe')
+        });
+        
+        lightbox.init();
+      });
+    });
   };
 
   document.addEventListener('DOMContentLoaded', initPhotoSwipe);
