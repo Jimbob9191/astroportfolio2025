@@ -10,7 +10,22 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404;
 <header class={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${!shouldBeWhite ? 'bg-white/90 backdrop-blur-md shadow-sm' : ''}`} id="header">
   <div class="container py-4 flex items-center justify-between">
     <a href="/" class={`font-display font-medium text-xl transition-colors duration-300 header-text ${shouldBeWhite ? 'text-white' : 'text-primary'}`}>James</a>
-    <nav>
+    
+    <!-- Mobile menu button -->
+    <button 
+      id="menuButton" 
+      class="md:hidden z-50 relative w-10 h-10 flex items-center justify-center"
+      aria-label="Toggle menu"
+    >
+      <div class="w-6 h-4 flex flex-col justify-between">
+        <span class={`w-full h-0.5 transform transition-all duration-300 ${shouldBeWhite ? 'bg-white' : 'bg-primary'} menu-line-1`}></span>
+        <span class={`w-full h-0.5 transform transition-all duration-300 ${shouldBeWhite ? 'bg-white' : 'bg-primary'} menu-line-2`}></span>
+        <span class={`w-full h-0.5 transform transition-all duration-300 ${shouldBeWhite ? 'bg-white' : 'bg-primary'} menu-line-3`}></span>
+      </div>
+    </button>
+
+    <!-- Desktop navigation -->
+    <nav class="hidden md:block">
       <ul class="flex gap-8">
         <li>
           <a 
@@ -35,6 +50,35 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404;
         </li>
       </ul>
     </nav>
+
+    <!-- Mobile navigation -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden">
+      <nav class="h-full flex items-center justify-center">
+        <ul class="flex flex-col gap-8 text-center">
+          <li>
+            <a 
+              href="/work" 
+              class={`text-2xl font-display ${currentPath.startsWith('work') ? 'active' : ''}`}>
+              Work
+            </a>
+          </li>
+          <li>
+            <a 
+              href="/photography" 
+              class={`text-2xl font-display ${currentPath.startsWith('photography') ? 'active' : ''}`}>
+              Photography
+            </a>
+          </li>
+          <li>
+            <a 
+              href="/about" 
+              class={`text-2xl font-display ${currentPath.startsWith('about') ? 'active' : ''}`}>
+              About
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -63,9 +107,44 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404;
   };
 
   window.addEventListener('scroll', updateHeader);
-  
-  // Initialize header state
   updateHeader();
+
+  // Mobile menu functionality
+  const menuButton = document.getElementById('menuButton');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuLines = menuButton.querySelectorAll('span');
+  let isMenuOpen = false;
+
+  const toggleMenu = () => {
+    isMenuOpen = !isMenuOpen;
+    
+    // Toggle menu visibility
+    mobileMenu.style.transform = isMenuOpen ? 'translateX(0)' : 'translateX(100%)';
+    
+    // Animate hamburger to X
+    if (isMenuOpen) {
+      menuLines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      menuLines[1].style.opacity = '0';
+      menuLines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    } else {
+      menuLines[0].style.transform = 'none';
+      menuLines[1].style.opacity = '1';
+      menuLines[2].style.transform = 'none';
+    }
+    
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+  };
+
+  menuButton.addEventListener('click', toggleMenu);
+
+  // Close menu when clicking on a link
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (isMenuOpen) toggleMenu();
+    });
+  });
 </script>
 
 <style>
