@@ -73,8 +73,8 @@ const galleryImages = [
           gallery,
           dataSource: Array.from(galleryItems).map(item => ({
             src: item.getAttribute('data-pswp-src'),
-            w: parseInt(item.getAttribute('data-pswp-width')),
-            h: parseInt(item.getAttribute('data-pswp-height')),
+            width: parseInt(item.getAttribute('data-pswp-width')),
+            height: parseInt(item.getAttribute('data-pswp-height')),
           })),
           index,
           pswpModule: () => import('photoswipe')
