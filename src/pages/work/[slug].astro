@@ -28,12 +28,51 @@ const galleryImages = [
     alt: 'Finance app mobile screens'
   }
 ];
+
+const additionalGalleryImages = [
+  {
+    thumbnail: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=600',
+    large: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    width: 1260,
+    height: 750,
+    alt: 'Finance app user flow'
+  },
+  {
+    thumbnail: 'https://images.pexels.com/photos/6802062/pexels-photo-6802062.jpeg?auto=compress&cs=tinysrgb&w=600',
+    large: 'https://images.pexels.com/photos/6802062/pexels-photo-6802062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    width: 1260,
+    height: 750,
+    alt: 'Finance app wireframes'
+  },
+  {
+    thumbnail: 'https://images.pexels.com/photos/6802069/pexels-photo-6802069.jpeg?auto=compress&cs=tinysrgb&w=600',
+    large: 'https://images.pexels.com/photos/6802069/pexels-photo-6802069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    width: 1260,
+    height: 750,
+    alt: 'Finance app components'
+  },
+  {
+    thumbnail: 'https://images.pexels.com/photos/6802073/pexels-photo-6802073.jpeg?auto=compress&cs=tinysrgb&w=600',
+    large: 'https://images.pexels.com/photos/6802073/pexels-photo-6802073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    width: 1260,
+    height: 750,
+    alt: 'Finance app style guide'
+  }
+];
+
+const finalImage = {
+  thumbnail: 'https://images.pexels.com/photos/6802080/pexels-photo-6802080.jpeg?auto=compress&cs=tinysrgb&w=600',
+  large: 'https://images.pexels.com/photos/6802080/pexels-photo-6802080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  width: 1260,
+  height: 750,
+  alt: 'Finance app final presentation'
+};
 ---
 
 <CaseStudyLayout title={title} slug={slug}>
   <section class="mb-20">
     <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Gallery</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="gallery">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="gallery1">
       {galleryImages.map((image) => (
         <a 
           href={image.large}
@@ -51,18 +90,58 @@ const galleryImages = [
       ))}
     </div>
   </section>
+
+  <section class="mb-20">
+    <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Design Process</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="gallery2">
+      {additionalGalleryImages.map((image) => (
+        <a 
+          href={image.large}
+          class="block img-hover rounded-lg overflow-hidden gallery-item"
+          data-pswp-width={image.width}
+          data-pswp-height={image.height}
+        >
+          <img 
+            src={image.thumbnail} 
+            alt={image.alt}
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="mb-20">
+    <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Final Presentation</h2>
+    <div id="gallery3">
+      <a 
+        href={finalImage.large}
+        class="block img-hover rounded-lg overflow-hidden gallery-item"
+        data-pswp-width={finalImage.width}
+        data-pswp-height={finalImage.height}
+      >
+        <img 
+          src={finalImage.thumbnail} 
+          alt={finalImage.alt}
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </a>
+    </div>
+  </section>
 </CaseStudyLayout>
 
 <script>
   import PhotoSwipe from 'photoswipe';
   import 'photoswipe/dist/photoswipe.css';
 
-  const initPhotoSwipe = () => {
-    const gallery = document.querySelector('#gallery');
+  const initPhotoSwipe = (galleryId: string) => {
+    const gallery = document.querySelector(`#${galleryId}`);
     
     if (!gallery) return;
     
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryItems = gallery.querySelectorAll('.gallery-item');
     
     galleryItems.forEach((item, index) => {
       item.addEventListener('click', (e) => {
@@ -100,5 +179,9 @@ const galleryImages = [
     });
   };
 
-  document.addEventListener('DOMContentLoaded', initPhotoSwipe);
+  document.addEventListener('DOMContentLoaded', () => {
+    initPhotoSwipe('gallery1');
+    initPhotoSwipe('gallery2');
+    initPhotoSwipe('gallery3');
+  });
 </script>
