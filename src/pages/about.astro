@@ -11,7 +11,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="grid md:grid-cols-12 gap-12">
           <div class="md:col-span-5">
             <div class="sticky top-24">
-              <div class="aspect-[3/4] mb-4">
+              <div class="aspect-[3/4] mb-4 rounded-[1.25rem] overflow-hidden">
                 <img 
                   src="https://images.pexels.com/photos/3785104/pexels-photo-3785104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                   alt="James portrait" 
@@ -19,11 +19,11 @@ import Layout from '../layouts/Layout.astro';
                 />
               </div>
               
-              <div class="flex flex-col gap-1">
-                <a href="https://linkedin.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://instagram.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">Instagram</a>
-                <a href="https://dribbble.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">Dribbble</a>
-                <a href="https://twitter.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">Twitter</a>
+              <div class="flex flex-wrap gap-2">
+                <a href="https://linkedin.com/jamesmb" class="social-pill" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://instagram.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://dribbble.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Dribbble</a>
+                <a href="https://twitter.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Twitter</a>
               </div>
             </div>
           </div>
@@ -44,27 +44,90 @@ import Layout from '../layouts/Layout.astro';
             
             <h3 class="text-xl font-display font-medium mt-12 mb-6">Experience</h3>
             
-            <div class="space-y-12">
-              <div class="experience-item">
-                <div class="flex flex-wrap items-baseline justify-between mb-2">
-                  <h4 class="text-lg font-medium">Pavers</h4>
-                  <span class="text-sm text-muted">2023 – Present</span>
-                </div>
-                <p class="text-lg font-medium mb-2">UX/UI Designer & Product Manager</p>
-                <p class="text-secondary">
-                  Leading UX/UI design for internal and external systems, developing comprehensive design systems, and managing product development lifecycles. Collaborating with cross-functional teams to deliver cohesive user experiences across all platforms.
-                </p>
-              </div>
+            <div class="timeline-container relative">
+              <!-- Timeline line -->
+              <div class="timeline-line absolute left-4 top-0 bottom-0 w-px bg-gray-200"></div>
               
-              <div class="experience-item">
-                <div class="flex flex-wrap items-baseline justify-between mb-2">
-                  <h4 class="text-lg font-medium">Coeo</h4>
-                  <span class="text-sm text-muted">2021 – 2023</span>
+              <div class="space-y-12">
+                <!-- Current Position - Almost Black -->
+                <div class="experience-item relative pl-12">
+                  <div class="timeline-circle absolute left-0 top-0 w-8 h-8 bg-gray-900 rounded-full border-4 border-white shadow-sm flex items-center justify-center">
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  
+                  <div class="flex flex-wrap items-baseline justify-between mb-2">
+                    <h4 class="text-lg font-medium">Pavers</h4>
+                    <span class="text-sm text-muted">2023 – Present</span>
+                  </div>
+                  <p class="text-lg font-medium mb-2">UX/UI Designer & Product Manager</p>
+                  <p class="text-secondary">
+                    Leading UX/UI design for internal and external systems, developing comprehensive design systems, and managing product development lifecycles. Collaborating with cross-functional teams to deliver cohesive user experiences across all platforms.
+                  </p>
                 </div>
-                <p class="text-lg font-medium mb-2">Branding, Graphic Design, UX/UI Designer</p>
-                <p class="text-secondary">
-                  Responsible for creating and implementing brand identities, designing user interfaces for internal, B2B, and customer-facing platforms. Collaborated with developers to ensure design integrity throughout the development process.
-                </p>
+                
+                <!-- Previous Position at Pavers - Dark Gray -->
+                <div class="experience-item relative pl-12">
+                  <div class="timeline-circle absolute left-0 top-0 w-8 h-8 bg-gray-700 rounded-full border-4 border-white shadow-sm flex items-center justify-center">
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  
+                  <div class="flex flex-wrap items-baseline justify-between mb-2">
+                    <h4 class="text-lg font-medium">Pavers</h4>
+                    <span class="text-sm text-muted">2022 – 2023</span>
+                  </div>
+                  <p class="text-lg font-medium mb-2">UX/UI Designer</p>
+                  <p class="text-secondary">
+                    Focused on user interface design and user experience optimization for customer-facing applications. Conducted user research and usability testing to inform design decisions and improve conversion rates across digital touchpoints.
+                  </p>
+                </div>
+                
+                <!-- Latest Position at Coeo - Medium Gray -->
+                <div class="experience-item relative pl-12">
+                  <div class="timeline-circle absolute left-0 top-0 w-8 h-8 bg-gray-500 rounded-full border-4 border-white shadow-sm flex items-center justify-center">
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  
+                  <div class="flex flex-wrap items-baseline justify-between mb-2">
+                    <h4 class="text-lg font-medium">Coeo</h4>
+                    <span class="text-sm text-muted">2021 – 2022</span>
+                  </div>
+                  <p class="text-lg font-medium mb-2">Branding, Graphic Design, UX/UI Designer</p>
+                  <p class="text-secondary">
+                    Responsible for creating and implementing brand identities, designing user interfaces for internal, B2B, and customer-facing platforms. Collaborated with developers to ensure design integrity throughout the development process.
+                  </p>
+                </div>
+                
+                <!-- Earlier Position at Coeo - Light Gray -->
+                <div class="experience-item relative pl-12">
+                  <div class="timeline-circle absolute left-0 top-0 w-8 h-8 bg-gray-400 rounded-full border-4 border-white shadow-sm flex items-center justify-center">
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  
+                  <div class="flex flex-wrap items-baseline justify-between mb-2">
+                    <h4 class="text-lg font-medium">Coeo</h4>
+                    <span class="text-sm text-muted">2020 – 2021</span>
+                  </div>
+                  <p class="text-lg font-medium mb-2">Junior Graphic Designer</p>
+                  <p class="text-secondary">
+                    Started as a junior designer working on brand identity projects and marketing materials. Gained experience in digital design principles and began transitioning into UX/UI design through internal projects and professional development.
+                  </p>
+                </div>
+                
+                <!-- University - Lightest Gray -->
+                <div class="experience-item relative pl-12">
+                  <div class="timeline-circle absolute left-0 top-0 w-8 h-8 bg-gray-300 rounded-full border-4 border-white shadow-sm flex items-center justify-center">
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  
+                  <div class="flex flex-wrap items-baseline justify-between mb-2">
+                    <h4 class="text-lg font-medium">University of Design</h4>
+                    <span class="text-sm text-muted">2017 – 2020</span>
+                  </div>
+                  <p class="text-lg font-medium mb-2">Bachelor of Design (Visual Communication)</p>
+                  <p class="text-secondary">
+                    Graduated with honors, specializing in visual communication design with a focus on digital media. Completed coursework in typography, branding, user experience design, and design thinking methodologies. Final project focused on mobile app design for social impact.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -73,3 +136,53 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 </Layout>
+
+<style>
+  .social-pill {
+    @apply inline-block px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-medium text-gray-700 transition-all duration-300;
+  }
+  
+  .social-pill:hover {
+    @apply bg-gray-50 border-gray-400 text-gray-900 transform translate-y-[-1px] shadow-sm;
+  }
+  
+  .timeline-container {
+    position: relative;
+  }
+  
+  .timeline-line {
+    z-index: 1;
+  }
+  
+  .timeline-circle {
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
+  
+  .experience-item:hover .timeline-circle {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .timeline-container {
+      margin-left: -0.5rem;
+    }
+    
+    .experience-item {
+      padding-left: 2.5rem;
+    }
+    
+    .timeline-circle {
+      width: 1.5rem;
+      height: 1.5rem;
+      left: -0.75rem;
+    }
+    
+    .timeline-circle .w-2 {
+      width: 0.375rem;
+      height: 0.375rem;
+    }
+  }
+</style>
