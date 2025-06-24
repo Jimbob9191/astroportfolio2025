@@ -19,11 +19,11 @@ import Layout from '../layouts/Layout.astro';
                 />
               </div>
               
-              <div class="flex flex-col gap-1">
-                <a href="https://linkedin.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://instagram.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">Instagram</a>
-                <a href="https://dribbble.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">Dribbble</a>
-                <a href="https://twitter.com/jamesmb" class="hover-underline" target="_blank" rel="noopener">Twitter</a>
+              <div class="flex flex-wrap gap-2">
+                <a href="https://linkedin.com/jamesmb" class="social-pill" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://instagram.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://dribbble.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Dribbble</a>
+                <a href="https://twitter.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Twitter</a>
               </div>
             </div>
           </div>
@@ -138,6 +138,14 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+  .social-pill {
+    @apply inline-block px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-medium text-gray-700 transition-all duration-300;
+  }
+  
+  .social-pill:hover {
+    @apply bg-gray-50 border-gray-400 text-gray-900 transform translate-y-[-1px] shadow-sm;
+  }
+  
   .timeline-container {
     position: relative;
   }
