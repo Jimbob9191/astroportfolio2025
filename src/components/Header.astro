@@ -11,7 +11,9 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404 && !isWorkIndex;
 <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="header">
   <div class="container py-4 flex items-center justify-between">
     <a href="/" class={`font-display font-medium text-xl transition-colors duration-300 header-text ${shouldBeWhite ? 'text-white' : 'text-primary'}`}>James</a>
-    <nav>
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:block">
       <ul class="flex gap-8">
         <li>
           <a 
@@ -36,6 +38,82 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404 && !isWorkIndex;
         </li>
       </ul>
     </nav>
+
+    <!-- Mobile Hamburger Button -->
+    <button 
+      id="mobile-menu-button"
+      class={`md:hidden flex flex-col justify-center items-center w-8 h-8 transition-colors duration-300 header-text ${shouldBeWhite ? 'text-white' : 'text-primary'}`}
+      aria-label="Toggle mobile menu"
+    >
+      <span class="hamburger-line w-6 h-0.5 bg-current transition-all duration-300 ease-in-out"></span>
+      <span class="hamburger-line w-6 h-0.5 bg-current transition-all duration-300 ease-in-out mt-1"></span>
+      <span class="hamburger-line w-6 h-0.5 bg-current transition-all duration-300 ease-in-out mt-1"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div 
+    id="mobile-menu" 
+    class="md:hidden fixed inset-0 w-full h-full bg-white/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 ease-in-out overflow-hidden"
+    style="height: 100vh; height: 100dvh;"
+  >
+    <!-- Content container -->
+    <div class="relative z-10 flex flex-col h-full w-full">
+      <!-- Mobile menu header -->
+      <div class="container py-4 flex items-center justify-between border-b border-gray-200/50 flex-shrink-0">
+        <a href="/" class="font-display font-medium text-xl text-primary">James</a>
+        <button 
+          id="mobile-menu-close"
+          class="flex flex-col justify-center items-center w-8 h-8 text-primary"
+          aria-label="Close mobile menu"
+        >
+          <span class="hamburger-line w-6 h-0.5 bg-current transform rotate-45 transition-all duration-300 ease-in-out"></span>
+          <span class="hamburger-line w-6 h-0.5 bg-current transform -rotate-45 -mt-0.5 transition-all duration-300 ease-in-out"></span>
+        </button>
+      </div>
+      
+      <!-- Mobile menu content - centered vertically -->
+      <div class="flex-1 flex flex-col justify-center min-h-0">
+        <nav class="container">
+          <ul class="space-y-8">
+            <li>
+              <a 
+                href="/work" 
+                class={`block text-3xl font-display font-medium transition-colors duration-300 text-primary hover:text-secondary ${currentPath.startsWith('work') ? 'text-secondary' : ''}`}
+              >
+                Work
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/photography" 
+                class={`block text-3xl font-display font-medium transition-colors duration-300 text-primary hover:text-secondary ${currentPath.startsWith('photography') ? 'text-secondary' : ''}`}
+              >
+                Photography
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/about" 
+                class={`block text-3xl font-display font-medium transition-colors duration-300 text-primary hover:text-secondary ${currentPath.startsWith('about') ? 'text-secondary' : ''}`}
+              >
+                About
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+        
+      <!-- Mobile menu footer -->
+      <div class="container pb-8 flex-shrink-0">
+        <div class="flex flex-wrap gap-2 pt-8 border-t border-gray-200/50">
+          <a href="https://linkedin.com/jamesmb" class="social-pill" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://dribbble.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Dribbble</a>
+          <a href="https://twitter.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Twitter</a>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -68,6 +146,57 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404 && !isWorkIndex;
   
   // Initialize header state
   updateHeader();
+
+  // Mobile menu functionality
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const hamburgerLines = mobileMenuButton.querySelectorAll('.hamburger-line');
+
+  const openMobileMenu = () => {
+    mobileMenu.classList.remove('translate-x-full');
+    mobileMenu.classList.add('translate-x-0');
+    document.body.style.overflow = 'hidden';
+    
+    // Animate hamburger to X
+    hamburgerLines[0].style.transform = 'rotate(45deg) translateY(6px)';
+    hamburgerLines[1].style.opacity = '0';
+    hamburgerLines[2].style.transform = 'rotate(-45deg) translateY(-6px)';
+  };
+
+  const closeMobileMenu = () => {
+    mobileMenu.classList.remove('translate-x-0');
+    mobileMenu.classList.add('translate-x-full');
+    document.body.style.overflow = '';
+    
+    // Reset hamburger lines
+    hamburgerLines[0].style.transform = '';
+    hamburgerLines[1].style.opacity = '1';
+    hamburgerLines[2].style.transform = '';
+  };
+
+  mobileMenuButton.addEventListener('click', openMobileMenu);
+  mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+  // Close menu when clicking on navigation links
+  const mobileNavLinks = mobileMenu.querySelectorAll('nav a');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Close menu when clicking outside
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) {
+      closeMobileMenu();
+    }
+  });
+
+  // Close menu on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !mobileMenu.classList.contains('translate-x-full')) {
+      closeMobileMenu();
+    }
+  });
 </script>
 
 <style>
@@ -76,5 +205,24 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404 && !isWorkIndex;
   }
   .active::after {
     @apply w-full;
+  }
+
+  /* Hamburger animation styles */
+  .hamburger-line {
+    transform-origin: center;
+  }
+
+  /* Ensure mobile menu is above everything */
+  #mobile-menu {
+    z-index: 9999;
+  }
+
+  /* Social pill styles matching the about page */
+  .social-pill {
+    @apply inline-block px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-medium text-gray-700 transition-all duration-300;
+  }
+  
+  .social-pill:hover {
+    @apply bg-gray-50 border-gray-400 text-gray-900 transform translate-y-[-1px] shadow-sm;
   }
 </style>
