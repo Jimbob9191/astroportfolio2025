@@ -78,7 +78,7 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404 && !isWorkIndex;
       <!-- Mobile menu content - centered vertically -->
       <div class="flex-1 flex flex-col justify-center bg-white min-h-0">
         <nav class="container">
-          <ul class="space-y-8 text-center">
+          <ul class="space-y-8">
             <li>
               <a 
                 href="/work" 
@@ -109,11 +109,11 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404 && !isWorkIndex;
         
       <!-- Mobile menu footer -->
       <div class="container pb-8 bg-white flex-shrink-0">
-        <div class="flex flex-wrap justify-center gap-4 pt-8 border-t border-gray-200">
-          <a href="https://linkedin.com/jamesmb" class="text-muted hover:text-primary transition-colors" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://instagram.com/jamesmb" class="text-muted hover:text-primary transition-colors" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://dribbble.com/jamesmb" class="text-muted hover:text-primary transition-colors" target="_blank" rel="noopener">Dribbble</a>
-          <a href="https://twitter.com/jamesmb" class="text-muted hover:text-primary transition-colors" target="_blank" rel="noopener">Twitter</a>
+        <div class="flex flex-wrap gap-2 pt-8 border-t border-gray-200">
+          <a href="https://linkedin.com/jamesmb" class="social-pill" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://dribbble.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Dribbble</a>
+          <a href="https://twitter.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Twitter</a>
         </div>
       </div>
     </div>
@@ -218,5 +218,14 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404 && !isWorkIndex;
   /* Ensure mobile menu is above everything */
   #mobile-menu {
     z-index: 9999;
+  }
+
+  /* Social pill styles matching the about page */
+  .social-pill {
+    @apply inline-block px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-medium text-gray-700 transition-all duration-300;
+  }
+  
+  .social-pill:hover {
+    @apply bg-gray-50 border-gray-400 text-gray-900 transform translate-y-[-1px] shadow-sm;
   }
 </style>
