@@ -54,11 +54,16 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404 && !isWorkIndex;
   <!-- Mobile Navigation Menu -->
   <div 
     id="mobile-menu" 
-    class="md:hidden fixed inset-0 bg-white transform translate-x-full transition-transform duration-300 ease-in-out"
+    class="md:hidden fixed inset-0 w-full h-full bg-white transform translate-x-full transition-transform duration-300 ease-in-out overflow-hidden"
+    style="height: 100vh; height: 100dvh;"
   >
-    <div class="flex flex-col h-full bg-white">
+    <!-- Full screen white background container -->
+    <div class="absolute inset-0 w-full h-full bg-white"></div>
+    
+    <!-- Content container -->
+    <div class="relative z-10 flex flex-col h-full w-full bg-white">
       <!-- Mobile menu header -->
-      <div class="container py-4 flex items-center justify-between border-b border-gray-200 bg-white">
+      <div class="container py-4 flex items-center justify-between border-b border-gray-200 bg-white flex-shrink-0">
         <a href="/" class="font-display font-medium text-xl text-primary">James</a>
         <button 
           id="mobile-menu-close"
@@ -70,45 +75,47 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404 && !isWorkIndex;
         </button>
       </div>
       
-      <!-- Mobile menu content -->
-      <nav class="flex-1 flex flex-col justify-center bg-white">
-        <ul class="container space-y-8">
-          <li>
-            <a 
-              href="/work" 
-              class={`block text-3xl font-display font-medium transition-colors duration-300 text-primary hover:text-secondary ${currentPath.startsWith('work') ? 'text-secondary' : ''}`}
-            >
-              Work
-            </a>
-          </li>
-          <li>
-            <a 
-              href="/photography" 
-              class={`block text-3xl font-display font-medium transition-colors duration-300 text-primary hover:text-secondary ${currentPath.startsWith('photography') ? 'text-secondary' : ''}`}
-            >
-              Photography
-            </a>
-          </li>
-          <li>
-            <a 
-              href="/about" 
-              class={`block text-3xl font-display font-medium transition-colors duration-300 text-primary hover:text-secondary ${currentPath.startsWith('about') ? 'text-secondary' : ''}`}
-            >
-              About
-            </a>
-          </li>
-        </ul>
+      <!-- Mobile menu content - centered vertically -->
+      <div class="flex-1 flex flex-col justify-center bg-white min-h-0">
+        <nav class="container">
+          <ul class="space-y-8 text-center">
+            <li>
+              <a 
+                href="/work" 
+                class={`block text-3xl font-display font-medium transition-colors duration-300 text-primary hover:text-secondary ${currentPath.startsWith('work') ? 'text-secondary' : ''}`}
+              >
+                Work
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/photography" 
+                class={`block text-3xl font-display font-medium transition-colors duration-300 text-primary hover:text-secondary ${currentPath.startsWith('photography') ? 'text-secondary' : ''}`}
+              >
+                Photography
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/about" 
+                class={`block text-3xl font-display font-medium transition-colors duration-300 text-primary hover:text-secondary ${currentPath.startsWith('about') ? 'text-secondary' : ''}`}
+              >
+                About
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
         
-        <!-- Mobile menu footer -->
-        <div class="container pb-8 bg-white">
-          <div class="flex flex-wrap gap-4 pt-8 border-t border-gray-200">
-            <a href="https://linkedin.com/jamesmb" class="text-muted hover:text-primary transition-colors" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://instagram.com/jamesmb" class="text-muted hover:text-primary transition-colors" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://dribbble.com/jamesmb" class="text-muted hover:text-primary transition-colors" target="_blank" rel="noopener">Dribbble</a>
-            <a href="https://twitter.com/jamesmb" class="text-muted hover:text-primary transition-colors" target="_blank" rel="noopener">Twitter</a>
-          </div>
+      <!-- Mobile menu footer -->
+      <div class="container pb-8 bg-white flex-shrink-0">
+        <div class="flex flex-wrap justify-center gap-4 pt-8 border-t border-gray-200">
+          <a href="https://linkedin.com/jamesmb" class="text-muted hover:text-primary transition-colors" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/jamesmb" class="text-muted hover:text-primary transition-colors" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://dribbble.com/jamesmb" class="text-muted hover:text-primary transition-colors" target="_blank" rel="noopener">Dribbble</a>
+          <a href="https://twitter.com/jamesmb" class="text-muted hover:text-primary transition-colors" target="_blank" rel="noopener">Twitter</a>
         </div>
-      </nav>
+      </div>
     </div>
   </div>
 </header>
