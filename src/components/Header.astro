@@ -54,16 +54,13 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404 && !isWorkIndex;
   <!-- Mobile Navigation Menu -->
   <div 
     id="mobile-menu" 
-    class="md:hidden fixed inset-0 w-full h-full bg-white transform translate-x-full transition-transform duration-300 ease-in-out overflow-hidden"
+    class="md:hidden fixed inset-0 w-full h-full bg-white/90 backdrop-blur-md transform translate-x-full transition-transform duration-300 ease-in-out overflow-hidden"
     style="height: 100vh; height: 100dvh;"
   >
-    <!-- Full screen white background container -->
-    <div class="absolute inset-0 w-full h-full bg-white"></div>
-    
     <!-- Content container -->
-    <div class="relative z-10 flex flex-col h-full w-full bg-white">
+    <div class="relative z-10 flex flex-col h-full w-full">
       <!-- Mobile menu header -->
-      <div class="container py-4 flex items-center justify-between border-b border-gray-200 bg-white flex-shrink-0">
+      <div class="container py-4 flex items-center justify-between border-b border-gray-200/50 flex-shrink-0">
         <a href="/" class="font-display font-medium text-xl text-primary">James</a>
         <button 
           id="mobile-menu-close"
@@ -76,7 +73,7 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404 && !isWorkIndex;
       </div>
       
       <!-- Mobile menu content - centered vertically -->
-      <div class="flex-1 flex flex-col justify-center bg-white min-h-0">
+      <div class="flex-1 flex flex-col justify-center min-h-0">
         <nav class="container">
           <ul class="space-y-8">
             <li>
@@ -108,8 +105,8 @@ const shouldBeWhite = (isHomePage || isCaseStudy) && !is404 && !isWorkIndex;
       </div>
         
       <!-- Mobile menu footer -->
-      <div class="container pb-8 bg-white flex-shrink-0">
-        <div class="flex flex-wrap gap-2 pt-8 border-t border-gray-200">
+      <div class="container pb-8 flex-shrink-0">
+        <div class="flex flex-wrap gap-2 pt-8 border-t border-gray-200/50">
           <a href="https://linkedin.com/jamesmb" class="social-pill" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://instagram.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Instagram</a>
           <a href="https://dribbble.com/jamesmb" class="social-pill" target="_blank" rel="noopener">Dribbble</a>
