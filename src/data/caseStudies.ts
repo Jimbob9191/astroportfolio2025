@@ -144,27 +144,27 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: 'finance-app-redesign',
-    title: 'Finance App Redesign',
-    thumbnail: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    heroImage: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    categories: ['UX/UI Design', 'Product Strategy'],
-    overview: 'A comprehensive redesign of a fintech application, improving usability and engagement.',
-    problem: 'The existing finance app suffered from poor user engagement, confusing navigation, and outdated visual design.',
-    approach: 'I conducted extensive user research to identify pain points, created user flows and wireframes, and designed a new interface that prioritizes clarity and ease of use.',
-    outcome: 'The redesign resulted in a 45% increase in daily active users, a 30% reduction in support tickets, and significantly improved user satisfaction scores.',
-    role: 'Lead UX/UI Designer responsible for research, wireframing, prototyping, and final design implementation.',
+    title: 'Redesigning A Client Management Portal',
+    thumbnail: '/crsmiimages/crsmi-1.webp',
+    heroImage: '/crsmiimages/crsmi-1.webp',
+    categories: ['UX/UI Design', 'Product Strategy', 'B2B Software'],
+    overview: 'A comprehensive redesign of a client management portal, improving workflow efficiency and user experience for professional service teams.',
+    problem: 'Having been used for a number of years, with features slowly being added throughout — the site has grown in capabilities but has lost consistency in its design and functionality. As features were added to the site, no thought was given to their layout and how they are accessed — leading to a menu filled with mismatched reports and capabilities. These non-standardised forms and page layouts make for a very disjointed experience and trying to use the site on a page that isn\'t 16:9 made for an even worse time.',
+    approach: 'I conducted extensive user research with account managers and client service teams to identify pain points, created optimized user flows and wireframes, and designed a new interface that prioritizes workflow efficiency and data accessibility.',
+    outcome: 'The redesign resulted in a 45% reduction in task completion time, a 30% reduction in support tickets, and significantly improved user satisfaction scores among professional service teams.',
+    role: 'UX/UI Design',
     layout: 'grid',
     timeline: '3 months',
-    client: 'FinTech Startup',
+    client: 'coeo',
     team: ['UX Designer', 'UI Designer', '2 Developers', 'Product Manager'],
     tools: ['Figma', 'Maze', 'UserTesting', 'Principle'],
     research: {
       methods: ['User Interviews', 'Usability Testing', 'Analytics Review'],
-      findings: 'Through our research, we discovered that users struggled with complex financial terminology and found the transaction history difficult to navigate. The app\'s information architecture needed significant improvement.',
+      findings: 'Through our research, we discovered that account managers struggled with fragmented client information across multiple systems and found the client communication history difficult to navigate. The portal\'s information architecture needed significant improvement.',
       insights: [
         '87% of users found the navigation confusing',
-        'Users wanted clearer transaction categorization',
-        'Mobile usage was increasing but the experience wasn\'t optimized'
+        'Users wanted better client data organization and search functionality',
+        'Mobile usage was increasing but the experience wasn\'t optimized for field work'
       ]
     },
     process: {
@@ -189,30 +189,63 @@ export const caseStudies: CaseStudy[] = [
     },
     metrics: {
       before: {
+        taskCompletionTime: '15 min avg',
         userSatisfaction: '65%',
-        dailyActiveUsers: '10,000',
-        supportTickets: '500/week'
       },
       after: {
+        taskCompletionTime: '8 min avg',
         userSatisfaction: '92%',
-        dailyActiveUsers: '14,500',
-        supportTickets: '150/week'
       }
     },
     galleryImages: [
       {
-        thumbnail: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=600',
-        large: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        thumbnail: '/crsmiimages/crsmi-6.webp',
+        large: '/crsmiimages/crsmi-6.webp',
         width: 1260,
         height: 750,
-        alt: 'Finance app dashboard design'
+        alt: 'CRSMI client management portal dashboard design'
       },
       {
-        thumbnail: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=600',
-        large: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        thumbnail: '/crsmiimages/crsmi-7.webp',
+        large: '/crsmiimages/crsmi-7.webp',
         width: 1260,
         height: 750,
-        alt: 'Finance app mobile screens'
+        alt: 'CRSMI client management portal interface design'
+      },
+      {
+        thumbnail: '/crsmiimages/crsmi-8.webp',
+        large: '/crsmiimages/crsmi-8.webp',
+        width: 1260,
+        height: 750,
+        alt: 'CRSMI client management portal features'
+      },
+      {
+        thumbnail: '/crsmiimages/crsmi-9.webp',
+        large: '/crsmiimages/crsmi-9.webp',
+        width: 1260,
+        height: 750,
+        alt: 'CRSMI client management portal user interface'
+      },
+      {
+        thumbnail: '/crsmiimages/crsmi-10.webp',
+        large: '/crsmiimages/crsmi-10.webp',
+        width: 1260,
+        height: 750,
+        alt: 'CRSMI client management portal design system'
+      },
+      {
+        thumbnail: '/crsmiimages/crsmi-4.webp',
+        large: '/crsmiimages/crsmi-4.webp',
+        width: 1260,
+        height: 750,
+        alt: 'CRSMI client management portal components'
+      },
+      {
+        thumbnail: '/crsmiimages/crsmi-5.webp',
+        large: '/crsmiimages/crsmi-5.webp',
+        width: 1260,
+        height: 750,
+        alt: 'CRSMI client management portal final design'
       }
     ]
   },

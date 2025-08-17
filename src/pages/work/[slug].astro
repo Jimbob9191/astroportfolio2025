@@ -67,6 +67,18 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
+  {project.slug === 'finance-app-redesign' && (
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">The Solution</h2>
+      <p class="text-secondary text-lg leading-relaxed mb-6">
+        I started by talking with key stakeholders in the business, such as account managers and the compliance team, before talking to select clients and sending out surveys to get feedback on what tools they use, what can be improved and what they struggle with. I combined this with heatmapping and user recordings to further refine the changes that were needed.
+      </p>
+      <p class="text-secondary text-lg leading-relaxed">
+        After I had a clearer scope of the project, I created a design system for the site (and other sites in the business) to use. This included colours, fonts, buttons, inputs, graphs, tables and layout conventions. I also worked closely with the development team to implement new features such as notifications, a quick onboarding feature and a dark mode. Before QAing and testing each feature before deployment.
+      </p>
+    </section>
+  )}
+
   <section class="mb-20">
     <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Project Gallery</h2>
     <div class={galleryClass} id="gallery">
@@ -137,6 +149,48 @@ const galleryClass = getGalleryClass(layout);
           const options = {
             gallery,
             dataSource: Array.from(galleryItems).map(galleryItem => ({
+              src: galleryItem.href,
+              width: parseInt(galleryItem.getAttribute('data-pswp-width')),
+              height: parseInt(galleryItem.getAttribute('data-pswp-height')),
+              msrc: galleryItem.querySelector('img').src
+            })),
+            index,
+            showHideAnimationType: 'fade',
+            showAnimationDuration: 300,
+            hideAnimationDuration: 300,
+            bgOpacity: 0.8,
+            spacing: 0.1,
+            allowPanToNext: true,
+            maxSpreadZoom: 2,
+            getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
+            pinchToClose: true,
+            closeOnScroll: false,
+            closeOnVerticalDrag: true,
+            wheelToZoom: true,
+            padding: { top: 20, bottom: 20, left: 20, right: 20 },
+            fit: 'contain',
+            pswpModule: () => import('photoswipe')
+          };
+          
+          const lightbox = new PhotoSwipe(options);
+          lightbox.init();
+        });
+      });
+    }
+    
+    // Initialize background gallery for CRSMI case study
+    const backgroundGallery = document.querySelector('#background-gallery');
+    
+    if (backgroundGallery) {
+      const backgroundGalleryItems = backgroundGallery.querySelectorAll('.background-gallery-item');
+      
+      backgroundGalleryItems.forEach((item, index) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          const options = {
+            gallery: backgroundGallery,
+            dataSource: Array.from(backgroundGalleryItems).map(galleryItem => ({
               src: galleryItem.href,
               width: parseInt(galleryItem.getAttribute('data-pswp-width')),
               height: parseInt(galleryItem.getAttribute('data-pswp-height')),
