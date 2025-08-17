@@ -152,10 +152,10 @@ export const caseStudies: CaseStudy[] = [
     problem: 'Having been used for a number of years, with features slowly being added throughout — the site has grown in capabilities but has lost consistency in its design and functionality. As features were added to the site, no thought was given to their layout and how they are accessed — leading to a menu filled with mismatched reports and capabilities. These non-standardised forms and page layouts make for a very disjointed experience and trying to use the site on a page that isn\'t 16:9 made for an even worse time.',
     approach: 'I conducted extensive user research with account managers and client service teams to identify pain points, created optimized user flows and wireframes, and designed a new interface that prioritizes workflow efficiency and data accessibility.',
     outcome: 'The redesign resulted in a 45% reduction in task completion time, a 30% reduction in support tickets, and significantly improved user satisfaction scores among professional service teams.',
-    role: 'Lead UX/UI Designer responsible for research, wireframing, prototyping, and final design implementation.',
+    role: 'UX/UI Design',
     layout: 'grid',
     timeline: '3 months',
-    client: 'Professional Services Firm',
+    client: 'coeo',
     team: ['UX Designer', 'UI Designer', '2 Developers', 'Product Manager'],
     tools: ['Figma', 'Maze', 'UserTesting', 'Principle'],
     research: {
