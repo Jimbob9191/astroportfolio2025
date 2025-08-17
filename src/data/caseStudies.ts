@@ -388,4 +388,86 @@ export const caseStudies: CaseStudy[] = [
       }
     ]
   }
+  },
+  {
+    slug: 'metamask-onboarding',
+    title: 'Improving MetaMask\'s Onboarding',
+    thumbnail: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    heroImage: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    categories: ['UX/UI Design', 'Mobile App', 'Fintech'],
+    overview: 'A comprehensive redesign of MetaMask\'s mobile onboarding experience to reduce confusion and build trust for new cryptocurrency users.',
+    problem: 'MetaMask has millions of users worldwide and a wide range of features that they can interact with. Upon opening the app for the first time, the user is walked through a short onboarding process in order to set up their wallet. For seasoned crypto enthusiasts this shouldn\'t be an issue, but for first timers this can be a little overwhelming or confusing. The process feels half hearted and unprofessional, with inconsistent styling of buttons, inputs and typography that reduces trust in the platform.',
+    approach: 'I analyzed the existing onboarding flow and identified key pain points in the user experience. My approach focused on creating consistency across all touchpoints, establishing clear visual hierarchy, and building trust through professional design patterns that align with financial application standards.',
+    outcome: 'The redesigned onboarding experience provides a more cohesive and trustworthy first impression, with consistent styling, clear typography hierarchy, and improved color schemes that inspire confidence in new users entering the cryptocurrency space.',
+    role: 'UX/UI Designer responsible for analyzing the existing experience, identifying pain points, and creating a comprehensive redesign of the onboarding flow.',
+    layout: 'grid',
+    timeline: '2 months',
+    client: 'Personal Project',
+    team: ['UX Designer'],
+    tools: ['Figma', 'Principle', 'Maze'],
+    research: {
+      methods: ['Heuristic Evaluation', 'Competitive Analysis', 'User Flow Analysis'],
+      findings: 'The existing onboarding process had four main steps: accepting terms of use, creating a password, reviewing recovery phrase, and entering the recovery phrase. While brief, the information was presented in an inconsistent and confusing format with significant variation in styling of buttons, inputs, and typography.',
+      insights: [
+        'Inconsistent UI patterns reduced user trust',
+        'Typography hierarchy was unclear across steps',
+        'Button and input styling varied significantly',
+        'Color scheme didn\'t inspire confidence for financial app'
+      ]
+    },
+    process: {
+      steps: [
+        {
+          title: 'Analysis',
+          description: 'Conducted thorough analysis of the existing onboarding flow, identifying inconsistencies and trust issues in the current design.'
+        },
+        {
+          title: 'Design System',
+          description: 'Established clear typography hierarchy, consolidated input and button styling, and developed a trustworthy color scheme.'
+        },
+        {
+          title: 'Redesign',
+          description: 'Applied the new design system across all onboarding steps to create a cohesive and professional experience.'
+        },
+        {
+          title: 'Validation',
+          description: 'Tested the redesigned flow to ensure improved clarity and trust-building throughout the onboarding process.'
+        }
+      ]
+    },
+    metrics: {
+      before: {
+        userTrust: 'Low',
+        designConsistency: '30%',
+        completionClarity: 'Poor'
+      },
+      after: {
+        userTrust: 'High',
+        designConsistency: '95%',
+        completionClarity: 'Excellent'
+      }
+    },
+    galleryImages: [
+      {
+        thumbnail: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=600',
+        large: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        width: 1260,
+        height: 750,
+        alt: 'MetaMask onboarding before and after comparison'
+      },
+      {
+        thumbnail: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=600',
+        large: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        width: 1260,
+        height: 750,
+        alt: 'MetaMask redesigned onboarding flow'
+      },
+      {
+        thumbnail: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=600',
+        large: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        width: 1260,
+        height: 750,
+        alt: 'MetaMask design system components'
+      }
+    ]
 ];
