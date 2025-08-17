@@ -387,7 +387,6 @@ export const caseStudies: CaseStudy[] = [
         alt: 'Design system final presentation'
       }
     ]
-  }
   },
   {
     slug: 'metamask-onboarding',
@@ -470,4 +469,5 @@ export const caseStudies: CaseStudy[] = [
         alt: 'MetaMask design system components'
       }
     ]
+  }
 ];
