@@ -82,6 +82,52 @@ const nextProject = caseStudies[nextIndex];
           </section>
         )}
         
+        {project.slug === 'finance-app-redesign' && (
+          <section class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="background-gallery">
+              <a 
+                href="/crsmiimages/crsmi-2.webp"
+                class="block img-hover rounded-lg overflow-hidden background-gallery-item w-full"
+                data-pswp-width="1260"
+                data-pswp-height="750"
+              >
+                <img 
+                  src="/crsmiimages/crsmi-2.webp" 
+                  alt="CRSMI original interface showing design inconsistencies" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </a>
+              <a 
+                href="/crsmiimages/crsmi-3.webp"
+                class="block img-hover rounded-lg overflow-hidden background-gallery-item w-full"
+                data-pswp-width="1260"
+                data-pswp-height="750"
+              >
+                <img 
+                  src="/crsmiimages/crsmi-3.webp" 
+                  alt="CRSMI platform analysis and user flow issues" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </a>
+              <a 
+                href="/crsmiimages/crsmi-4.webp"
+                class="block img-hover rounded-lg overflow-hidden background-gallery-item w-full"
+                data-pswp-width="1260"
+                data-pswp-height="750"
+              >
+                <img 
+                  src="/crsmiimages/crsmi-4.webp" 
+                  alt="CRSMI component audit and design system planning" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </section>
+        )}
+        
         <section class="mb-16">
           <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">The Problem</h2>
           <p class="text-secondary text-lg leading-relaxed">{project.problem}</p>
