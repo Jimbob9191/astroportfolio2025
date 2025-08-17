@@ -166,6 +166,8 @@ const nextProject = caseStudies[nextIndex];
           </section>
         )}
         
+        <slot />
+
         {project.slug === 'finance-app-redesign' && (
           <section class="mb-16">
             <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">The Solution</h2>
@@ -177,8 +179,6 @@ const nextProject = caseStudies[nextIndex];
             </p>
           </section>
         )}
-        
-        <slot />
 
         {project.slug === 'metamask-onboarding' && (
           <section class="mt-20 pt-16 border-t">
