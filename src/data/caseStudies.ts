@@ -399,9 +399,6 @@ export const caseStudies: CaseStudy[] = [
     approach: 'I analyzed the existing onboarding flow and identified key pain points in the user experience. My approach focused on creating consistency across all touchpoints, establishing clear visual hierarchy, and building trust through professional design patterns that align with financial application standards.',
     outcome: 'The redesigned onboarding experience provides a more cohesive and trustworthy first impression, with consistent styling, clear typography hierarchy, and improved color schemes that inspire confidence in new users entering the cryptocurrency space.',
     role: 'UX/UI Designer responsible for analyzing the existing experience, identifying pain points, and creating a comprehensive redesign of the onboarding flow.',
-    layout: 'grid',
-    timeline: '2 months',
-    client: 'Personal Project',
     team: ['UX Designer'],
     tools: ['Figma', 'Principle', 'Maze'],
     research: {
