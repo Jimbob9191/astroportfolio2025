@@ -448,25 +448,46 @@ export const caseStudies: CaseStudy[] = [
     },
     galleryImages: [
       {
-        thumbnail: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=600',
-        large: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        thumbnail: '/metamaskimages/metamask-4.webp',
+        large: '/metamaskimages/metamask-4.webp',
         width: 1260,
         height: 750,
-        alt: 'MetaMask onboarding before and after comparison'
+        alt: 'MetaMask redesigned onboarding screens'
       },
       {
-        thumbnail: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=600',
-        large: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        thumbnail: '/metamaskimages/metamask-5.webp',
+        large: '/metamaskimages/metamask-5.webp',
         width: 1260,
         height: 750,
-        alt: 'MetaMask redesigned onboarding flow'
+        alt: 'MetaMask onboarding flow improvements'
       },
       {
-        thumbnail: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=600',
-        large: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        thumbnail: '/metamaskimages/metamask-6.webp',
+        large: '/metamaskimages/metamask-6.webp',
         width: 1260,
         height: 750,
-        alt: 'MetaMask design system components'
+        alt: 'MetaMask design system and components'
+      },
+      {
+        thumbnail: '/metamaskimages/metamask-7.webp',
+        large: '/metamaskimages/metamask-7.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MetaMask typography and color improvements'
+      },
+      {
+        thumbnail: '/metamaskimages/metamask-8.webp',
+        large: '/metamaskimages/metamask-8.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MetaMask button and input styling'
+      },
+      {
+        thumbnail: '/metamaskimages/metamask-9.webp',
+        large: '/metamaskimages/metamask-9.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MetaMask final onboarding solution'
       }
     ]
   }
