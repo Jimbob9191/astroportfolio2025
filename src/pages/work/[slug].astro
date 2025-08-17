@@ -124,46 +124,89 @@ const galleryClass = getGalleryClass(layout);
   import 'photoswipe/dist/photoswipe.css';
 
   const initPhotoSwipe = () => {
+    // Initialize main gallery
     const gallery = document.querySelector('#gallery');
     
-    if (!gallery) return;
-    
-    const galleryItems = gallery.querySelectorAll('.gallery-item');
-    
-    galleryItems.forEach((item, index) => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        const options = {
-          gallery,
-          dataSource: Array.from(galleryItems).map(galleryItem => ({
-            src: galleryItem.href,
-            width: parseInt(galleryItem.getAttribute('data-pswp-width')),
-            height: parseInt(galleryItem.getAttribute('data-pswp-height')),
-            msrc: galleryItem.querySelector('img').src
-          })),
-          index,
-          showHideAnimationType: 'fade',
-          showAnimationDuration: 300,
-          hideAnimationDuration: 300,
-          bgOpacity: 0.8,
-          spacing: 0.1,
-          allowPanToNext: true,
-          maxSpreadZoom: 2,
-          getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
-          pinchToClose: true,
-          closeOnScroll: false,
-          closeOnVerticalDrag: true,
-          wheelToZoom: true,
-          padding: { top: 20, bottom: 20, left: 20, right: 20 },
-          fit: 'contain',
-          pswpModule: () => import('photoswipe')
-        };
-        
-        const lightbox = new PhotoSwipe(options);
-        lightbox.init();
+    if (gallery) {
+      const galleryItems = gallery.querySelectorAll('.gallery-item');
+      
+      galleryItems.forEach((item, index) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          const options = {
+            gallery,
+            dataSource: Array.from(galleryItems).map(galleryItem => ({
+              src: galleryItem.href,
+              width: parseInt(galleryItem.getAttribute('data-pswp-width')),
+              height: parseInt(galleryItem.getAttribute('data-pswp-height')),
+              msrc: galleryItem.querySelector('img').src
+            })),
+            index,
+            showHideAnimationType: 'fade',
+            showAnimationDuration: 300,
+            hideAnimationDuration: 300,
+            bgOpacity: 0.8,
+            spacing: 0.1,
+            allowPanToNext: true,
+            maxSpreadZoom: 2,
+            getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
+            pinchToClose: true,
+            closeOnScroll: false,
+            closeOnVerticalDrag: true,
+            wheelToZoom: true,
+            padding: { top: 20, bottom: 20, left: 20, right: 20 },
+            fit: 'contain',
+            pswpModule: () => import('photoswipe')
+          };
+          
+          const lightbox = new PhotoSwipe(options);
+          lightbox.init();
+        });
       });
-    });
+    }
+    
+    // Initialize problem gallery for MetaMask case study
+    const problemGallery = document.querySelector('#problem-gallery');
+    
+    if (problemGallery) {
+      const problemGalleryItems = problemGallery.querySelectorAll('.problem-gallery-item');
+      
+      problemGalleryItems.forEach((item, index) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          const options = {
+            gallery: problemGallery,
+            dataSource: Array.from(problemGalleryItems).map(galleryItem => ({
+              src: galleryItem.href,
+              width: parseInt(galleryItem.getAttribute('data-pswp-width')),
+              height: parseInt(galleryItem.getAttribute('data-pswp-height')),
+              msrc: galleryItem.querySelector('img').src
+            })),
+            index,
+            showHideAnimationType: 'fade',
+            showAnimationDuration: 300,
+            hideAnimationDuration: 300,
+            bgOpacity: 0.8,
+            spacing: 0.1,
+            allowPanToNext: true,
+            maxSpreadZoom: 2,
+            getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
+            pinchToClose: true,
+            closeOnScroll: false,
+            closeOnVerticalDrag: true,
+            wheelToZoom: true,
+            padding: { top: 20, bottom: 20, left: 20, right: 20 },
+            fit: 'contain',
+            pswpModule: () => import('photoswipe')
+          };
+          
+          const lightbox = new PhotoSwipe(options);
+          lightbox.init();
+        });
+      });
+    }
   };
 
   document.addEventListener('DOMContentLoaded', () => {
