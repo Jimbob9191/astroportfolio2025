@@ -191,12 +191,10 @@ export const caseStudies: CaseStudy[] = [
       before: {
         taskCompletionTime: '15 min avg',
         userSatisfaction: '65%',
-        supportTickets: '500/week'
       },
       after: {
         taskCompletionTime: '8 min avg',
         userSatisfaction: '92%',
-        supportTickets: '150/week'
       }
     },
     galleryImages: [
