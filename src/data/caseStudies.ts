@@ -144,27 +144,27 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: 'finance-app-redesign',
-    title: 'Finance App Redesign',
+    title: 'Redesigning A Client Management Portal',
     thumbnail: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     heroImage: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    categories: ['UX/UI Design', 'Product Strategy'],
-    overview: 'A comprehensive redesign of a fintech application, improving usability and engagement.',
-    problem: 'The existing finance app suffered from poor user engagement, confusing navigation, and outdated visual design.',
-    approach: 'I conducted extensive user research to identify pain points, created user flows and wireframes, and designed a new interface that prioritizes clarity and ease of use.',
-    outcome: 'The redesign resulted in a 45% increase in daily active users, a 30% reduction in support tickets, and significantly improved user satisfaction scores.',
+    categories: ['UX/UI Design', 'Product Strategy', 'B2B Software'],
+    overview: 'A comprehensive redesign of a client management portal, improving workflow efficiency and user experience for professional service teams.',
+    problem: 'The existing client management portal suffered from poor information architecture, inefficient workflows, and outdated visual design that hindered productivity for professional service teams.',
+    approach: 'I conducted extensive user research with account managers and client service teams to identify pain points, created optimized user flows and wireframes, and designed a new interface that prioritizes workflow efficiency and data accessibility.',
+    outcome: 'The redesign resulted in a 45% reduction in task completion time, a 30% reduction in support tickets, and significantly improved user satisfaction scores among professional service teams.',
     role: 'Lead UX/UI Designer responsible for research, wireframing, prototyping, and final design implementation.',
     layout: 'grid',
     timeline: '3 months',
-    client: 'FinTech Startup',
+    client: 'Professional Services Firm',
     team: ['UX Designer', 'UI Designer', '2 Developers', 'Product Manager'],
     tools: ['Figma', 'Maze', 'UserTesting', 'Principle'],
     research: {
       methods: ['User Interviews', 'Usability Testing', 'Analytics Review'],
-      findings: 'Through our research, we discovered that users struggled with complex financial terminology and found the transaction history difficult to navigate. The app\'s information architecture needed significant improvement.',
+      findings: 'Through our research, we discovered that account managers struggled with fragmented client information across multiple systems and found the client communication history difficult to navigate. The portal\'s information architecture needed significant improvement.',
       insights: [
         '87% of users found the navigation confusing',
-        'Users wanted clearer transaction categorization',
-        'Mobile usage was increasing but the experience wasn\'t optimized'
+        'Users wanted better client data organization and search functionality',
+        'Mobile usage was increasing but the experience wasn\'t optimized for field work'
       ]
     },
     process: {
@@ -189,13 +189,13 @@ export const caseStudies: CaseStudy[] = [
     },
     metrics: {
       before: {
+        taskCompletionTime: '15 min avg',
         userSatisfaction: '65%',
-        dailyActiveUsers: '10,000',
         supportTickets: '500/week'
       },
       after: {
+        taskCompletionTime: '8 min avg',
         userSatisfaction: '92%',
-        dailyActiveUsers: '14,500',
         supportTickets: '150/week'
       }
     },
@@ -205,14 +205,14 @@ export const caseStudies: CaseStudy[] = [
         large: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         width: 1260,
         height: 750,
-        alt: 'Finance app dashboard design'
+        alt: 'Client management portal dashboard design'
       },
       {
         thumbnail: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=600',
         large: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         width: 1260,
         height: 750,
-        alt: 'Finance app mobile screens'
+        alt: 'Client management portal mobile screens'
       }
     ]
   },
