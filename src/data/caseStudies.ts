@@ -398,7 +398,10 @@ export const caseStudies: CaseStudy[] = [
     problem: 'MetaMask has millions of users worldwide and a wide range of features that they can interact with. Upon opening the app for the first time, the user is walked through a short onboarding process in order to set up their wallet. For seasoned crypto enthusiasts this shouldn\'t be an issue, but for first timers this can be a little overwhelming or confusing. The process feels half hearted and unprofessional, with inconsistent styling of buttons, inputs and typography that reduces trust in the platform.',
     approach: 'I analyzed the existing onboarding flow and identified key pain points in the user experience. My approach focused on creating consistency across all touchpoints, establishing clear visual hierarchy, and building trust through professional design patterns that align with financial application standards.',
     outcome: 'The redesigned onboarding experience provides a more cohesive and trustworthy first impression, with consistent styling, clear typography hierarchy, and improved color schemes that inspire confidence in new users entering the cryptocurrency space.',
-    role: 'UX/UI Designer responsible for analyzing the existing experience, identifying pain points, and creating a comprehensive redesign of the onboarding flow.',
+    role: 'UX/UI Design',
+    layout: 'grid',
+    timeline: '1 afternoon',
+    client: 'MetaMask',
     team: ['UX Designer'],
     tools: ['Figma', 'Principle', 'Maze'],
     research: {
