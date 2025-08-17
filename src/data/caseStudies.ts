@@ -199,18 +199,53 @@ export const caseStudies: CaseStudy[] = [
     },
     galleryImages: [
       {
-        thumbnail: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=600',
-        large: 'https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        thumbnail: '/crsmiimages/crsmi-6.webp',
+        large: '/crsmiimages/crsmi-6.webp',
         width: 1260,
         height: 750,
-        alt: 'Client management portal dashboard design'
+        alt: 'CRSMI client management portal dashboard design'
       },
       {
-        thumbnail: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=600',
-        large: 'https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        thumbnail: '/crsmiimages/crsmi-7.webp',
+        large: '/crsmiimages/crsmi-7.webp',
         width: 1260,
         height: 750,
-        alt: 'Client management portal mobile screens'
+        alt: 'CRSMI client management portal interface design'
+      },
+      {
+        thumbnail: '/crsmiimages/crsmi-8.webp',
+        large: '/crsmiimages/crsmi-8.webp',
+        width: 1260,
+        height: 750,
+        alt: 'CRSMI client management portal features'
+      },
+      {
+        thumbnail: '/crsmiimages/crsmi-9.webp',
+        large: '/crsmiimages/crsmi-9.webp',
+        width: 1260,
+        height: 750,
+        alt: 'CRSMI client management portal user interface'
+      },
+      {
+        thumbnail: '/crsmiimages/crsmi-10.webp',
+        large: '/crsmiimages/crsmi-10.webp',
+        width: 1260,
+        height: 750,
+        alt: 'CRSMI client management portal design system'
+      },
+      {
+        thumbnail: '/crsmiimages/crsmi-4.webp',
+        large: '/crsmiimages/crsmi-4.webp',
+        width: 1260,
+        height: 750,
+        alt: 'CRSMI client management portal components'
+      },
+      {
+        thumbnail: '/crsmiimages/crsmi-5.webp',
+        large: '/crsmiimages/crsmi-5.webp',
+        width: 1260,
+        height: 750,
+        alt: 'CRSMI client management portal final design'
       }
     ]
   },
