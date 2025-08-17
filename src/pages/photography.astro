@@ -1,115 +1,72 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { photos } from '../data/photos';
+import Button from '../components/Button.astro';
 ---
 
 <Layout title="Photography | James — UX/UI Designer & Product Manager">
   <section class="section">
     <div class="container">
-      <h1 class="text-4xl md:text-6xl font-display font-medium mb-16">Photography</h1>
-      
-      <div class="masonry-grid" id="gallery">
-        {photos.map((photo, index) => (
-          <a 
-            href={photo.large} 
-            class="masonry-item case-study-card"
-            data-pswp-width={photo.width}
-            data-pswp-height={photo.height}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div class="img-hover rounded-[1.25rem] overflow-hidden">
-              <img 
-                src={photo.thumbnail} 
-                alt={`Photography sample ${index + 1}`}
-                class="w-full h-auto"
-                loading="lazy"
-              />
-            </div>
-          </a>
-        ))}
+      <div class="flex items-center justify-center min-h-[70vh]">
+        <div class="text-center max-w-2xl">
+          <h1 class="text-4xl md:text-6xl font-display font-medium mb-8">Photography</h1>
+          <div class="w-24 h-px bg-gray-300 mx-auto mb-8"></div>
+          <h2 class="text-2xl md:text-3xl font-display font-medium mb-6 text-secondary">Coming Soon</h2>
+          <p class="text-lg text-muted mb-10 max-w-lg mx-auto leading-relaxed">
+            I'm currently curating a collection of my photography work. This gallery will showcase 
+            landscapes, architecture, and travel photography from my adventures around the world.
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <Button href="/work" variant="outline" class="rounded-full bg-gray-100 text-primary hover:bg-transparent hover:border-primary hover:text-black inline-flex items-center py-3 px-6">
+              <span>View My Design Work</span>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="20" 
+                height="20" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="2" 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                class="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+              >
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </Button>
+            <Button href="mailto:jamesmolyneuxbirch@gmail.com" variant="outline" class="rounded-full bg-transparent text-primary hover:bg-primary hover:text-white border-primary inline-flex items-center py-3 px-6">
+              <span>Get In Touch</span>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="20" 
+                height="20" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="2" 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                class="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+              >
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </Layout>
 
-<script>
-  import PhotoSwipe from 'photoswipe';
-  import 'photoswipe/dist/photoswipe.css';
-
-  const initPhotoSwipe = () => {
-    const gallery = document.querySelector('#gallery');
-    
-    if (!gallery) return;
-    
-    const galleryItems = gallery.querySelectorAll('a');
-    
-    galleryItems.forEach((item, index) => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        const options = {
-          gallery,
-          dataSource: Array.from(galleryItems).map(galleryItem => ({
-            src: galleryItem.href,
-            width: parseInt(galleryItem.getAttribute('data-pswp-width')),
-            height: parseInt(galleryItem.getAttribute('data-pswp-height')),
-            msrc: galleryItem.querySelector('img').src
-          })),
-          index,
-          showHideAnimationType: 'fade',
-          showAnimationDuration: 300,
-          hideAnimationDuration: 300,
-          bgOpacity: 0.8,
-          spacing: 0.1,
-          allowPanToNext: true,
-          maxSpreadZoom: 2,
-          getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
-          pinchToClose: true,
-          closeOnScroll: false,
-          closeOnVerticalDrag: true,
-          wheelToZoom: true,
-          padding: { top: 20, bottom: 20, left: 20, right: 20 },
-          fit: 'contain',
-          pswpModule: () => import('photoswipe')
-        };
-        
-        const lightbox = new PhotoSwipe(options);
-        lightbox.init();
-      });
-    });
-  };
-
-  document.addEventListener('DOMContentLoaded', initPhotoSwipe);
-</script>
-
 <style>
-  .masonry-grid {
-    column-count: 1;
-    column-gap: 20px;
+  /* Add subtle animation to the coming soon text */
+  h2 {
+    animation: fadeIn 2s ease-in-out;
   }
   
-  @media (min-width: 640px) {
-    .masonry-grid {
-      column-count: 2;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .masonry-grid {
-      column-count: 3;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .masonry-grid {
-      column-count: 4;
-    }
-  }
-  
-  .masonry-item {
-    break-inside: avoid;
-    margin-bottom: 20px;
-    display: block;
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
 </style>
