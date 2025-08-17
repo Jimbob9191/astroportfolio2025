@@ -169,7 +169,12 @@ const nextProject = caseStudies[nextIndex];
         <slot />
 
 
-        {project.slug === 'metamask-onboarding' && (
+      </div>
+    </div>
+    
+    {project.slug === 'metamask-onboarding' && (
+      <div class="container">
+        <div class="max-w-3xl mx-auto">
           <section class="mt-20 pt-16 border-t">
             <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">The Solution</h2>
             <p class="text-secondary text-lg leading-relaxed mb-6">
@@ -189,22 +194,6 @@ const nextProject = caseStudies[nextIndex];
                 Adjust the colour scheme to inspire trust.
               </li>
             </ul>
-          </section>
-        )}
-      </div>
-    </div>
-    
-    {project.slug === 'finance-app-redesign' && (
-      <div class="container">
-        <div class="max-w-3xl mx-auto">
-          <section class="mb-20">
-            <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">The Solution</h2>
-            <p class="text-secondary text-lg leading-relaxed mb-6">
-              I started by talking with key stakeholders in the business, such as account managers and the compliance team, before talking to select clients and sending out surveys to get feedback on what tools they use, what can be improved and what they struggle with. I combined this with heatmapping and user recordings to further refine the changes that were needed.
-            </p>
-            <p class="text-secondary text-lg leading-relaxed">
-              After I had a clearer scope of the project, I created a design system for the site (and other sites in the business) to use. This included colours, fonts, buttons, inputs, graphs, tables and layout conventions. I also worked closely with the development team to implement new features such as notifications, a quick onboarding feature and a dark mode. Before QAing and testing each feature before deployment.
-            </p>
           </section>
         </div>
       </div>
