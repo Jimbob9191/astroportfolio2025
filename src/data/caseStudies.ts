@@ -40,6 +40,109 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: 'metamask-onboarding',
+    title: 'Improving MetaMask\'s Onboarding',
+    thumbnail: '/metamaskimages/metamask-6.webp',
+    heroImage: '/metamaskimages/metamask-1.webp',
+    categories: ['UX/UI Design', 'Mobile App', 'Fintech'],
+    overview: 'A comprehensive redesign of MetaMask\'s mobile onboarding experience to reduce confusion and build trust for new cryptocurrency users.',
+    problem: 'MetaMask has millions of users worldwide and a wide range of features that they can interact with. Upon opening the app for the first time, the user is walked through a short onboarding process in order to set up their wallet. For seasoned crypto enthusiasts this shouldn\'t be an issue, but for first timers this can be a little overwhelming or confusing. The process feels half hearted and unprofessional, with inconsistent styling of buttons, inputs and typography that reduces trust in the platform.',
+    approach: 'I analyzed the existing onboarding flow and identified key pain points in the user experience. My approach focused on creating consistency across all touchpoints, establishing clear visual hierarchy, and building trust through professional design patterns that align with financial application standards.',
+    outcome: 'The redesigned onboarding experience provides a more cohesive and trustworthy first impression, with consistent styling, clear typography hierarchy, and improved color schemes that inspire confidence in new users entering the cryptocurrency space.',
+    role: 'UX/UI Design',
+    layout: 'grid',
+    timeline: '1 afternoon',
+    client: 'MetaMask',
+    team: ['UX Designer'],
+    tools: ['Figma', 'Principle', 'Maze'],
+    research: {
+      methods: ['Heuristic Evaluation', 'Competitive Analysis', 'User Flow Analysis'],
+      findings: 'The existing onboarding process had four main steps: accepting terms of use, creating a password, reviewing recovery phrase, and entering the recovery phrase. While brief, the information was presented in an inconsistent and confusing format with significant variation in styling of buttons, inputs, and typography.',
+      insights: [
+        'Inconsistent UI patterns reduced user trust',
+        'Typography hierarchy was unclear across steps',
+        'Button and input styling varied significantly',
+        'Color scheme didn\'t inspire confidence for financial app'
+      ]
+    },
+    process: {
+      steps: [
+        {
+          title: 'Analysis',
+          description: 'Conducted thorough analysis of the existing onboarding flow, identifying inconsistencies and trust issues in the current design.'
+        },
+        {
+          title: 'Design System',
+          description: 'Established clear typography hierarchy, consolidated input and button styling, and developed a trustworthy color scheme.'
+        },
+        {
+          title: 'Redesign',
+          description: 'Applied the new design system across all onboarding steps to create a cohesive and professional experience.'
+        },
+        {
+          title: 'Validation',
+          description: 'Tested the redesigned flow to ensure improved clarity and trust-building throughout the onboarding process.'
+        }
+      ]
+    },
+    metrics: {
+      before: {
+        userTrust: 'Low',
+        designConsistency: '30%',
+        completionClarity: 'Poor'
+      },
+      after: {
+        userTrust: 'High',
+        designConsistency: '95%',
+        completionClarity: 'Excellent'
+      }
+    },
+    galleryImages: [
+      {
+        thumbnail: '/metamaskimages/metamask-4.webp',
+        large: '/metamaskimages/metamask-4.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MetaMask redesigned onboarding screens'
+      },
+      {
+        thumbnail: '/metamaskimages/metamask-5.webp',
+        large: '/metamaskimages/metamask-5.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MetaMask onboarding flow improvements'
+      },
+      {
+        thumbnail: '/metamaskimages/metamask-6.webp',
+        large: '/metamaskimages/metamask-6.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MetaMask design system and components'
+      },
+      {
+        thumbnail: '/metamaskimages/metamask-7.webp',
+        large: '/metamaskimages/metamask-7.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MetaMask typography and color improvements'
+      },
+      {
+        thumbnail: '/metamaskimages/metamask-8.webp',
+        large: '/metamaskimages/metamask-8.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MetaMask button and input styling'
+      },
+      {
+        thumbnail: '/metamaskimages/metamask-9.webp',
+        large: '/metamaskimages/metamask-9.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MetaMask final onboarding solution'
+      }
+    ]
+  },
+  {
     slug: 'finance-app-redesign',
     title: 'Finance App Redesign',
     thumbnail: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -387,5 +490,5 @@ export const caseStudies: CaseStudy[] = [
         alt: 'Design system final presentation'
       }
     ]
-  }
+  },
 ];
