@@ -145,7 +145,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'finance-app-redesign',
     title: 'Redesigning A Client Management Portal',
-    thumbnail: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    thumbnail: '/crsmiimages/crsmi-1.webp',
     heroImage: '/crsmiimages/crsmi-1.webp',
     categories: ['UX/UI Design', 'Product Strategy', 'B2B Software'],
     overview: 'A comprehensive redesign of a client management portal, improving workflow efficiency and user experience for professional service teams.',
