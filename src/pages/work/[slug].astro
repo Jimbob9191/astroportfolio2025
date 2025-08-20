@@ -53,6 +53,26 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
+  {project.slug === 'payment-portal-redesign' && (
+    <section class="mb-20">
+      <div class="grid grid-cols-1 gap-8" id="research-gallery-payment">
+        <a 
+          href="/mycrsimages/mycrs-3.webp"
+          class="block img-hover rounded-lg overflow-hidden research-gallery-payment-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/mycrsimages/mycrs-3.webp" 
+            alt="MYCRS payment portal research and user analysis findings" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </section>
+  )}
+
   {process && (
     <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Process</h2>
@@ -76,26 +96,6 @@ const galleryClass = getGalleryClass(layout);
       <p class="text-secondary text-lg leading-relaxed">
         After I had a clearer scope of the project, I created a design system for the site (and other sites in the business) to use. This included colours, fonts, buttons, inputs, graphs, tables and layout conventions. I also worked closely with the development team to implement new features such as notifications, a quick onboarding feature and a dark mode. Before QAing and testing each feature before deployment.
       </p>
-    </section>
-  )}
-
-  {project.slug === 'payment-portal-redesign' && (
-    <section class="mb-20">
-      <div class="grid grid-cols-1 gap-8" id="research-gallery-payment">
-        <a 
-          href="/mycrsimages/mycrs-3.webp"
-          class="block img-hover rounded-lg overflow-hidden research-gallery-payment-item w-full"
-          data-pswp-width="1260"
-          data-pswp-height="750"
-        >
-          <img 
-            src="/mycrsimages/mycrs-3.webp" 
-            alt="MYCRS payment portal research and user analysis findings" 
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </a>
-      </div>
     </section>
   )}
 
