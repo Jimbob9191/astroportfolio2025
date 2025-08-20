@@ -133,6 +133,26 @@ const nextProject = caseStudies[nextIndex];
           <p class="text-secondary text-lg leading-relaxed">{project.problem}</p>
         </section>
         
+        {project.slug === 'payment-portal-redesign' && (
+          <section class="mb-16">
+            <div class="grid grid-cols-1 gap-8" id="problem-gallery-payment">
+              <a 
+                href="/mycrsimages/mycrs-2.webp"
+                class="block img-hover rounded-lg overflow-hidden problem-gallery-payment-item w-full"
+                data-pswp-width="1260"
+                data-pswp-height="750"
+              >
+                <img 
+                  src="/mycrsimages/mycrs-2.webp" 
+                  alt="MYCRS original payment portal showing outdated design and accessibility issues" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </section>
+        )}
+        
         {project.slug === 'metamask-onboarding' && (
           <section class="mb-16">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="problem-gallery">
