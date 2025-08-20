@@ -220,6 +220,48 @@ const galleryClass = getGalleryClass(layout);
       });
     }
     
+    // Initialize problem gallery for Payment Portal case study
+    const problemGalleryPayment = document.querySelector('#problem-gallery-payment');
+    
+    if (problemGalleryPayment) {
+      const problemGalleryPaymentItems = problemGalleryPayment.querySelectorAll('.problem-gallery-payment-item');
+      
+      problemGalleryPaymentItems.forEach((item, index) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          const options = {
+            gallery: problemGalleryPayment,
+            dataSource: Array.from(problemGalleryPaymentItems).map(galleryItem => ({
+              src: galleryItem.href,
+              width: parseInt(galleryItem.getAttribute('data-pswp-width')),
+              height: parseInt(galleryItem.getAttribute('data-pswp-height')),
+              msrc: galleryItem.querySelector('img').src
+            })),
+            index,
+            showHideAnimationType: 'fade',
+            showAnimationDuration: 300,
+            hideAnimationDuration: 300,
+            bgOpacity: 0.8,
+            spacing: 0.1,
+            allowPanToNext: true,
+            maxSpreadZoom: 2,
+            getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
+            pinchToClose: true,
+            closeOnScroll: false,
+            closeOnVerticalDrag: true,
+            wheelToZoom: true,
+            padding: { top: 20, bottom: 20, left: 20, right: 20 },
+            fit: 'contain',
+            pswpModule: () => import('photoswipe')
+          };
+          
+          const lightbox = new PhotoSwipe(options);
+          lightbox.init();
+        });
+      });
+    }
+    
     // Initialize problem gallery for MetaMask case study
     const problemGallery = document.querySelector('#problem-gallery');
     
