@@ -252,7 +252,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'payment-portal-redesign',
     title: 'Redesigning A Payment Portal',
-    thumbnail: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    thumbnail: '/mycrsimages/mycrs-1.webp',
     heroImage: 'https://images.pexels.com/photos/6956800/pexels-photo-6956800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     categories: ['UX/UI Design', 'Mobile Optimization', 'Accessibility'],
     overview: 'A comprehensive redesign of MYCRS payment portal, transforming it from a desktop-focused platform to a mobile-first solution that improved user trust and payment completion rates.',
