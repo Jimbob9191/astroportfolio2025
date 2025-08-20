@@ -312,18 +312,39 @@ export const caseStudies: CaseStudy[] = [
     },
     galleryImages: [
       {
-        thumbnail: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=600',
-        large: 'https://images.pexels.com/photos/6802051/pexels-photo-6802051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        thumbnail: '/mycrsimages/mycrs-8.webp',
+        large: '/mycrsimages/mycrs-8.webp',
         width: 1260,
         height: 750,
-        alt: 'E-commerce platform user flow'
+        alt: 'MYCRS payment portal redesign interface'
       },
       {
-        thumbnail: 'https://images.pexels.com/photos/6802062/pexels-photo-6802062.jpeg?auto=compress&cs=tinysrgb&w=600',
-        large: 'https://images.pexels.com/photos/6802062/pexels-photo-6802062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        thumbnail: '/mycrsimages/mycrs-5.webp',
+        large: '/mycrsimages/mycrs-5.webp',
         width: 1260,
         height: 750,
-        alt: 'E-commerce platform wireframes'
+        alt: 'MYCRS payment portal user experience improvements'
+      },
+      {
+        thumbnail: '/mycrsimages/mycrs-6.webp',
+        large: '/mycrsimages/mycrs-6.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MYCRS payment portal mobile optimization'
+      },
+      {
+        thumbnail: '/mycrsimages/mycrs-7.webp',
+        large: '/mycrsimages/mycrs-7.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MYCRS payment portal accessibility features'
+      },
+      {
+        thumbnail: '/mycrsimages/mycrs-4.webp',
+        large: '/mycrsimages/mycrs-4.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MYCRS payment portal design system'
       }
     ]
   },
