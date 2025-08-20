@@ -250,60 +250,64 @@ export const caseStudies: CaseStudy[] = [
     ]
   },
   {
-    slug: 'ecommerce-platform',
-    title: 'E-commerce Platform',
+    slug: 'payment-portal-redesign',
+    title: 'Redesigning A Payment Portal',
     thumbnail: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     heroImage: 'https://images.pexels.com/photos/6956800/pexels-photo-6956800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    categories: ['UX Research', 'UI Design', 'Product Management'],
-    overview: 'An end-to-end e-commerce solution focused on conversion optimization and seamless user experience.',
-    problem: 'The client needed a modern e-commerce platform that would improve conversion rates and provide a better mobile shopping experience.',
-    approach: 'I led a cross-functional team through the product development lifecycle, from research and prototyping to implementation and testing.',
-    outcome: 'The new platform achieved a 60% increase in mobile conversions and a 25% overall increase in sales within the first three months.',
-    role: 'Product Manager and UX Designer, overseeing the entire project from concept to launch.',
+    categories: ['UX/UI Design', 'Mobile Optimization', 'Accessibility'],
+    overview: 'A comprehensive redesign of MYCRS payment portal, transforming it from a desktop-focused platform to a mobile-first solution that improved user trust and payment completion rates.',
+    problem: 'The portal was outdated, last redesigned in 2018 with little to no consideration for accessibility or user experience. The vast majority of the site functioned through javascript and so errors were inevitable no matter the device a user was trying to access the site from. This limited accessibility and the prominence of bugs on the site would often result in negative reviews on platforms such as Google or Trustpilot which would then in turn make a visiting customers impression of CRS worse.',
+    approach: 'I worked with the web development team to improve the user experience on mobile to take our platform back to a market-leading position as it had been in the past. Taking into account accessibility, customer satisfaction and future expandability.',
+    outcome: 'After shipping the first iteration of the new portal in October 2021 we saw an immediate decrease in bounce rate of nearly 20%, meaning users were much more trusting of the site from the get-go. We also continued to track payment performance, and users on the new portal were 20% more likely to clear their account in a single payment during their first visit to the site, whilst users setting up a payment arrangement were 50% more likely to make a token payment on the first day.',
+    role: 'Lead UX/UI Designer responsible for overhauling the site from a design perspective and getting it to a place of security, upon which we could then build.',
     layout: 'masonry',
-    timeline: '6 months',
-    client: 'Retail Chain',
-    team: ['Product Manager', 'UX Designer', '3 Developers', 'QA Engineer'],
-    tools: ['Shopify', 'Figma', 'Hotjar', 'Google Analytics'],
+    timeline: '8 months',
+    client: 'CRS',
+    team: ['Lead Designer', 'Web Development Team', 'UX Researcher'],
+    tools: ['Figma', 'Hotjar', 'Google Analytics', 'Trustpilot Analytics'],
     research: {
-      methods: ['A/B Testing', 'Heat Mapping', 'Customer Surveys'],
-      findings: 'Mobile users were abandoning carts due to a complicated checkout process and slow page load times. Desktop conversion rates were significantly higher than mobile.',
+      methods: ['Heat Mapping', 'User Personas', 'Analytics Review', 'Customer Feedback Analysis'],
+      findings: 'MYCRS was originally built for desktop devices with the option of access via mobile. By late 2019 it was obvious that consumers had moved in their masses to mobile devices and the portal would now receive 95% of its traffic from mobile devices. The homepage of the site did not include any methods of contact or context for a visiting customer other than a login form requesting 6 different pieces of sensitive information which were usually met with a high degree of scepticism resulting in a bounce rate of over 50%.',
       insights: [
-        'Mobile cart abandonment rate was 78%',
-        'Page load times exceeded 5 seconds on mobile',
-        'Users requested better product filtering options'
+        'Bounce rates in excess of 50%',
+        'Lots of bugs and poor navigation',
+        'Bad accessibility causing user frustration',
+        'Negative Trustpilot reviews affecting company reputation',
+        'Loss in potential profit, driving more traffic to the contact centre'
       ]
     },
     process: {
       steps: [
         {
-          title: 'Analysis',
-          description: 'Analyzed existing platform performance and identified key areas for improvement.'
+          title: 'Research & Analysis',
+          description: 'Conducted heatmapping, created user personas, and analyzed customer feedback to understand pain points in the existing portal.'
         },
         {
-          title: 'Strategy',
-          description: 'Developed a comprehensive strategy focusing on mobile optimization and conversion rate improvement.'
+          title: 'Restructuring',
+          description: 'Restructured user flows that were easier to follow and streamlined the login process to reduce user skepticism.'
         },
         {
-          title: 'Implementation',
-          description: 'Rebuilt the platform with a mobile-first approach and optimized checkout flow.'
+          title: 'Design & Development',
+          description: 'Tweaked and consolidated the existing design style for consistency, designed clearer visual feedback methods, and created an interactive FAQ section.'
         },
         {
-          title: 'Optimization',
-          description: 'Continuously monitored performance metrics and made iterative improvements.'
+          title: 'Launch & Monitoring',
+          description: 'Shipped the first iteration in October 2021 and continuously monitored payment performance and user feedback.'
         }
       ]
     },
     metrics: {
       before: {
-        mobileConversion: '1.2%',
-        pageLoadTime: '5.2s',
-        cartAbandonment: '78%'
+        bounceRate: '50%+',
+        singlePaymentCompletion: 'Baseline',
+        tokenPaymentRate: 'Baseline',
+        trustpilotReviews: 'Negative'
       },
       after: {
-        mobileConversion: '3.5%',
-        pageLoadTime: '2.1s',
-        cartAbandonment: '45%'
+        bounceRate: '30%',
+        singlePaymentCompletion: '+20%',
+        tokenPaymentRate: '+50%',
+        trustpilotReviews: 'Positive'
       }
     },
     galleryImages: [
