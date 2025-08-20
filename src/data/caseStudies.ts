@@ -301,7 +301,6 @@ export const caseStudies: CaseStudy[] = [
         bounceRate: '50%+',
         singlePaymentCompletion: 'Baseline',
         tokenPaymentRate: 'Baseline',
-        trustpilotReviews: 'Negative'
       },
       after: {
         bounceRate: '30%',
