@@ -306,8 +306,7 @@ export const caseStudies: CaseStudy[] = [
       after: {
         bounceRate: '30%',
         singlePaymentCompletion: '+20%',
-        tokenPaymentRate: '+50%',
-        trustpilotReviews: 'Positive'
+        tokenPaymentRate: '+50%'
       }
     },
     galleryImages: [
