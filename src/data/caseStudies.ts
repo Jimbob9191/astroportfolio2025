@@ -346,7 +346,7 @@ export const caseStudies: CaseStudy[] = [
     team: ['Product Manager', 'UX Designer', '4 Developers', 'DevOps Engineer', 'QA Specialist'],
     tools: ['Figma', 'Shopify Plus', 'Google Analytics', 'Hotjar', 'Miro', 'Jira'],
     research: {
-      methods: ['User Journey Mapping', 'Technical Audit', 'Competitive Analysis', 'Stakeholder Interviews', 'Performance Testing'],
+      methods: ['Performance Profiling', 'Stakeholder Interviews', 'Parity Mapping', 'Integration Review', 'Heat Mapping', 'Analytics Review'],
       findings: 'The legacy platform was built on outdated technology that couldn\'t scale with business growth. Performance issues were driving customers away, and the inability to create distinct brand experiences was limiting market expansion opportunities.',
       insights: [
         'Page load times averaged 8+ seconds on mobile, well above the 3-second threshold that causes significant user drop-off',
