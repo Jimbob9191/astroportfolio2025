@@ -262,7 +262,7 @@ export const caseStudies: CaseStudy[] = [
     role: 'Lead UX/UI Designer',
     layout: 'masonry',
     timeline: '8 months',
-    client: 'CRS',
+    client: 'CRS / Finance',
     team: ['Lead Designer', 'Web Development Team', 'UX Researcher'],
     tools: ['Figma', 'Hotjar', 'Google Analytics', 'Trustpilot Analytics'],
     research: {
