@@ -46,7 +46,7 @@ export const caseStudies: CaseStudy[] = [
     slug: 'ecommerce-replatforming',
     title: 'Replatforming and White Labeling an Ecommerce Store for Market Expansion',
     thumbnail: '/ecommerceimages/ecommerce-1.webp',
-    heroImage: '/ecommerceimages/ecommerce-1.webp',
+    heroImage: '/jones/jones-10.webp',
     categories: ['Product Strategy', 'UX/UI Design', 'E-commerce'],
     overview: 'A comprehensive replatforming project that transformed a legacy e-commerce system into a scalable, white-label solution, enabling rapid market expansion across multiple brands and territories.',
     problem: 'The team was spending significant time duplicating work, fixing avoidable errors, and maintaining divergent patterns across brands. This created:\n\n* Operational drag (duplicate content updates, disjointed releases).\n* UX inconsistency across brands.\n* Slower experimentation and fragmented analytics.\n\nWe had already rebuilt the main Pavers site from Nuxt to Shopify Hydrogen headless with a clean, accessible codebase and embedded CRO wins. The next step was to bring Jones Bootmaker onto the same platform via a white‑label approach so we could maintain one codebase, multiple brands.',
