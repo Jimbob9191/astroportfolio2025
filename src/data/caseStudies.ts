@@ -43,6 +43,90 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: 'payment-portal-redesign',
+    title: 'Redesigning A Payment Portal',
+    thumbnail: '/mycrsimages/mycrs-1.webp',
+    heroImage: '/mycrsimages/mycrs-1.webp',
+    categories: ['UX/UI Design', 'Mobile Optimisation', 'Accessibility'],
+    overview: 'A comprehensive redesign of MYCRS payment portal, transforming it from a desktop-focused platform to a mobile-first solution that improved user trust and payment completion rates.',
+    problem: 'By 2019, the customer portal had become outdated and ineffective. The last redesign in 2017 had overlooked accessibility standards and failed to prioritise user experience. The platform\'s heavy reliance on JavaScript caused frequent errors across devices, resulting in an inconsistent and frustrating user journey. Customers were often unable to complete essential tasks smoothly, leading to decreased trust, reduced satisfaction, and ultimately, a measurable decline in revenue.\n\nI aimed to redesign the customer portal to deliver a consistent, accessible, and user friendly experience across devices, restoring customer trust, increasing satisfaction and driving revenue higher.',
+    approach: 'I worked with the web development team to improve the user experience on mobile to take our platform back to a market-leading position as it had been in the past. Taking into account accessibility, customer satisfaction and future expandability.',
+    outcome: 'After shipping the first iteration of the new portal in October 2021 we saw an immediate decrease in bounce rate of nearly 20%, meaning users were much more trusting of the site from the get-go. We also continued to track payment performance, and users on the new portal were 20% more likely to clear their account in a single payment during their first visit to the site, whilst users setting up a payment arrangement were 50% more likely to make a token payment on the first day.',
+    role: 'Lead UX/UI Designer',
+    layout: 'masonry',
+    timeline: '2 months',
+    client: 'CRS / Finance',
+    team: ['Lead Designer', 'Web Development Team', 'UX Researcher'],
+    tools: ['Figma', 'Hotjar', 'Google Analytics', 'Trustpilot Analytics'],
+    research: {
+      methods: ['Heat Mapping', 'User Personas', 'Analytics Review', 'Customer Feedback Analysis'],
+      insights: [
+        'Customers did not immediately recognise the CRS brand and often dismissed it as unrelated to their debts. This led to confusion, mistrust and lower engagement with the service.',
+        'Most customer interactions took place via SMS and email, typically accessed on a customer\'s mobile device during the workday or shortly after. To support this behaviour, a quick and seamless login process is essential to ensure an efficient and frictionless user journey.',
+        'Frustrating experiences were leading to negative online reviews. Poor ratings then eroded trust, discourage new customers, and reinforce a cycle of low expectations and reduced engagement.',
+        'Technical issues were reducing customer trust, stopping users from completing payments even after login had been completed.',
+        'The homepage demanded too much personal information upfront, discouraging customers before they could explore.',
+        'Before login, customers were given just enough information to contact CRS, but not enough to build the trust needed to make payments directly, leading most to reach out by email or phone first.'
+      ]
+    },
+    process: {
+      steps: [],
+      details: 'As the lead designer, I was responsible for a complete overhaul of the portal\'s design, ensuring it was secure, intuitive and aligned with business goals. Given the portal\'s role as a primary revenue channel, timelines were extremely tight. My process consisted of:\n\n* Implementing heat mapping to analyse behaviour and identify pain points.\n* Conducted interviews with stakeholders and customer support agents to get a better understanding of the business goals and customer behaviour.\n* Creating user personas to guide design decisions.\n* Conducted quick user testing sessions internally using prototypes and wireframes to get early feedback.\n* Restructuring user flows to be more intuitive.\n* Establishing a consistent design system, consolidating the existing style for clarity and coherence.'
+    },
+    outcomes: {
+      content: 'Throughout the project we had learned a lot about the user base and the niche use cases that users were running into whilst trying to use our platform. Whilst we couldn\'t implement all the functionality we wanted to at launch, we did manage to ship with a set of new features and some great performance improvements:\n\n* As we had to verify users identities with sensitive information, we changed some of the login questions to be hidden until a user had submitted a single piece of information, this played into the hands of commitment bias.\n* We developed some self-service tools inside the portal, including an interactive FAQ and account management features to reduce reliance on the call centre.\n* We design and developed an early example of CRS\' white label capabilities to expand the platform\'s potential for future growth. The added white labelling of customers brands would later boost trust significantly.\n* We added much clearer interaction feedback to assist customers from the beginning to the end of the payment process, reassuring customers whenever possible.\n* We implemented a much more in-depth account dashboard that allowed customers to fully understand the length of their payment arrangement, how much they were paying and when.'
+    },
+    metrics: {
+      before: {
+        bounceRate: '50%+',
+        singlePaymentCompletion: 'Baseline',
+        tokenPaymentRate: 'Baseline',
+      },
+      after: {
+        bounceRate: '30%',
+        singlePaymentCompletion: '+20%',
+        tokenPaymentRate: '+50%'
+      }
+    },
+    galleryImages: [
+      {
+        thumbnail: '/mycrsimages/mycrs-8.webp',
+        large: '/mycrsimages/mycrs-8.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MYCRS payment portal redesign interface'
+      },
+      {
+        thumbnail: '/mycrsimages/mycrs-5.webp',
+        large: '/mycrsimages/mycrs-5.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MYCRS payment portal user experience improvements'
+      },
+      {
+        thumbnail: '/mycrsimages/mycrs-6.webp',
+        large: '/mycrsimages/mycrs-6.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MYCRS payment portal mobile optimization'
+      },
+      {
+        thumbnail: '/mycrsimages/mycrs-7.webp',
+        large: '/mycrsimages/mycrs-7.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MYCRS payment portal accessibility features'
+      },
+      {
+        thumbnail: '/mycrsimages/mycrs-4.webp',
+        large: '/mycrsimages/mycrs-4.webp',
+        width: 1260,
+        height: 750,
+        alt: 'MYCRS payment portal design system'
+      }
+    ]
+  },
+  {
     slug: 'metamask-onboarding',
     title: 'Improving MetaMask\'s Onboarding',
     thumbnail: '/metamaskimages/metamask-6.webp',
@@ -249,90 +333,6 @@ export const caseStudies: CaseStudy[] = [
         width: 1260,
         height: 750,
         alt: 'CRSMI client management portal final design'
-      }
-    ]
-  },
-  {
-    slug: 'payment-portal-redesign',
-    title: 'Redesigning A Payment Portal',
-    thumbnail: '/mycrsimages/mycrs-1.webp',
-    heroImage: '/mycrsimages/mycrs-1.webp',
-    categories: ['UX/UI Design', 'Mobile Optimisation', 'Accessibility'],
-    overview: 'A comprehensive redesign of MYCRS payment portal, transforming it from a desktop-focused platform to a mobile-first solution that improved user trust and payment completion rates.',
-    problem: 'By 2019, the customer portal had become outdated and ineffective. The last redesign in 2017 had overlooked accessibility standards and failed to prioritise user experience. The platform\'s heavy reliance on JavaScript caused frequent errors across devices, resulting in an inconsistent and frustrating user journey. Customers were often unable to complete essential tasks smoothly, leading to decreased trust, reduced satisfaction, and ultimately, a measurable decline in revenue.\n\nI aimed to redesign the customer portal to deliver a consistent, accessible, and user friendly experience across devices, restoring customer trust, increasing satisfaction and driving revenue higher.',
-    approach: 'I worked with the web development team to improve the user experience on mobile to take our platform back to a market-leading position as it had been in the past. Taking into account accessibility, customer satisfaction and future expandability.',
-    outcome: 'After shipping the first iteration of the new portal in October 2021 we saw an immediate decrease in bounce rate of nearly 20%, meaning users were much more trusting of the site from the get-go. We also continued to track payment performance, and users on the new portal were 20% more likely to clear their account in a single payment during their first visit to the site, whilst users setting up a payment arrangement were 50% more likely to make a token payment on the first day.',
-    role: 'Lead UX/UI Designer',
-    layout: 'masonry',
-    timeline: '2 months',
-    client: 'CRS / Finance',
-    team: ['Lead Designer', 'Web Development Team', 'UX Researcher'],
-    tools: ['Figma', 'Hotjar', 'Google Analytics', 'Trustpilot Analytics'],
-    research: {
-      methods: ['Heat Mapping', 'User Personas', 'Analytics Review', 'Customer Feedback Analysis'],
-      insights: [
-        'Customers did not immediately recognise the CRS brand and often dismissed it as unrelated to their debts. This led to confusion, mistrust and lower engagement with the service.',
-        'Most customer interactions took place via SMS and email, typically accessed on a customer\'s mobile device during the workday or shortly after. To support this behaviour, a quick and seamless login process is essential to ensure an efficient and frictionless user journey.',
-        'Frustrating experiences were leading to negative online reviews. Poor ratings then eroded trust, discourage new customers, and reinforce a cycle of low expectations and reduced engagement.',
-        'Technical issues were reducing customer trust, stopping users from completing payments even after login had been completed.',
-        'The homepage demanded too much personal information upfront, discouraging customers before they could explore.',
-        'Before login, customers were given just enough information to contact CRS, but not enough to build the trust needed to make payments directly, leading most to reach out by email or phone first.'
-      ]
-    },
-    process: {
-      steps: [],
-      details: 'As the lead designer, I was responsible for a complete overhaul of the portal\'s design, ensuring it was secure, intuitive and aligned with business goals. Given the portal\'s role as a primary revenue channel, timelines were extremely tight. My process consisted of:\n\n* Implementing heat mapping to analyse behaviour and identify pain points.\n* Conducted interviews with stakeholders and customer support agents to get a better understanding of the business goals and customer behaviour.\n* Creating user personas to guide design decisions.\n* Conducted quick user testing sessions internally using prototypes and wireframes to get early feedback.\n* Restructuring user flows to be more intuitive.\n* Establishing a consistent design system, consolidating the existing style for clarity and coherence.'
-    },
-    outcomes: {
-      content: 'Throughout the project we had learned a lot about the user base and the niche use cases that users were running into whilst trying to use our platform. Whilst we couldn\'t implement all the functionality we wanted to at launch, we did manage to ship with a set of new features and some great performance improvements:\n\n* As we had to verify users identities with sensitive information, we changed some of the login questions to be hidden until a user had submitted a single piece of information, this played into the hands of commitment bias.\n* We developed some self-service tools inside the portal, including an interactive FAQ and account management features to reduce reliance on the call centre.\n* We design and developed an early example of CRS\' white label capabilities to expand the platform\'s potential for future growth. The added white labelling of customers brands would later boost trust significantly.\n* We added much clearer interaction feedback to assist customers from the beginning to the end of the payment process, reassuring customers whenever possible.\n* We implemented a much more in-depth account dashboard that allowed customers to fully understand the length of their payment arrangement, how much they were paying and when.'
-    },
-    metrics: {
-      before: {
-        bounceRate: '50%+',
-        singlePaymentCompletion: 'Baseline',
-        tokenPaymentRate: 'Baseline',
-      },
-      after: {
-        bounceRate: '30%',
-        singlePaymentCompletion: '+20%',
-        tokenPaymentRate: '+50%'
-      }
-    },
-    galleryImages: [
-      {
-        thumbnail: '/mycrsimages/mycrs-8.webp',
-        large: '/mycrsimages/mycrs-8.webp',
-        width: 1260,
-        height: 750,
-        alt: 'MYCRS payment portal redesign interface'
-      },
-      {
-        thumbnail: '/mycrsimages/mycrs-5.webp',
-        large: '/mycrsimages/mycrs-5.webp',
-        width: 1260,
-        height: 750,
-        alt: 'MYCRS payment portal user experience improvements'
-      },
-      {
-        thumbnail: '/mycrsimages/mycrs-6.webp',
-        large: '/mycrsimages/mycrs-6.webp',
-        width: 1260,
-        height: 750,
-        alt: 'MYCRS payment portal mobile optimization'
-      },
-      {
-        thumbnail: '/mycrsimages/mycrs-7.webp',
-        large: '/mycrsimages/mycrs-7.webp',
-        width: 1260,
-        height: 750,
-        alt: 'MYCRS payment portal accessibility features'
-      },
-      {
-        thumbnail: '/mycrsimages/mycrs-4.webp',
-        large: '/mycrsimages/mycrs-4.webp',
-        width: 1260,
-        height: 750,
-        alt: 'MYCRS payment portal design system'
       }
     ]
   },
