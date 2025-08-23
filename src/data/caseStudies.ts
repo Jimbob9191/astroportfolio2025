@@ -367,18 +367,18 @@ export const caseStudies: CaseStudy[] = [
     },
     metrics: {
       before: {
-        pageLoadTime: '8+ seconds',
-        cartAbandonment: '70%',
+        revenue: 'Baseline',
         conversionRate: 'Baseline',
-        platformUptime: '95%',
-        supportTickets: 'High volume'
+        attributionAccuracy: 'Poor',
+        operationalEfficiency: 'Manual processes',
+        engineeringEffort: 'High duplication'
       },
       after: {
-        pageLoadTime: '3.2 seconds',
-        cartAbandonment: '42%',
-        conversionRate: '+25%',
-        platformUptime: '99.9%',
-        supportTickets: '-65%'
+        revenue: '+43% uplift',
+        conversionRate: '+9.2% uplift',
+        attributionAccuracy: 'Reduced "unassigned/direct" by ~14%',
+        operationalEfficiency: '40% time saved on routine updates',
+        engineeringEffort: '25% drop in duplicated effort'
       }
     },
     galleryImages: [
