@@ -359,24 +359,7 @@ export const caseStudies: CaseStudy[] = [
       ]
     },
     process: {
-      steps: [
-        {
-          title: 'Discovery & Audit',
-          description: 'Conducted comprehensive technical and UX audits to understand current limitations and define requirements for the new platform.'
-        },
-        {
-          title: 'Strategy & Planning',
-          description: 'Developed migration strategy, defined white-label requirements, and created detailed project roadmap with stakeholder alignment.'
-        },
-        {
-          title: 'Design & Prototyping',
-          description: 'Created scalable design system and prototyped key user journeys for multiple brand experiences and market requirements.'
-        },
-        {
-          title: 'Implementation & Testing',
-          description: 'Oversaw development, conducted extensive testing across brands and markets, and managed the phased migration process.'
-        }
-      ],
+      steps: [],
       details: 'As the product manager and design lead, I owned the backlog, prioritised features, aligned brand stakeholders, coordinated cross-functional teams and managed delivery from concept to launch. With this being my first large scale project for the business and on a very short turnaround, we had to move quickly and decisively to stay on track.\n\nThroughout the project, we worked in a scrum / agile structure with daily standups, weekly planning meetings and retros.\n\nI began by meeting stakeholders from each brand to agree on the overall timeline and identify potential site specific changes required to make the replatforming possible. From there, I drafted a rough backlog and sprint plan, detailing the first couple of weeks where the development team would set up components and CMS structures to support theming across multiple brands.\n\nWhile the dev team established the framework, I designed a flexible theming system that included brand tokens, typography, colour, and spacing so that a single component library could serve multiple brands. I also defined clear rules for where brands could diverge eg: accent colours and typography scale, versus where consistency was critical (checkout flows).This gave us a clearer view of feature parity between sites and surfaced larger differences requiring strategic decisions.\n\nThroughout the project, I ran ongoing stakeholder sessions to evaluate changes. Where CRO data already existed, we adopted the proven winning configuration by default. For untested features, we facilitated deeper discussions between stakeholders and set up new CRO tests where needed. For example:\n\n* Product images: Pavers used a carousel, while Jones used a grid. With no existing data, I initiated a CRO test, which confirmed the grid layout performed better.\n* Other contested features: Several went through similar testing to remove ambiguity and drive data-led decisions.\n\nDue to time restraints, not every feature could be tested ahead of launch. For instance, PLP filter layouts and product card details defaulted to the Pavers implementation, with post-launch tests planned to validate and optimise.\n\nTo keep development unblocked, I ran staggered design handoffs, accepting functionally correct (but not pixel-perfect) builds when necessary. Each sprint included handoffs of a few core pages eg: PDP and PLP designs for both brands. These would be signed off by stakeholders before moving into development the next sprint.\n\nThird-party integrations were a major risk area, particularly for marketing teams such as CRM, Paid Social, and PPC platforms. To mitigate delays, we pushed to implement and configure these systems as early as possible, enabling UAT by marketing teams and external partners before UI completion.\n\nBy the halfway point, we were working closely with ecommerce and marketing teams on QA and UAT. Without a dedicated QA resource, testing was shared between myself and the development team before handoff to business stakeholders for sign off.\n\nGiven the high risks around tagging, tracking, product feeds, and campaign setup, I collaborated with developers and an external agency to document site changes, minimise performance impact, and preserve tracking accuracy.\n\nIn the final weeks, I facilitated group UAT sessions with wider business teams. Especially those not involved in day to day development or testing, to uncover overlooked issues and build a backlog of enhancements for post launch.'
     },
     outcomes: {
