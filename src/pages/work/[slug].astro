@@ -125,7 +125,7 @@ const galleryClass = getGalleryClass(layout);
         <div class="mb-12">
           <div class="prose prose-lg max-w-none">
             {process.details.split('\n\n').map(paragraph => (
-              paragraph.startsWith('*') ? (
+              paragraph.includes('*') ? (
                 <ul class="space-y-2 text-secondary text-lg">
                   {paragraph.split('\n').filter(line => line.startsWith('*')).map(item => (
                     <li class="flex items-start">
