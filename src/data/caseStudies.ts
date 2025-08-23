@@ -269,11 +269,11 @@ export const caseStudies: CaseStudy[] = [
       methods: ['Heat Mapping', 'User Personas', 'Analytics Review', 'Customer Feedback Analysis'],
       findings: 'MYCRS was originally built for desktop devices with the option of access via mobile. By late 2019 it was obvious that consumers had moved in their masses to mobile devices and the portal would now receive 95% of its traffic from mobile devices. The homepage of the site did not include any methods of contact or context for a visiting customer other than a login form requesting 6 different pieces of sensitive information which were usually met with a high degree of scepticism resulting in a bounce rate of over 50%.',
       insights: [
-        'Bounce rates in excess of 50%',
-        'Lots of bugs and poor navigation',
-        'Bad accessibility causing user frustration',
-        'Negative Trustpilot reviews affecting company reputation',
-        'Loss in potential profit, driving more traffic to the contact centre'
+        'High abandonment rates from an unfriendly homepage demanding excessive personal information.',
+        'Accessibility barriers, preventing some customers from using the service at all.',
+        'Technical instability, undermining user trust.',
+        'Reputation damage through poor online reviews.',
+        'Increased operational costs, as dissatisfied users turned to the call centre.'
       ]
     },
     process: {
