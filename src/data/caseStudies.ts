@@ -261,7 +261,7 @@ export const caseStudies: CaseStudy[] = [
     outcome: 'After shipping the first iteration of the new portal in October 2021 we saw an immediate decrease in bounce rate of nearly 20%, meaning users were much more trusting of the site from the get-go. We also continued to track payment performance, and users on the new portal were 20% more likely to clear their account in a single payment during their first visit to the site, whilst users setting up a payment arrangement were 50% more likely to make a token payment on the first day.',
     role: 'Lead UX/UI Designer',
     layout: 'masonry',
-    timeline: '8 months',
+    timeline: '2 months',
     client: 'CRS / Finance',
     team: ['Lead Designer', 'Web Development Team', 'UX Researcher'],
     tools: ['Figma', 'Hotjar', 'Google Analytics', 'Trustpilot Analytics'],
