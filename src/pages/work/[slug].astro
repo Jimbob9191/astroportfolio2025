@@ -184,9 +184,9 @@ const galleryClass = getGalleryClass(layout);
         </ol>
       </section>
     )}
-            {Object.entries(metrics.after).map(([metricKey, value]) => (
-              <div key={metricKey}>
-                <dt class="text-secondary">{metricKey.replace(/([A-Z])/g, ' $1').trim()}</dt>
+
+              <div>
+                <dt class="text-secondary">{key.replace(/([A-Z])/g, ' $1').trim()}</dt>
                 <dd class="text-2xl font-display font-medium">{value}</dd>
               </div>
             ))}
