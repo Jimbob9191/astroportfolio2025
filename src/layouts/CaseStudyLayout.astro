@@ -162,8 +162,83 @@ const nextProject = caseStudies[nextIndex];
           </section>
         )}
         
+        {project.slug === 'ecommerce-replatforming' && (
+          <section class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="problem-gallery-ecommerce">
+              <a 
+                href="/ecommerceimages/ecommerce-9.webp"
+                class="block img-hover rounded-lg overflow-hidden problem-gallery-ecommerce-item w-full"
+                data-pswp-width="1260"
+                data-pswp-height="750"
+              >
+                <img 
+                  src="/ecommerceimages/ecommerce-9.webp" 
+                  alt="Legacy e-commerce platform showing performance and scalability issues" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </a>
+              <a 
+                href="/ecommerceimages/ecommerce-10.webp"
+                class="block img-hover rounded-lg overflow-hidden problem-gallery-ecommerce-item w-full"
+                data-pswp-width="1260"
+                data-pswp-height="750"
+              >
+                <img 
+                  src="/ecommerceimages/ecommerce-10.webp" 
+                  alt="Technical limitations and user experience problems with the old platform" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </section>
+        )}
+        
         <slot />
 
+        <script>
+          // Initialize problem gallery for E-commerce case study
+          const problemGalleryEcommerce = document.querySelector('#problem-gallery-ecommerce');
+          
+          if (problemGalleryEcommerce) {
+            const problemGalleryEcommerceItems = problemGalleryEcommerce.querySelectorAll('.problem-gallery-ecommerce-item');
+            
+            problemGalleryEcommerceItems.forEach((item, index) => {
+              item.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const options = {
+                  gallery: problemGalleryEcommerce,
+                  dataSource: Array.from(problemGalleryEcommerceItems).map(galleryItem => ({
+                    src: galleryItem.href,
+                    width: parseInt(galleryItem.getAttribute('data-pswp-width')),
+                    height: parseInt(galleryItem.getAttribute('data-pswp-height')),
+                    msrc: galleryItem.querySelector('img').src
+                  })),
+                  index,
+                  showHideAnimationType: 'fade',
+                  showAnimationDuration: 300,
+                  hideAnimationDuration: 300,
+                  bgOpacity: 0.8,
+                  spacing: 0.1,
+                  allowPanToNext: true,
+                  maxSpreadZoom: 2,
+                  getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
+                  pinchToClose: true,
+                  closeOnScroll: false,
+                  closeOnVerticalDrag: true,
+                  wheelToZoom: true,
+                  padding: { top: 20, bottom: 20, left: 20, right: 20 },
+                  fit: 'contain'
+                };
+                
+                const lightbox = new PhotoSwipe(options);
+                lightbox.init();
+              });
+            });
+          }
+        </script>
 
       </div>
     </div>

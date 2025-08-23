@@ -48,6 +48,26 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
+  {project.slug === 'ecommerce-replatforming' && (
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">Background</h2>
+      <p class="text-secondary text-lg leading-relaxed mb-6">
+        Pavers Shoes had been operating on a legacy e-commerce platform for over 8 years, during which time the business had grown significantly but the technology had not kept pace. What started as a single-brand online store had evolved into a complex operation serving multiple customer segments, but the underlying platform couldn't support this growth effectively.
+      </p>
+      <p class="text-secondary text-lg leading-relaxed mb-6">
+        The business model had expanded beyond the original scope, with plans to launch additional brands targeting different market segments and geographic regions. However, the existing platform's limitations were becoming critical barriers to growth, affecting everything from customer experience to operational efficiency.
+      </p>
+      <p class="text-secondary text-lg leading-relaxed mb-4">The replatforming initiative aimed to address several key business objectives:</p>
+      <ol class="space-y-3 text-secondary text-lg mb-8 list-decimal list-inside">
+        <li>Create a scalable foundation that could support multiple brands and markets without compromising performance.</li>
+        <li>Dramatically improve customer experience, particularly on mobile devices where most traffic originated.</li>
+        <li>Enable rapid deployment of new brand experiences with distinct visual identities and customer journeys.</li>
+        <li>Establish operational efficiencies that would reduce manual work and improve inventory management.</li>
+        <li>Build a platform capable of handling significant traffic spikes during promotional periods without downtime.</li>
+      </ol>
+    </section>
+  )}
+
   {research && (
     <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Research & Discovery</h2>
@@ -64,6 +84,26 @@ const galleryClass = getGalleryClass(layout);
             ))}
           </ul>
         </div>
+      </div>
+    </section>
+  )}
+
+  {project.slug === 'ecommerce-replatforming' && (
+    <section class="mb-20">
+      <div class="grid grid-cols-1 gap-8" id="research-gallery-ecommerce">
+        <a 
+          href="/ecommerceimages/ecommerce-8.webp"
+          class="block img-hover rounded-lg overflow-hidden research-gallery-ecommerce-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/ecommerceimages/ecommerce-8.webp" 
+            alt="E-commerce platform research findings and technical audit results" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
       </div>
     </section>
   )}
@@ -414,6 +454,47 @@ const galleryClass = getGalleryClass(layout);
           const options = {
             gallery: researchGalleryFinance,
             dataSource: Array.from(researchGalleryFinanceItems).map(galleryItem => ({
+              src: galleryItem.href,
+              width: parseInt(galleryItem.getAttribute('data-pswp-width')),
+              height: parseInt(galleryItem.getAttribute('data-pswp-height')),
+              msrc: galleryItem.querySelector('img').src
+            })),
+            index,
+            showHideAnimationType: 'fade',
+            showAnimationDuration: 300,
+            hideAnimationDuration: 300,
+            bgOpacity: 0.8,
+            spacing: 0.1,
+            allowPanToNext: true,
+            maxSpreadZoom: 2,
+            getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
+            pinchToClose: true,
+            closeOnScroll: false,
+            closeOnVerticalDrag: true,
+            wheelToZoom: true,
+            padding: { top: 20, bottom: 20, left: 20, right: 20 },
+            fit: 'contain'
+          };
+          
+          const lightbox = new PhotoSwipe(options);
+          lightbox.init();
+        });
+      });
+    }
+    
+    // Initialize research gallery for E-commerce case study
+    const researchGalleryEcommerce = document.querySelector('#research-gallery-ecommerce');
+    
+    if (researchGalleryEcommerce) {
+      const researchGalleryEcommerceItems = researchGalleryEcommerce.querySelectorAll('.research-gallery-ecommerce-item');
+      
+      researchGalleryEcommerceItems.forEach((item, index) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          const options = {
+            gallery: researchGalleryEcommerce,
+            dataSource: Array.from(researchGalleryEcommerceItems).map(galleryItem => ({
               src: galleryItem.href,
               width: parseInt(galleryItem.getAttribute('data-pswp-width')),
               height: parseInt(galleryItem.getAttribute('data-pswp-height')),
