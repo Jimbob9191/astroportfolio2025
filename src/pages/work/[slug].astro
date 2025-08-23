@@ -63,6 +63,104 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
+  {project.slug === 'ecommerce-replatforming' && (
+    <section class="mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="problem-gallery-ecommerce">
+        <a 
+          href="/jones/Jones-1.webp"
+          class="block img-hover rounded-lg overflow-hidden problem-gallery-ecommerce-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/jones/Jones-1.webp" 
+            alt="Legacy e-commerce platform showing performance and scalability issues" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+        <a 
+          href="/jones/jones-2.webp"
+          class="block img-hover rounded-lg overflow-hidden problem-gallery-ecommerce-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/jones/jones-2.webp" 
+            alt="Technical limitations and user experience problems with the old platform" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+        <a 
+          href="/jones/Jones-1.webp"
+          class="block img-hover rounded-lg overflow-hidden problem-gallery-ecommerce-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/jones/Jones-1.webp" 
+            alt="Jones Bootmaker original website showing legacy platform limitations" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+        <a 
+          href="/jones/jones-2.webp"
+          class="block img-hover rounded-lg overflow-hidden problem-gallery-ecommerce-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/jones/jones-2.webp" 
+            alt="Jones Bootmaker platform technical limitations and user experience issues" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+        <a 
+          href="/jones/jones-3.webp"
+          class="block img-hover rounded-lg overflow-hidden problem-gallery-ecommerce-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/jones/jones-3.webp" 
+            alt="Jones Bootmaker original design inconsistencies and brand fragmentation" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+        <a 
+          href="/jones/jones-4.webp"
+          class="block img-hover rounded-lg overflow-hidden problem-gallery-ecommerce-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/jones/jones-4.webp" 
+            alt="Jones Bootmaker legacy checkout process and conversion issues" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+        <a 
+          href="/jones/jones-5.webp"
+          class="block img-hover rounded-lg overflow-hidden problem-gallery-ecommerce-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/jones/jones-5.webp" 
+            alt="Jones Bootmaker mobile experience problems and performance issues" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </section>
+  )}
+
   {research && (
     <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Research & Discovery</h2>
@@ -87,14 +185,14 @@ const galleryClass = getGalleryClass(layout);
     <section class="mb-20">
       <div class="grid grid-cols-1 gap-8" id="research-gallery-ecommerce">
         <a 
-          href="/ecommerceimages/ecommerce-8.webp"
+          href="/jones/jones-9.webp"
           class="block img-hover rounded-lg overflow-hidden research-gallery-ecommerce-item w-full"
           data-pswp-width="1260"
           data-pswp-height="750"
         >
           <img 
-            src="/ecommerceimages/ecommerce-8.webp" 
-            alt="E-commerce platform research findings and technical audit results" 
+            src="/jones/jones-9.webp" 
+            alt="Jones Bootmaker research analysis and platform evaluation" 
             class="w-full h-full object-cover"
             loading="lazy"
           />
@@ -230,6 +328,49 @@ const galleryClass = getGalleryClass(layout);
             class="w-full h-full object-cover"
             loading="lazy"
           />
+
+    <script>
+      // Initialize problem gallery for E-commerce case study
+      const problemGalleryEcommerce = document.querySelector('#problem-gallery-ecommerce');
+      
+      if (problemGalleryEcommerce) {
+        const problemGalleryEcommerceItems = problemGalleryEcommerce.querySelectorAll('.problem-gallery-ecommerce-item');
+        
+        problemGalleryEcommerceItems.forEach((item, index) => {
+          item.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const options = {
+              gallery: problemGalleryEcommerce,
+              dataSource: Array.from(problemGalleryEcommerceItems).map(galleryItem => ({
+                src: galleryItem.href,
+                width: parseInt(galleryItem.getAttribute('data-pswp-width')),
+                height: parseInt(galleryItem.getAttribute('data-pswp-height')),
+                msrc: galleryItem.querySelector('img').src
+              })),
+              index,
+              showHideAnimationType: 'fade',
+              showAnimationDuration: 300,
+              hideAnimationDuration: 300,
+              bgOpacity: 0.8,
+              spacing: 0.1,
+              allowPanToNext: true,
+              maxSpreadZoom: 2,
+              getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
+              pinchToClose: true,
+              closeOnScroll: false,
+              closeOnVerticalDrag: true,
+              wheelToZoom: true,
+              padding: { top: 20, bottom: 20, left: 20, right: 20 },
+              fit: 'contain'
+            };
+            
+            const lightbox = new PhotoSwipe(options);
+            lightbox.init();
+          });
+        });
+      }
+    </script>
         </a>
       ))}
     </div>
@@ -285,6 +426,47 @@ const galleryClass = getGalleryClass(layout);
           const options = {
             gallery,
             dataSource: Array.from(galleryItems).map(galleryItem => ({
+              src: galleryItem.href,
+              width: parseInt(galleryItem.getAttribute('data-pswp-width')),
+              height: parseInt(galleryItem.getAttribute('data-pswp-height')),
+              msrc: galleryItem.querySelector('img').src
+            })),
+            index,
+            showHideAnimationType: 'fade',
+            showAnimationDuration: 300,
+            hideAnimationDuration: 300,
+            bgOpacity: 0.8,
+            spacing: 0.1,
+            allowPanToNext: true,
+            maxSpreadZoom: 2,
+            getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
+            pinchToClose: true,
+            closeOnScroll: false,
+            closeOnVerticalDrag: true,
+            wheelToZoom: true,
+            padding: { top: 20, bottom: 20, left: 20, right: 20 },
+            fit: 'contain'
+          };
+          
+          const lightbox = new PhotoSwipe(options);
+          lightbox.init();
+        });
+      });
+    }
+    
+    // Initialize problem gallery for E-commerce case study
+    const problemGalleryEcommerce = document.querySelector('#problem-gallery-ecommerce');
+    
+    if (problemGalleryEcommerce) {
+      const problemGalleryEcommerceItems = problemGalleryEcommerce.querySelectorAll('.problem-gallery-ecommerce-item');
+      
+      problemGalleryEcommerceItems.forEach((item, index) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          const options = {
+            gallery: problemGalleryEcommerce,
+            dataSource: Array.from(problemGalleryEcommerceItems).map(galleryItem => ({
               src: galleryItem.href,
               width: parseInt(galleryItem.getAttribute('data-pswp-width')),
               height: parseInt(galleryItem.getAttribute('data-pswp-height')),
@@ -560,7 +742,48 @@ const galleryClass = getGalleryClass(layout);
     }
   };
 
+  // Initialize problem gallery for E-commerce case study
   document.addEventListener('DOMContentLoaded', () => {
     initPhotoSwipe();
+    
+    const problemGalleryEcommerce = document.querySelector('#problem-gallery-ecommerce');
+    
+    if (problemGalleryEcommerce) {
+      const problemGalleryEcommerceItems = problemGalleryEcommerce.querySelectorAll('.problem-gallery-ecommerce-item');
+      
+      problemGalleryEcommerceItems.forEach((item, index) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          const options = {
+            gallery: problemGalleryEcommerce,
+            dataSource: Array.from(problemGalleryEcommerceItems).map(galleryItem => ({
+              src: galleryItem.href,
+              width: parseInt(galleryItem.getAttribute('data-pswp-width')),
+              height: parseInt(galleryItem.getAttribute('data-pswp-height')),
+              msrc: galleryItem.querySelector('img').src
+            })),
+            index,
+            showHideAnimationType: 'fade',
+            showAnimationDuration: 300,
+            hideAnimationDuration: 300,
+            bgOpacity: 0.8,
+            spacing: 0.1,
+            allowPanToNext: true,
+            maxSpreadZoom: 2,
+            getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
+            pinchToClose: true,
+            closeOnScroll: false,
+            closeOnVerticalDrag: true,
+            wheelToZoom: true,
+            padding: { top: 20, bottom: 20, left: 20, right: 20 },
+            fit: 'contain'
+          };
+          
+          const lightbox = new PhotoSwipe(options);
+          lightbox.init();
+        });
+      });
+    }
   });
 </script>
