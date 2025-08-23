@@ -349,13 +349,13 @@ export const caseStudies: CaseStudy[] = [
       methods: ['Performance Profiling', 'Stakeholder Interviews', 'Parity Mapping', 'Integration Review', 'Heat Mapping', 'Analytics Review'],
       findings: 'The legacy platform was built on outdated technology that couldn\'t scale with business growth. Performance issues were driving customers away, and the inability to create distinct brand experiences was limiting market expansion opportunities.',
       insights: [
-        'Page load times averaged 8+ seconds on mobile, well above the 3-second threshold that causes significant user drop-off',
-        'The checkout process had a 70% abandonment rate, primarily due to technical issues and poor mobile optimization',
-        'Customer support was spending 40% of their time dealing with platform-related issues rather than helping customers',
-        'The existing system couldn\'t support different pricing strategies, currencies, or localized content for different markets',
-        'Inventory management was manual and error-prone, leading to overselling and customer dissatisfaction',
-        'The platform couldn\'t handle traffic spikes during sales events, resulting in lost revenue and poor customer experience',
-        'Brand differentiation was impossible with the current system, limiting the ability to target different customer segments effectively'
+        'Proven conversion rate optimisation (CRO) strategies that had successfully driven measurable revenue growth on the Pavers brand were not implemented on the Jones brand. This created a clear opportunity gap where revenue was being left on the table.',
+        'Each site relied on a different mix of third-party solutions, with some integrations redundant or outdated. This lack of unification created inefficiencies and required consolidating functionality to streamline both performance and cost.',
+        'Different teams had established separate reporting setups across brands, meaning data tracking was inconsistent and siloed. Coordinating with stakeholders across departments was critical to ensure a smooth migration and alignment of reporting standards.',
+        'Page structures, user flows, and core features varied significantly between the two brands. This inconsistency required a detailed review to determine where unification was needed, and where differentiation between the brands was strategically valuable.',
+        'Several key features present on the Pavers brand were entirely absent from Jones. This not only created UX disparities but also required new operational processes and internal support structures to be introduced.',
+        'The existing site architectures were not designed with scalability in mind. Any redesign or migration needed to account for future growth, new features, and potential third-party integrations without introducing technical debt.',
+        'Variations in site speed, technical SEO implementation, and content structure posed potential risks to organic traffic. Aligning both brands on best practices was essential to protect visibility during and after migration.'
       ]
     },
     process: {
