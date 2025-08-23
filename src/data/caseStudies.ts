@@ -259,7 +259,7 @@ export const caseStudies: CaseStudy[] = [
     problem: 'The portal was outdated, last redesigned in 2018 with little to no consideration for accessibility or user experience. The vast majority of the site functioned through javascript and so errors were inevitable no matter the device a user was trying to access the site from. This limited accessibility and the prominence of bugs on the site would often result in negative reviews on platforms such as Google or Trustpilot which would then in turn make a visiting customers impression of CRS worse.',
     approach: 'I worked with the web development team to improve the user experience on mobile to take our platform back to a market-leading position as it had been in the past. Taking into account accessibility, customer satisfaction and future expandability.',
     outcome: 'After shipping the first iteration of the new portal in October 2021 we saw an immediate decrease in bounce rate of nearly 20%, meaning users were much more trusting of the site from the get-go. We also continued to track payment performance, and users on the new portal were 20% more likely to clear their account in a single payment during their first visit to the site, whilst users setting up a payment arrangement were 50% more likely to make a token payment on the first day.',
-    role: 'Lead UX/UI Designer responsible for overhauling the site from a design perspective and getting it to a place of security, upon which we could then build.',
+    role: 'Lead UX/UI Designer',
     layout: 'masonry',
     timeline: '8 months',
     client: 'CRS',
