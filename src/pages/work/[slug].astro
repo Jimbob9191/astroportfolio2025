@@ -161,6 +161,28 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
+  {project.problem && (
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">The Problem</h2>
+      <div class="prose prose-lg max-w-none">
+        {project.problem.split('\n\n').map(paragraph => (
+          paragraph.includes('*') ? (
+            <ul class="space-y-3 text-secondary text-lg mb-8">
+              {paragraph.split('\n').filter(line => line.startsWith('*')).map(item => (
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>{item.substring(2)}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="text-secondary text-lg leading-relaxed mb-6">{paragraph}</p>
+          )
+        ))}
+      </div>
+    </section>
+  )}
+
   {research && (
     <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Research & Discovery</h2>
@@ -312,71 +334,6 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
-  <section class="mb-20">
-    <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Project Gallery</h2>
-    <div class={galleryClass} id="gallery">
-      {galleryImages.map((image) => (
-        <a 
-          href={image.large}
-          class="block img-hover rounded-lg overflow-hidden gallery-item w-full"
-          data-pswp-width={image.width}
-          data-pswp-height={image.height}
-        >
-          <img 
-            src={image.thumbnail} 
-            alt={image.alt}
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-
-    <script>
-      // Initialize problem gallery for E-commerce case study
-      const problemGalleryEcommerce = document.querySelector('#problem-gallery-ecommerce');
-      
-      if (problemGalleryEcommerce) {
-        const problemGalleryEcommerceItems = problemGalleryEcommerce.querySelectorAll('.problem-gallery-ecommerce-item');
-        
-        problemGalleryEcommerceItems.forEach((item, index) => {
-          item.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            const options = {
-              gallery: problemGalleryEcommerce,
-              dataSource: Array.from(problemGalleryEcommerceItems).map(galleryItem => ({
-                src: galleryItem.href,
-                width: parseInt(galleryItem.getAttribute('data-pswp-width')),
-                height: parseInt(galleryItem.getAttribute('data-pswp-height')),
-                msrc: galleryItem.querySelector('img').src
-              })),
-              index,
-              showHideAnimationType: 'fade',
-              showAnimationDuration: 300,
-              hideAnimationDuration: 300,
-              bgOpacity: 0.8,
-              spacing: 0.1,
-              allowPanToNext: true,
-              maxSpreadZoom: 2,
-              getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
-              pinchToClose: true,
-              closeOnScroll: false,
-              closeOnVerticalDrag: true,
-              wheelToZoom: true,
-              padding: { top: 20, bottom: 20, left: 20, right: 20 },
-              fit: 'contain'
-            };
-            
-            const lightbox = new PhotoSwipe(options);
-            lightbox.init();
-          });
-        });
-      }
-    </script>
-        </a>
-      ))}
-    </div>
-  </section>
-    
-
   {metrics && project.slug !== 'metamask-onboarding' && (
     <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Impact & Results</h2>
@@ -426,47 +383,6 @@ const galleryClass = getGalleryClass(layout);
           const options = {
             gallery,
             dataSource: Array.from(galleryItems).map(galleryItem => ({
-              src: galleryItem.href,
-              width: parseInt(galleryItem.getAttribute('data-pswp-width')),
-              height: parseInt(galleryItem.getAttribute('data-pswp-height')),
-              msrc: galleryItem.querySelector('img').src
-            })),
-            index,
-            showHideAnimationType: 'fade',
-            showAnimationDuration: 300,
-            hideAnimationDuration: 300,
-            bgOpacity: 0.8,
-            spacing: 0.1,
-            allowPanToNext: true,
-            maxSpreadZoom: 2,
-            getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
-            pinchToClose: true,
-            closeOnScroll: false,
-            closeOnVerticalDrag: true,
-            wheelToZoom: true,
-            padding: { top: 20, bottom: 20, left: 20, right: 20 },
-            fit: 'contain'
-          };
-          
-          const lightbox = new PhotoSwipe(options);
-          lightbox.init();
-        });
-      });
-    }
-    
-    // Initialize problem gallery for E-commerce case study
-    const problemGalleryEcommerce = document.querySelector('#problem-gallery-ecommerce');
-    
-    if (problemGalleryEcommerce) {
-      const problemGalleryEcommerceItems = problemGalleryEcommerce.querySelectorAll('.problem-gallery-ecommerce-item');
-      
-      problemGalleryEcommerceItems.forEach((item, index) => {
-        item.addEventListener('click', (e) => {
-          e.preventDefault();
-          
-          const options = {
-            gallery: problemGalleryEcommerce,
-            dataSource: Array.from(problemGalleryEcommerceItems).map(galleryItem => ({
               src: galleryItem.href,
               width: parseInt(galleryItem.getAttribute('data-pswp-width')),
               height: parseInt(galleryItem.getAttribute('data-pswp-height')),
@@ -745,45 +661,5 @@ const galleryClass = getGalleryClass(layout);
   // Initialize problem gallery for E-commerce case study
   document.addEventListener('DOMContentLoaded', () => {
     initPhotoSwipe();
-    
-    const problemGalleryEcommerce = document.querySelector('#problem-gallery-ecommerce');
-    
-    if (problemGalleryEcommerce) {
-      const problemGalleryEcommerceItems = problemGalleryEcommerce.querySelectorAll('.problem-gallery-ecommerce-item');
-      
-      problemGalleryEcommerceItems.forEach((item, index) => {
-        item.addEventListener('click', (e) => {
-          e.preventDefault();
-          
-          const options = {
-            gallery: problemGalleryEcommerce,
-            dataSource: Array.from(problemGalleryEcommerceItems).map(galleryItem => ({
-              src: galleryItem.href,
-              width: parseInt(galleryItem.getAttribute('data-pswp-width')),
-              height: parseInt(galleryItem.getAttribute('data-pswp-height')),
-              msrc: galleryItem.querySelector('img').src
-            })),
-            index,
-            showHideAnimationType: 'fade',
-            showAnimationDuration: 300,
-            hideAnimationDuration: 300,
-            bgOpacity: 0.8,
-            spacing: 0.1,
-            allowPanToNext: true,
-            maxSpreadZoom: 2,
-            getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
-            pinchToClose: true,
-            closeOnScroll: false,
-            closeOnVerticalDrag: true,
-            wheelToZoom: true,
-            padding: { top: 20, bottom: 20, left: 20, right: 20 },
-            fit: 'contain'
-          };
-          
-          const lightbox = new PhotoSwipe(options);
-          lightbox.init();
-        });
-      });
-    }
   });
 </script>
