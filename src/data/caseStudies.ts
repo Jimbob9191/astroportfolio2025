@@ -277,24 +277,7 @@ export const caseStudies: CaseStudy[] = [
       ]
     },
     process: {
-      steps: [
-        {
-          title: 'Research & Analysis',
-          description: 'Conducted heatmapping, created user personas, and analyzed customer feedback to understand pain points in the existing portal.'
-        },
-        {
-          title: 'Restructuring',
-          description: 'Restructured user flows that were easier to follow and streamlined the login process to reduce user skepticism.'
-        },
-        {
-          title: 'Design & Development',
-          description: 'Tweaked and consolidated the existing design style for consistency, designed clearer visual feedback methods, and created an interactive FAQ section.'
-        },
-        {
-          title: 'Launch & Monitoring',
-          description: 'Shipped the first iteration in October 2021 and continuously monitored payment performance and user feedback.'
-        }
-      ],
+      steps: [],
       details: 'As the lead designer, I was responsible for a complete overhaul of the portal\'s design, ensuring it was secure, intuitive and aligned with business goals. Given the portal\'s role as a primary revenue channel, timelines were extremely tight. My process consisted of:\n\n* Implementing heat mapping to analyse behaviour and identify pain points.\n* Conducted interviews with stakeholders and customer support agents to get a better understanding of the business goals and customer behaviour.\n* Creating user personas to guide design decisions.\n* Conducted quick user testing sessions internally using prototypes and wireframes to get early feedback.\n* Restructuring user flows to be more intuitive.\n* Establishing a consistent design system, consolidating the existing style for clarity and coherence.'
     },
     metrics: {
