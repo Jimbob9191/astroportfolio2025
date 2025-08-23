@@ -294,7 +294,8 @@ export const caseStudies: CaseStudy[] = [
           title: 'Launch & Monitoring',
           description: 'Shipped the first iteration in October 2021 and continuously monitored payment performance and user feedback.'
         }
-      ]
+      ],
+      details: 'As the lead designer, I was responsible for a complete overhaul of the portal\'s design, ensuring it was secure, intuitive, and aligned with business goals. Given the portal\'s role as a primary revenue channel, timelines were extremely tight.\n\nMy responsibilities included:\n* Restructuring user flows to be more intuitive.\n* Creating user personas to guide design decisions.\n* Wireframing and prototyping key journeys.\n* Establishing a consistent design system, consolidating the existing style for clarity and coherence.\n* Implementing heatmapping to analyse behaviour and identify pain points.\n* Streamlining login by reducing barriers and building trust.\n* Designing clearer interaction feedback to improve usability.\n* Developing self-service tools, including an interactive FAQ and account management features to reduce reliance on call centres.\n* Designing white-label capabilities to expand the platform\'s potential for future growth.'
     },
     metrics: {
       before: {
