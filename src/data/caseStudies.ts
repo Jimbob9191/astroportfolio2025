@@ -26,6 +26,9 @@ export interface CaseStudy {
     }[];
   };
   metrics: {
+  outcomes?: {
+    content: string;
+  };
     before: Record<string, string>;
     after: Record<string, string>;
   };
@@ -279,6 +282,9 @@ export const caseStudies: CaseStudy[] = [
     process: {
       steps: [],
       details: 'As the lead designer, I was responsible for a complete overhaul of the portal\'s design, ensuring it was secure, intuitive and aligned with business goals. Given the portal\'s role as a primary revenue channel, timelines were extremely tight. My process consisted of:\n\n* Implementing heat mapping to analyse behaviour and identify pain points.\n* Conducted interviews with stakeholders and customer support agents to get a better understanding of the business goals and customer behaviour.\n* Creating user personas to guide design decisions.\n* Conducted quick user testing sessions internally using prototypes and wireframes to get early feedback.\n* Restructuring user flows to be more intuitive.\n* Establishing a consistent design system, consolidating the existing style for clarity and coherence.'
+    },
+    outcomes: {
+      content: 'Throughout the project we had learned a lot about the user base and the niche use cases that users were running into whilst trying to use our platform. Whilst we couldn\'t implement all the functionality we wanted to at launch, we did manage to ship with a set of new features and some great performance improvements:\n\n* As we had to verify users identities with sensitive information, we changed some of the login questions to be hidden until a user had submitted a single piece of information, this played into the hands of commitment bias.\n* We developed some self-service tools inside the portal, including an interactive FAQ and account management features to reduce reliance on the call centre.\n* We design and developed an early example of CRS\' white label capabilities to expand the platform\'s potential for future growth. The added white labelling of customers brands would later boost trust significantly.\n* We added much clearer interaction feedback to assist customers from the beginning to the end of the payment process, reassuring customers whenever possible.\n* We implemented a much more in-depth account dashboard that allowed customers to fully understand the length of their payment arrangement, how much they were paying and when.'
     },
     metrics: {
       before: {
