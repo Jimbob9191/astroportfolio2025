@@ -254,7 +254,7 @@ export const caseStudies: CaseStudy[] = [
     title: 'Redesigning A Payment Portal',
     thumbnail: '/mycrsimages/mycrs-1.webp',
     heroImage: '/mycrsimages/mycrs-1.webp',
-    categories: ['UX/UI Design', 'Mobile Optimization', 'Accessibility'],
+    categories: ['UX/UI Design', 'Mobile Optimisation', 'Accessibility'],
     overview: 'A comprehensive redesign of MYCRS payment portal, transforming it from a desktop-focused platform to a mobile-first solution that improved user trust and payment completion rates.',
     problem: 'By 2019, the customer portal had become outdated and ineffective. The last redesign in 2017 had overlooked accessibility standards and failed to prioritize user experience. The platform\'s heavy reliance on JavaScript caused frequent errors across devices, resulting in an inconsistent and frustrating user journey. Customers were often unable to complete essential tasks smoothly, leading to decreased trust, reduced satisfaction, and ultimately, a measurable decline in revenue. I aimed to redesign the customer portal to deliver a consistent, accessible, and user friendly experience across devices, restoring customer trust, increasing satisfaction and driving revenue higher.',
     approach: 'I worked with the web development team to improve the user experience on mobile to take our platform back to a market-leading position as it had been in the past. Taking into account accessibility, customer satisfaction and future expandability.',
