@@ -268,12 +268,11 @@ export const caseStudies: CaseStudy[] = [
     research: {
       methods: ['Heat Mapping', 'User Personas', 'Analytics Review', 'Customer Feedback Analysis'],
       insights: [
-        'High abandonment rates from an unfriendly homepage demanding excessive personal information.',
-        'Accessibility barriers, preventing some customers from using the service at all.',
-        'Technical instability, undermining user trust.',
-        'Reputation damage through poor online reviews.',
-        'Increased operational costs, as dissatisfied users turned to the call centre.',
+        'Customers did not immediately recognise the CRS brand and often dismissed it as unrelated to their debts. This led to confusion, mistrust and lower engagement with the service.',
         'Most customer interactions took place via SMS and email, typically accessed on a customer\'s mobile device during the workday or shortly after. To support this behaviour, a quick and seamless login process is essential to ensure an efficient and frictionless user journey.',
+        'Frustrating experiences were leading to negative online reviews. Poor ratings then eroded trust, discourage new customers, and reinforce a cycle of low expectations and reduced engagement.',
+        'Technical issues were reducing customer trust, stopping users from completing payments even after login had been completed.',
+        'The homepage demanded too much personal information upfront, discouraging customers before they could explore.',
         'Before login, customers were given just enough information to contact CRS, but not enough to build the trust needed to make payments directly, leading most to reach out by email or phone first.'
       ]
     },
