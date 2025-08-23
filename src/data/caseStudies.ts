@@ -249,12 +249,13 @@ export const caseStudies: CaseStudy[] = [
       methods: ['User Interviews', 'Usability Testing', 'Analytics Review', 'Heat Mapping', 'Card Sorting'],
       findings: 'Through our research, we discovered that account managers struggled with fragmented client information across multiple systems and found the client communication history difficult to navigate. The portal had become outdated and ineffective, with inconsistent design patterns that reduced user trust and efficiency. Users were often unable to complete essential tasks smoothly, leading to decreased satisfaction and productivity.',
       insights: [
-        'Account managers did not immediately recognize the updated interface patterns and often dismissed new features as unreliable or confusing. This led to reduced adoption of new tools and lower engagement with the platform.',
-        'Most user interactions took place during busy work periods, typically accessed on desktop during the workday. To support this behavior, a quick and efficient workflow process is essential to ensure productivity.',
-        'Frustrating experiences were leading to increased support tickets and reduced user satisfaction. Poor usability then eroded trust, discouraged feature adoption, and reinforced a cycle of low expectations.',
-        'Technical inconsistencies were reducing user trust, stopping users from completing tasks even after they had successfully logged in.',
-        'The navigation demanded too much cognitive load upfront, discouraging users before they could explore the platform\'s full capabilities.',
-        'Before accessing key features, users were given just enough information to contact support, but not enough guidance to complete tasks independently, leading most to reach out for help first.'
+        'Clients found the portal\'s dark theme dated and difficult to use, particularly when trying to read tables and graphs. This reduced overall readability and trust in the platform.',
+        'Locating specific reports within the menu was time consuming and confusing. Many clients abandoned their search altogether, opting to contact their account manager instead, undermining the purpose of the self service portal.',
+        'The absence of sort and filter options meant clients couldn\'t easily customise views or focus on the data most relevant to them, leading to frustration and inefficiency.',
+        'Users were often unaware when new features were released. As a result, development efforts were underutilised, with valuable resources spent on features that went unnoticed.',
+        'Tables and data were presented with poor spacing and layout, making them difficult to scan and interpret quickly.',
+        'Adding or removing users from client accounts required manual intervention from the support team, rather than giving clients direct control - slowing down workflows.',
+        'Most account management happened on laptops during office hours, where the portal\'s layout felt cramped and failed to adapt well to smaller screens.'
       ]
     },
     process: {
