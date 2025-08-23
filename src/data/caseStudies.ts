@@ -341,7 +341,7 @@ export const caseStudies: CaseStudy[] = [
     outcome: 'The new platform launched successfully, supporting 3 distinct brand experiences from day one. Performance improvements included 60% faster page load times, 40% reduction in cart abandonment, and 25% increase in conversion rates. The white-label capabilities enabled expansion into 2 new markets within 6 months of launch.',
     role: 'Product Manager & UX/UI Designer',
     layout: 'grid',
-    timeline: '8 months',
+    timeline: '2.5 Months',
     client: 'Pavers Shoes / E-commerce',
     team: ['Product Manager', 'UX Designer', '4 Developers', 'DevOps Engineer', 'QA Specialist'],
     tools: ['Figma', 'Shopify Plus', 'Google Analytics', 'Hotjar', 'Miro', 'Jira'],
