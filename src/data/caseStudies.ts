@@ -342,7 +342,7 @@ export const caseStudies: CaseStudy[] = [
     role: 'Product Manager & UX/UI Designer',
     layout: 'grid',
     timeline: '8 months',
-    client: 'Pavers Shoes',
+    client: 'Pavers Shoes / E-commerce',
     team: ['Product Manager', 'UX Designer', '4 Developers', 'DevOps Engineer', 'QA Specialist'],
     tools: ['Figma', 'Shopify Plus', 'Google Analytics', 'Hotjar', 'Miro', 'Jira'],
     research: {
