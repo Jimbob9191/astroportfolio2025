@@ -89,9 +89,9 @@ export const caseStudies: CaseStudy[] = [
       after: {
         revenue: '+43% uplift',
         conversionRate: '+9.2% uplift',
-        attributionAccuracy: 'Reduced "unassigned/direct" by ~14%',
-        operationalEfficiency: '40% time saved on routine updates',
-        engineeringEffort: '25% drop in duplicated effort'
+        attributionAccuracy: 'Reduced unassigned by 14%',
+        operationalEfficiency: '40% time saved',
+        engineeringEffort: '25% drop in duplication'
       }
     },
     galleryImages: [
