@@ -68,6 +68,26 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
+  {project.slug === 'finance-app-redesign' && (
+    <section class="mb-20">
+      <div class="grid grid-cols-1 gap-8" id="research-gallery-finance">
+        <a 
+          href="/crsmiimages/crsmi-2.webp"
+          class="block img-hover rounded-lg overflow-hidden research-gallery-finance-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/crsmiimages/crsmi-2.webp" 
+            alt="CRSMI client management portal research and user analysis findings" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </section>
+  )}
+
   {project.slug === 'payment-portal-redesign' && (
     <section class="mb-20">
       <div class="grid grid-cols-1 gap-8" id="research-gallery-payment">
@@ -90,25 +110,23 @@ const galleryClass = getGalleryClass(layout);
 
   {project.slug === 'finance-app-redesign' && (
     <section class="mb-20">
-      <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Background</h2>
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">Background</h2>
       <p class="text-secondary text-lg leading-relaxed mb-6">
         CRSMI is an internally built data management and reporting platform used by account managers and clients. The platform allows users to manipulate and interrogate data as they please, offering a standard set of reports which can then be expanded further down the line. (Similar to how google analytics works).
       </p>
-      <p class="text-secondary text-lg leading-relaxed mb-4">Key features include:</p>
-      <ul class="space-y-3 text-secondary text-lg mb-8">
-        <li class="flex items-start">
-          <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
-          Daily, weekly and monthly overviews with sorts and filters that can be presented as: Bar charts, Pie charts, Line graphs and tables.
-        </li>
-        <li class="flex items-start">
-          <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
-          Account management features including: opening and closing cases, editing details, accessing communication history, adding and responding to queries.
-        </li>
-        <li class="flex items-start">
-          <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
-          The ability to upload and export data in a variety of file types.
-        </li>
-      </ul>
+      <p class="text-secondary text-lg leading-relaxed mb-6">
+        Having been used for a number of years, with features slowly being added throughout — the site has grown in capabilities but has lost consistency in its design and functionality. As features were added to the site, no thought was given to their layout and how they are accessed — leading to a menu filled with mismatched reports and capabilities.
+      </p>
+      <p class="text-secondary text-lg leading-relaxed mb-6">
+        I aimed to redesign the client management portal to deliver a consistent, accessible, and user friendly experience across devices, improving workflow efficiency and reducing the time spent on administrative tasks.
+      </p>
+      <p class="text-secondary text-lg leading-relaxed mb-4">While COEO offers a range of services, the core business model follows a simple flow:</p>
+      <ol class="space-y-3 text-secondary text-lg mb-8 list-decimal list-inside">
+        <li>A client engages COEO for debt recovery services.</li>
+        <li>Account managers use CRSMI to track and manage client portfolios.</li>
+        <li>The platform provides reporting and analytics to optimize recovery strategies.</li>
+        <li>COEO delivers results and insights back to clients through the portal.</li>
+      </ol>
     </section>
   )}
 
@@ -150,10 +168,10 @@ const galleryClass = getGalleryClass(layout);
     <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">The Solution</h2>
       <p class="text-secondary text-lg leading-relaxed mb-6">
-        I started by talking with key stakeholders in the business, such as account managers and the compliance team, before talking to select clients and sending out surveys to get feedback on what tools they use, what can be improved and what they struggle with. I combined this with heatmapping and user recordings to further refine the changes that were needed.
+        I worked with the development team and key stakeholders to improve the user experience and take our platform back to a market-leading position as it had been in the past. Taking into account accessibility, user satisfaction and future expandability.
       </p>
       <p class="text-secondary text-lg leading-relaxed">
-        After I had a clearer scope of the project, I created a design system for the site (and other sites in the business) to use. This included colours, fonts, buttons, inputs, graphs, tables and layout conventions. I also worked closely with the development team to implement new features such as notifications, a quick onboarding feature and a dark mode. Before QAing and testing each feature before deployment.
+        After shipping the first iteration of the new portal we saw an immediate improvement in user satisfaction and task completion times. We also continued to track user performance, and users on the new portal were significantly more efficient at completing their daily tasks.
       </p>
     </section>
   )}
@@ -177,6 +195,37 @@ const galleryClass = getGalleryClass(layout);
           )
         ))}
       </div>
+    </section>
+  )}
+
+  {project.slug === 'finance-app-redesign' && (
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Outcomes</h2>
+      <p class="text-secondary text-lg leading-relaxed mb-6">
+        Throughout the project we had learned a lot about the user base and the niche use cases that users were running into whilst trying to use our platform. Whilst we couldn't implement all the functionality we wanted to at launch, we did manage to ship with a set of new features and some great performance improvements:
+      </p>
+      <ul class="space-y-3 text-secondary text-lg mb-8">
+        <li class="flex items-start">
+          <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+          We streamlined the navigation structure, reducing the number of menu items by 60% and organizing features into logical categories that matched user mental models.
+        </li>
+        <li class="flex items-start">
+          <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+          We developed a comprehensive design system that standardized all UI components, ensuring consistency across the entire platform and reducing development time for future features.
+        </li>
+        <li class="flex items-start">
+          <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+          We added much clearer data visualization and reporting tools, allowing users to quickly understand client performance and make informed decisions.
+        </li>
+        <li class="flex items-start">
+          <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+          We implemented responsive design principles to ensure the platform worked seamlessly across all devices, supporting the increasing number of users accessing the system on mobile devices.
+        </li>
+        <li class="flex items-start">
+          <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+          We added advanced search and filtering capabilities that allowed users to quickly find specific client information and reports, reducing time spent on administrative tasks.
+        </li>
+      </ul>
     </section>
   )}
 
@@ -374,6 +423,47 @@ const galleryClass = getGalleryClass(layout);
           const options = {
             gallery: researchGalleryPayment,
             dataSource: Array.from(researchGalleryPaymentItems).map(galleryItem => ({
+              src: galleryItem.href,
+              width: parseInt(galleryItem.getAttribute('data-pswp-width')),
+              height: parseInt(galleryItem.getAttribute('data-pswp-height')),
+              msrc: galleryItem.querySelector('img').src
+            })),
+            index,
+            showHideAnimationType: 'fade',
+            showAnimationDuration: 300,
+            hideAnimationDuration: 300,
+            bgOpacity: 0.8,
+            spacing: 0.1,
+            allowPanToNext: true,
+            maxSpreadZoom: 2,
+            getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
+            pinchToClose: true,
+            closeOnScroll: false,
+            closeOnVerticalDrag: true,
+            wheelToZoom: true,
+            padding: { top: 20, bottom: 20, left: 20, right: 20 },
+            fit: 'contain'
+          };
+          
+          const lightbox = new PhotoSwipe(options);
+          lightbox.init();
+        });
+      });
+    }
+    
+    // Initialize research gallery for Finance App case study
+    const researchGalleryFinance = document.querySelector('#research-gallery-finance');
+    
+    if (researchGalleryFinance) {
+      const researchGalleryFinanceItems = researchGalleryFinance.querySelectorAll('.research-gallery-finance-item');
+      
+      researchGalleryFinanceItems.forEach((item, index) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          const options = {
+            gallery: researchGalleryFinance,
+            dataSource: Array.from(researchGalleryFinanceItems).map(galleryItem => ({
               src: galleryItem.href,
               width: parseInt(galleryItem.getAttribute('data-pswp-width')),
               height: parseInt(galleryItem.getAttribute('data-pswp-height')),

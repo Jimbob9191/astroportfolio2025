@@ -247,11 +247,14 @@ export const caseStudies: CaseStudy[] = [
     tools: ['Figma', 'Maze', 'UserTesting', 'Principle'],
     research: {
       methods: ['User Interviews', 'Usability Testing', 'Analytics Review'],
-      findings: 'Through our research, we discovered that account managers struggled with fragmented client information across multiple systems and found the client communication history difficult to navigate. The portal\'s information architecture needed significant improvement.',
+      findings: 'Through our research, we discovered that account managers struggled with fragmented client information across multiple systems and found the client communication history difficult to navigate. The portal had become outdated and ineffective, with inconsistent design patterns that reduced user trust and efficiency. Users were often unable to complete essential tasks smoothly, leading to decreased satisfaction and productivity.',
       insights: [
-        '87% of users found the navigation confusing',
-        'Users wanted better client data organization and search functionality',
-        'Mobile usage was increasing but the experience wasn\'t optimized for field work'
+        'Account managers did not immediately recognize the updated interface patterns and often dismissed new features as unreliable or confusing. This led to reduced adoption of new tools and lower engagement with the platform.',
+        'Most user interactions took place during busy work periods, typically accessed on desktop during the workday. To support this behavior, a quick and efficient workflow process is essential to ensure productivity.',
+        'Frustrating experiences were leading to increased support tickets and reduced user satisfaction. Poor usability then eroded trust, discouraged feature adoption, and reinforced a cycle of low expectations.',
+        'Technical inconsistencies were reducing user trust, stopping users from completing tasks even after they had successfully logged in.',
+        'The navigation demanded too much cognitive load upfront, discouraging users before they could explore the platform\'s full capabilities.',
+        'Before accessing key features, users were given just enough information to contact support, but not enough guidance to complete tasks independently, leading most to reach out for help first.'
       ]
     },
     process: {
@@ -266,22 +269,27 @@ export const caseStudies: CaseStudy[] = [
         },
         {
           title: 'Design',
-          description: 'Created wireframes, prototypes, and high-fidelity designs based on research findings and user feedback.'
+          description: 'Restructured user flows to be more intuitive and established a consistent design system, consolidating the existing style for clarity and coherence.'
         },
         {
           title: 'Testing',
-          description: 'Conducted iterative testing sessions to validate design decisions and gather feedback for improvements.'
+          description: 'Conducted quick user testing sessions internally using prototypes and wireframes to get early feedback before implementation.'
         }
       ]
+    },
+    outcomes: {
+      content: 'Throughout the project we had learned a lot about the user base and the niche use cases that users were running into whilst trying to use our platform. Whilst we couldn\'t implement all the functionality we wanted to at launch, we did manage to ship with a set of new features and some great performance improvements:\n\n* We streamlined the navigation structure, reducing the number of menu items by 60% and organizing features into logical categories that matched user mental models.\n* We developed a comprehensive design system that standardized all UI components, ensuring consistency across the entire platform and reducing development time for future features.\n* We added much clearer data visualization and reporting tools, allowing users to quickly understand client performance and make informed decisions.\n* We implemented responsive design principles to ensure the platform worked seamlessly across all devices, supporting the increasing number of users accessing the system on mobile devices.\n* We added advanced search and filtering capabilities that allowed users to quickly find specific client information and reports, reducing time spent on administrative tasks.'
     },
     metrics: {
       before: {
         taskCompletionTime: '15 min avg',
         userSatisfaction: '65%',
+        supportTickets: 'Baseline'
       },
       after: {
         taskCompletionTime: '8 min avg',
         userSatisfaction: '92%',
+        supportTickets: '-30%'
       }
     },
     galleryImages: [
