@@ -330,6 +330,120 @@ export const caseStudies: CaseStudy[] = [
     ]
   },
   {
+    slug: 'ecommerce-replatforming',
+    title: 'Replatforming and White Labeling an Ecommerce Store for Market Expansion',
+    thumbnail: '/ecommerceimages/ecommerce-1.webp',
+    heroImage: '/ecommerceimages/ecommerce-1.webp',
+    categories: ['Product Strategy', 'UX/UI Design', 'E-commerce'],
+    overview: 'A comprehensive replatforming project that transformed a legacy e-commerce system into a scalable, white-label solution, enabling rapid market expansion across multiple brands and territories.',
+    problem: 'The existing e-commerce platform had reached its technical limits, struggling to support the business\'s growth ambitions. Built on outdated technology, the system suffered from poor performance, limited customization capabilities, and an inability to support multiple brands effectively. The platform\'s rigid architecture made it impossible to create distinct brand experiences, forcing all products to share the same look and feel regardless of target market or brand positioning.\n\nCustomer experience was suffering due to slow page load times, frequent downtime during peak periods, and a checkout process that hadn\'t been optimized for mobile users. The backend systems were equally problematic, with inventory management, order processing, and customer service tools that were disconnected and inefficient. This technical debt was not only limiting current performance but also preventing the business from expanding into new markets and launching additional brands.\n\nThe goal was to replatform the entire e-commerce ecosystem onto a modern, scalable architecture that could support multiple white-label brands, improve performance across all touchpoints, and provide the flexibility needed for rapid market expansion.',
+    approach: 'I led the product strategy and UX design for a complete platform migration, working closely with stakeholders to define requirements, map user journeys, and design scalable solutions that could support multiple brand identities while maintaining operational efficiency.',
+    outcome: 'The new platform launched successfully, supporting 3 distinct brand experiences from day one. Performance improvements included 60% faster page load times, 40% reduction in cart abandonment, and 25% increase in conversion rates. The white-label capabilities enabled expansion into 2 new markets within 6 months of launch.',
+    role: 'Product Manager & UX/UI Designer',
+    layout: 'grid',
+    timeline: '8 months',
+    client: 'Pavers Shoes',
+    team: ['Product Manager', 'UX Designer', '4 Developers', 'DevOps Engineer', 'QA Specialist'],
+    tools: ['Figma', 'Shopify Plus', 'Google Analytics', 'Hotjar', 'Miro', 'Jira'],
+    research: {
+      methods: ['User Journey Mapping', 'Technical Audit', 'Competitive Analysis', 'Stakeholder Interviews', 'Performance Testing'],
+      findings: 'The legacy platform was built on outdated technology that couldn\'t scale with business growth. Performance issues were driving customers away, and the inability to create distinct brand experiences was limiting market expansion opportunities.',
+      insights: [
+        'Page load times averaged 8+ seconds on mobile, well above the 3-second threshold that causes significant user drop-off',
+        'The checkout process had a 70% abandonment rate, primarily due to technical issues and poor mobile optimization',
+        'Customer support was spending 40% of their time dealing with platform-related issues rather than helping customers',
+        'The existing system couldn\'t support different pricing strategies, currencies, or localized content for different markets',
+        'Inventory management was manual and error-prone, leading to overselling and customer dissatisfaction',
+        'The platform couldn\'t handle traffic spikes during sales events, resulting in lost revenue and poor customer experience',
+        'Brand differentiation was impossible with the current system, limiting the ability to target different customer segments effectively'
+      ]
+    },
+    process: {
+      steps: [
+        {
+          title: 'Discovery & Audit',
+          description: 'Conducted comprehensive technical and UX audits to understand current limitations and define requirements for the new platform.'
+        },
+        {
+          title: 'Strategy & Planning',
+          description: 'Developed migration strategy, defined white-label requirements, and created detailed project roadmap with stakeholder alignment.'
+        },
+        {
+          title: 'Design & Prototyping',
+          description: 'Created scalable design system and prototyped key user journeys for multiple brand experiences and market requirements.'
+        },
+        {
+          title: 'Implementation & Testing',
+          description: 'Oversaw development, conducted extensive testing across brands and markets, and managed the phased migration process.'
+        }
+      ],
+      details: 'As the product manager and lead designer, I was responsible for orchestrating the entire replatforming initiative while ensuring minimal disruption to ongoing business operations. The project required balancing technical constraints with business objectives, user needs, and tight timelines. My approach focused on creating a scalable foundation that could support current needs while enabling future growth:\n\n* Conducted extensive stakeholder interviews across all departments to understand pain points, requirements, and success criteria for the new platform.\n* Performed detailed technical audits of the existing system, identifying performance bottlenecks, security vulnerabilities, and scalability limitations.\n* Analyzed customer behavior data and conducted user research to understand how platform limitations were impacting the shopping experience.\n* Developed a comprehensive migration strategy that minimized business disruption while ensuring data integrity and SEO preservation.\n* Created detailed user journey maps for different customer segments and brand experiences to guide the new platform design.\n* Designed a flexible, component-based design system that could support multiple brand identities while maintaining development efficiency.\n* Established performance benchmarks and success metrics to measure the impact of the new platform.\n* Coordinated with development teams to ensure technical feasibility while maintaining design integrity and user experience standards.'
+    },
+    outcomes: {
+      content: 'The replatforming project delivered significant improvements across all key metrics while establishing a foundation for sustainable growth. The new platform not only solved immediate technical and user experience issues but also enabled strategic business expansion that wasn\'t possible with the legacy system:\n\n* We successfully migrated over 50,000 products and 100,000+ customer accounts with zero data loss and minimal downtime during the transition.\n* The new platform architecture reduced page load times by 60%, bringing mobile performance well within industry best practices and significantly improving user experience.\n* Cart abandonment rates dropped by 40% due to improved checkout flow, better mobile optimization, and enhanced payment processing capabilities.\n* Overall conversion rates increased by 25% across all brands, with mobile conversions seeing the most dramatic improvement.\n* The white-label capabilities enabled the launch of two distinct brand experiences within the first quarter, each tailored to specific market segments and customer needs.\n* Customer support tickets related to platform issues decreased by 65%, allowing the team to focus on higher-value customer service activities.\n* The new inventory management system eliminated overselling incidents and reduced stock discrepancies by 90%.\n* Platform uptime improved to 99.9%, with the system successfully handling traffic spikes during major sales events without performance degradation.\n* The modular design system reduced development time for new features by 50%, enabling faster iteration and market response.\n* SEO performance improved significantly, with organic traffic increasing by 35% within six months of launch due to better site structure and performance.\n* The platform\'s scalability enabled expansion into two new international markets within six months, something that would have been impossible with the legacy system.'
+    },
+    metrics: {
+      before: {
+        pageLoadTime: '8+ seconds',
+        cartAbandonment: '70%',
+        conversionRate: 'Baseline',
+        platformUptime: '95%',
+        supportTickets: 'High volume'
+      },
+      after: {
+        pageLoadTime: '3.2 seconds',
+        cartAbandonment: '42%',
+        conversionRate: '+25%',
+        platformUptime: '99.9%',
+        supportTickets: '-65%'
+      }
+    },
+    galleryImages: [
+      {
+        thumbnail: '/ecommerceimages/ecommerce-2.webp',
+        large: '/ecommerceimages/ecommerce-2.webp',
+        width: 1260,
+        height: 750,
+        alt: 'E-commerce platform architecture and technical planning'
+      },
+      {
+        thumbnail: '/ecommerceimages/ecommerce-3.webp',
+        large: '/ecommerceimages/ecommerce-3.webp',
+        width: 1260,
+        height: 750,
+        alt: 'White-label design system and brand customization capabilities'
+      },
+      {
+        thumbnail: '/ecommerceimages/ecommerce-4.webp',
+        large: '/ecommerceimages/ecommerce-4.webp',
+        width: 1260,
+        height: 750,
+        alt: 'User journey mapping and experience optimization'
+      },
+      {
+        thumbnail: '/ecommerceimages/ecommerce-5.webp',
+        large: '/ecommerceimages/ecommerce-5.webp',
+        width: 1260,
+        height: 750,
+        alt: 'Mobile-first checkout process redesign'
+      },
+      {
+        thumbnail: '/ecommerceimages/ecommerce-6.webp',
+        large: '/ecommerceimages/ecommerce-6.webp',
+        width: 1260,
+        height: 750,
+        alt: 'Performance optimization and technical improvements'
+      },
+      {
+        thumbnail: '/ecommerceimages/ecommerce-7.webp',
+        large: '/ecommerceimages/ecommerce-7.webp',
+        width: 1260,
+        height: 750,
+        alt: 'Multi-brand platform capabilities and market expansion'
+      }
+    ]
+  },
+  {
     slug: 'healthcare-dashboard',
     title: 'Healthcare Dashboard',
     thumbnail: 'https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
