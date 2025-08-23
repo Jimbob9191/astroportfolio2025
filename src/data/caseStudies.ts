@@ -43,6 +43,103 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: 'ecommerce-replatforming',
+    title: 'Replatforming and White Labeling an Ecommerce Store for Market Expansion',
+    thumbnail: '/ecommerceimages/ecommerce-1.webp',
+    heroImage: '/ecommerceimages/ecommerce-1.webp',
+    categories: ['Product Strategy', 'UX/UI Design', 'E-commerce'],
+    overview: 'A comprehensive replatforming project that transformed a legacy e-commerce system into a scalable, white-label solution, enabling rapid market expansion across multiple brands and territories.',
+    problem: 'The team was spending significant time duplicating work, fixing avoidable errors, and maintaining divergent patterns across brands. This created:\n\n* Operational drag (duplicate content updates, disjointed releases).\n* UX inconsistency across brands.\n* Slower experimentation and fragmented analytics.\n\nWe had already rebuilt the main Pavers site from Nuxt to Shopify Hydrogen headless with a clean, accessible codebase and embedded CRO wins. The next step was to bring Jones Bootmaker onto the same platform via a white‑label approach so we could maintain one codebase, multiple brands.',
+    approach: 'I led the product strategy and UX design for a complete platform migration, working closely with stakeholders to define requirements, map user journeys, and design scalable solutions that could support multiple brand identities while maintaining operational efficiency.',
+    outcome: 'The new platform launched successfully, supporting 3 distinct brand experiences from day one. Performance improvements included 60% faster page load times, 40% reduction in cart abandonment, and 25% increase in conversion rates. The white-label capabilities enabled expansion into 2 new markets within 6 months of launch.',
+    role: 'Product Manager & UX/UI Designer',
+    layout: 'grid',
+    timeline: '2.5 Months',
+    client: 'Pavers Shoes / E-commerce',
+    team: ['Product Manager', 'UX Designer', '4 Developers', 'DevOps Engineer', 'QA Specialist'],
+    tools: ['Figma', 'Shopify Plus', 'Google Analytics', 'Hotjar', 'Miro', 'Jira'],
+    research: {
+      methods: ['Performance Profiling', 'Stakeholder Interviews', 'Parity Mapping', 'Integration Review', 'Heat Mapping', 'Analytics Review'],
+      findings: 'The legacy platform was built on outdated technology that couldn\'t scale with business growth. Performance issues were driving customers away, and the inability to create distinct brand experiences was limiting market expansion opportunities.',
+      insights: [
+        'Proven conversion rate optimisation (CRO) strategies that had successfully driven measurable revenue growth on the Pavers brand were not implemented on the Jones brand. This created a clear opportunity gap where revenue was being left on the table.',
+        'Each site relied on a different mix of third-party solutions, with some integrations redundant or outdated. This lack of unification created inefficiencies and required consolidating functionality to streamline both performance and cost.',
+        'Different teams had established separate reporting setups across brands, meaning data tracking was inconsistent and siloed. Coordinating with stakeholders across departments was critical to ensure a smooth migration and alignment of reporting standards.',
+        'Page structures, user flows, and core features varied significantly between the two brands. This inconsistency required a detailed review to determine where unification was needed, and where differentiation between the brands was strategically valuable.',
+        'Several key features present on the Pavers brand were entirely absent from Jones. This not only created UX disparities but also required new operational processes and internal support structures to be introduced.',
+        'The existing site architectures were not designed with scalability in mind. Any redesign or migration needed to account for future growth, new features, and potential third-party integrations without introducing technical debt.',
+        'Variations in site speed, technical SEO implementation, and content structure posed potential risks to organic traffic. Aligning both brands on best practices was essential to protect visibility during and after migration.'
+      ]
+    },
+    process: {
+      steps: [],
+      details: 'As the product manager and design lead, I owned the backlog, prioritised features, aligned brand stakeholders, coordinated cross-functional teams and managed delivery from concept to launch. With this being my first large scale project for the business and on a very short turnaround, we had to move quickly and decisively to stay on track.\n\nThroughout the project, we worked in a scrum / agile structure with daily standups, weekly planning meetings and retros.\n\nI began by meeting stakeholders from each brand to agree on the overall timeline and identify potential site specific changes required to make the replatforming possible. From there, I drafted a rough backlog and sprint plan, detailing the first couple of weeks where the development team would set up components and CMS structures to support theming across multiple brands.\n\nWhile the dev team established the framework, I designed a flexible theming system that included brand tokens, typography, colour, and spacing so that a single component library could serve multiple brands. I also defined clear rules for where brands could diverge eg: accent colours and typography scale, versus where consistency was critical (checkout flows).This gave us a clearer view of feature parity between sites and surfaced larger differences requiring strategic decisions.\n\nThroughout the project, I ran ongoing stakeholder sessions to evaluate changes. Where CRO data already existed, we adopted the proven winning configuration by default. For untested features, we facilitated deeper discussions between stakeholders and set up new CRO tests where needed. For example:\n\n* Product images: Pavers used a carousel, while Jones used a grid. With no existing data, I initiated a CRO test, which confirmed the grid layout performed better.\n* Other contested features: Several went through similar testing to remove ambiguity and drive data-led decisions.\n\nDue to time restraints, not every feature could be tested ahead of launch. For instance, PLP filter layouts and product card details defaulted to the Pavers implementation, with post-launch tests planned to validate and optimise.\n\nTo keep development unblocked, I ran staggered design handoffs, accepting functionally correct (but not pixel-perfect) builds when necessary. Each sprint included handoffs of a few core pages eg: PDP and PLP designs for both brands. These would be signed off by stakeholders before moving into development the next sprint.\n\nThird-party integrations were a major risk area, particularly for marketing teams such as CRM, Paid Social, and PPC platforms. To mitigate delays, we pushed to implement and configure these systems as early as possible, enabling UAT by marketing teams and external partners before UI completion.\n\nBy the halfway point, we were working closely with ecommerce and marketing teams on QA and UAT. Without a dedicated QA resource, testing was shared between myself and the development team before handoff to business stakeholders for sign off.\n\nGiven the high risks around tagging, tracking, product feeds, and campaign setup, I collaborated with developers and an external agency to document site changes, minimise performance impact, and preserve tracking accuracy.\n\nIn the final weeks, I facilitated group UAT sessions with wider business teams. Especially those not involved in day to day development or testing, to uncover overlooked issues and build a backlog of enhancements for post launch.'
+    },
+    outcomes: {
+      content: 'By the end of the project, our team had gained deep insights into the systems, third-party integrations, and design nuances of both brands. We successfully unified our tech stack and used the opportunity to document a range of new features and functionalities—many of which had previously been overlooked or not fully understood.\n\nOn launch day, we delivered:\n* A single white-label codebase powering multiple brands.\n* CRO wins from Pavers seamlessly applied to Jones from day one.\n* Introduced new features including Wishlist, Pre-Order, Purchase on Collection Page, and Combined Product Listings.\n* Cleaner event schema and improved revenue attribution, with a clear path to resolving inherited attribution issues from Pavers in the coming months.\n* Performance enhancements, with faster LCP and reduced errors.\n* Operational efficiencies for ecommerce, creative, and marketing teams, thanks to simplified file sizes and dimensions.'
+    },
+    metrics: {
+      before: {
+        revenue: 'Baseline',
+        conversionRate: 'Baseline',
+        attributionAccuracy: 'Poor',
+        operationalEfficiency: 'Manual processes',
+        engineeringEffort: 'High duplication'
+      },
+      after: {
+        revenue: '+43% uplift',
+        conversionRate: '+9.2% uplift',
+        attributionAccuracy: 'Reduced "unassigned/direct" by ~14%',
+        operationalEfficiency: '40% time saved on routine updates',
+        engineeringEffort: '25% drop in duplicated effort'
+      }
+    },
+    galleryImages: [
+      {
+        thumbnail: '/ecommerceimages/ecommerce-2.webp',
+        large: '/ecommerceimages/ecommerce-2.webp',
+        width: 1260,
+        height: 750,
+        alt: 'E-commerce platform architecture and technical planning'
+      },
+      {
+        thumbnail: '/ecommerceimages/ecommerce-3.webp',
+        large: '/ecommerceimages/ecommerce-3.webp',
+        width: 1260,
+        height: 750,
+        alt: 'White-label design system and brand customization capabilities'
+      },
+      {
+        thumbnail: '/ecommerceimages/ecommerce-4.webp',
+        large: '/ecommerceimages/ecommerce-4.webp',
+        width: 1260,
+        height: 750,
+        alt: 'User journey mapping and experience optimization'
+      },
+      {
+        thumbnail: '/ecommerceimages/ecommerce-5.webp',
+        large: '/ecommerceimages/ecommerce-5.webp',
+        width: 1260,
+        height: 750,
+        alt: 'Mobile-first checkout process redesign'
+      },
+      {
+        thumbnail: '/ecommerceimages/ecommerce-6.webp',
+        large: '/ecommerceimages/ecommerce-6.webp',
+        width: 1260,
+        height: 750,
+        alt: 'Performance optimization and technical improvements'
+      },
+      {
+        thumbnail: '/ecommerceimages/ecommerce-7.webp',
+        large: '/ecommerceimages/ecommerce-7.webp',
+        width: 1260,
+        height: 750,
+        alt: 'Multi-brand platform capabilities and market expansion'
+      }
+    ]
+  },
+  {
     slug: 'payment-portal-redesign',
     title: 'Redesigning A Payment Portal',
     thumbnail: '/mycrsimages/mycrs-1.webp',
@@ -326,103 +423,6 @@ export const caseStudies: CaseStudy[] = [
         width: 1260,
         height: 750,
         alt: 'CRSMI client management portal final design'
-      }
-    ]
-  },
-  {
-    slug: 'ecommerce-replatforming',
-    title: 'Replatforming and White Labeling an Ecommerce Store for Market Expansion',
-    thumbnail: '/ecommerceimages/ecommerce-1.webp',
-    heroImage: '/ecommerceimages/ecommerce-1.webp',
-    categories: ['Product Strategy', 'UX/UI Design', 'E-commerce'],
-    overview: 'A comprehensive replatforming project that transformed a legacy e-commerce system into a scalable, white-label solution, enabling rapid market expansion across multiple brands and territories.',
-    problem: 'The team was spending significant time duplicating work, fixing avoidable errors, and maintaining divergent patterns across brands. This created:\n\n* Operational drag (duplicate content updates, disjointed releases).\n* UX inconsistency across brands.\n* Slower experimentation and fragmented analytics.\n\nWe had already rebuilt the main Pavers site from Nuxt to Shopify Hydrogen headless with a clean, accessible codebase and embedded CRO wins. The next step was to bring Jones Bootmaker onto the same platform via a white‑label approach so we could maintain one codebase, multiple brands.',
-    approach: 'I led the product strategy and UX design for a complete platform migration, working closely with stakeholders to define requirements, map user journeys, and design scalable solutions that could support multiple brand identities while maintaining operational efficiency.',
-    outcome: 'The new platform launched successfully, supporting 3 distinct brand experiences from day one. Performance improvements included 60% faster page load times, 40% reduction in cart abandonment, and 25% increase in conversion rates. The white-label capabilities enabled expansion into 2 new markets within 6 months of launch.',
-    role: 'Product Manager & UX/UI Designer',
-    layout: 'grid',
-    timeline: '2.5 Months',
-    client: 'Pavers Shoes / E-commerce',
-    team: ['Product Manager', 'UX Designer', '4 Developers', 'DevOps Engineer', 'QA Specialist'],
-    tools: ['Figma', 'Shopify Plus', 'Google Analytics', 'Hotjar', 'Miro', 'Jira'],
-    research: {
-      methods: ['Performance Profiling', 'Stakeholder Interviews', 'Parity Mapping', 'Integration Review', 'Heat Mapping', 'Analytics Review'],
-      findings: 'The legacy platform was built on outdated technology that couldn\'t scale with business growth. Performance issues were driving customers away, and the inability to create distinct brand experiences was limiting market expansion opportunities.',
-      insights: [
-        'Proven conversion rate optimisation (CRO) strategies that had successfully driven measurable revenue growth on the Pavers brand were not implemented on the Jones brand. This created a clear opportunity gap where revenue was being left on the table.',
-        'Each site relied on a different mix of third-party solutions, with some integrations redundant or outdated. This lack of unification created inefficiencies and required consolidating functionality to streamline both performance and cost.',
-        'Different teams had established separate reporting setups across brands, meaning data tracking was inconsistent and siloed. Coordinating with stakeholders across departments was critical to ensure a smooth migration and alignment of reporting standards.',
-        'Page structures, user flows, and core features varied significantly between the two brands. This inconsistency required a detailed review to determine where unification was needed, and where differentiation between the brands was strategically valuable.',
-        'Several key features present on the Pavers brand were entirely absent from Jones. This not only created UX disparities but also required new operational processes and internal support structures to be introduced.',
-        'The existing site architectures were not designed with scalability in mind. Any redesign or migration needed to account for future growth, new features, and potential third-party integrations without introducing technical debt.',
-        'Variations in site speed, technical SEO implementation, and content structure posed potential risks to organic traffic. Aligning both brands on best practices was essential to protect visibility during and after migration.'
-      ]
-    },
-    process: {
-      steps: [],
-      details: 'As the product manager and design lead, I owned the backlog, prioritised features, aligned brand stakeholders, coordinated cross-functional teams and managed delivery from concept to launch. With this being my first large scale project for the business and on a very short turnaround, we had to move quickly and decisively to stay on track.\n\nThroughout the project, we worked in a scrum / agile structure with daily standups, weekly planning meetings and retros.\n\nI began by meeting stakeholders from each brand to agree on the overall timeline and identify potential site specific changes required to make the replatforming possible. From there, I drafted a rough backlog and sprint plan, detailing the first couple of weeks where the development team would set up components and CMS structures to support theming across multiple brands.\n\nWhile the dev team established the framework, I designed a flexible theming system that included brand tokens, typography, colour, and spacing so that a single component library could serve multiple brands. I also defined clear rules for where brands could diverge eg: accent colours and typography scale, versus where consistency was critical (checkout flows).This gave us a clearer view of feature parity between sites and surfaced larger differences requiring strategic decisions.\n\nThroughout the project, I ran ongoing stakeholder sessions to evaluate changes. Where CRO data already existed, we adopted the proven winning configuration by default. For untested features, we facilitated deeper discussions between stakeholders and set up new CRO tests where needed. For example:\n\n* Product images: Pavers used a carousel, while Jones used a grid. With no existing data, I initiated a CRO test, which confirmed the grid layout performed better.\n* Other contested features: Several went through similar testing to remove ambiguity and drive data-led decisions.\n\nDue to time restraints, not every feature could be tested ahead of launch. For instance, PLP filter layouts and product card details defaulted to the Pavers implementation, with post-launch tests planned to validate and optimise.\n\nTo keep development unblocked, I ran staggered design handoffs, accepting functionally correct (but not pixel-perfect) builds when necessary. Each sprint included handoffs of a few core pages eg: PDP and PLP designs for both brands. These would be signed off by stakeholders before moving into development the next sprint.\n\nThird-party integrations were a major risk area, particularly for marketing teams such as CRM, Paid Social, and PPC platforms. To mitigate delays, we pushed to implement and configure these systems as early as possible, enabling UAT by marketing teams and external partners before UI completion.\n\nBy the halfway point, we were working closely with ecommerce and marketing teams on QA and UAT. Without a dedicated QA resource, testing was shared between myself and the development team before handoff to business stakeholders for sign off.\n\nGiven the high risks around tagging, tracking, product feeds, and campaign setup, I collaborated with developers and an external agency to document site changes, minimise performance impact, and preserve tracking accuracy.\n\nIn the final weeks, I facilitated group UAT sessions with wider business teams. Especially those not involved in day to day development or testing, to uncover overlooked issues and build a backlog of enhancements for post launch.'
-    },
-    outcomes: {
-      content: 'By the end of the project, our team had gained deep insights into the systems, third-party integrations, and design nuances of both brands. We successfully unified our tech stack and used the opportunity to document a range of new features and functionalities—many of which had previously been overlooked or not fully understood.\n\nOn launch day, we delivered:\n* A single white-label codebase powering multiple brands.\n* CRO wins from Pavers seamlessly applied to Jones from day one.\n* Introduced new features including Wishlist, Pre-Order, Purchase on Collection Page, and Combined Product Listings.\n* Cleaner event schema and improved revenue attribution, with a clear path to resolving inherited attribution issues from Pavers in the coming months.\n* Performance enhancements, with faster LCP and reduced errors.\n* Operational efficiencies for ecommerce, creative, and marketing teams, thanks to simplified file sizes and dimensions.'
-    },
-    metrics: {
-      before: {
-        revenue: 'Baseline',
-        conversionRate: 'Baseline',
-        attributionAccuracy: 'Poor',
-        operationalEfficiency: 'Manual processes',
-        engineeringEffort: 'High duplication'
-      },
-      after: {
-        revenue: '+43% uplift',
-        conversionRate: '+9.2% uplift',
-        attributionAccuracy: 'Reduced "unassigned/direct" by ~14%',
-        operationalEfficiency: '40% time saved on routine updates',
-        engineeringEffort: '25% drop in duplicated effort'
-      }
-    },
-    galleryImages: [
-      {
-        thumbnail: '/ecommerceimages/ecommerce-2.webp',
-        large: '/ecommerceimages/ecommerce-2.webp',
-        width: 1260,
-        height: 750,
-        alt: 'E-commerce platform architecture and technical planning'
-      },
-      {
-        thumbnail: '/ecommerceimages/ecommerce-3.webp',
-        large: '/ecommerceimages/ecommerce-3.webp',
-        width: 1260,
-        height: 750,
-        alt: 'White-label design system and brand customization capabilities'
-      },
-      {
-        thumbnail: '/ecommerceimages/ecommerce-4.webp',
-        large: '/ecommerceimages/ecommerce-4.webp',
-        width: 1260,
-        height: 750,
-        alt: 'User journey mapping and experience optimization'
-      },
-      {
-        thumbnail: '/ecommerceimages/ecommerce-5.webp',
-        large: '/ecommerceimages/ecommerce-5.webp',
-        width: 1260,
-        height: 750,
-        alt: 'Mobile-first checkout process redesign'
-      },
-      {
-        thumbnail: '/ecommerceimages/ecommerce-6.webp',
-        large: '/ecommerceimages/ecommerce-6.webp',
-        width: 1260,
-        height: 750,
-        alt: 'Performance optimization and technical improvements'
-      },
-      {
-        thumbnail: '/ecommerceimages/ecommerce-7.webp',
-        large: '/ecommerceimages/ecommerce-7.webp',
-        width: 1260,
-        height: 750,
-        alt: 'Multi-brand platform capabilities and market expansion'
       }
     ]
   },
