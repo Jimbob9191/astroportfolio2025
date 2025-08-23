@@ -10,7 +10,7 @@ export function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { title, slug, layout, galleryImages, research, process, metrics } = project;
+const { title, slug, layout, galleryImages, research, process, outcomes, metrics } = project;
 
 const getGalleryClass = (layout: string) => {
   switch (layout) {
@@ -36,10 +36,6 @@ const galleryClass = getGalleryClass(layout);
         <div>
           <h3 class="text-xl font-medium mb-4">Research Methods</h3>
           <p class="text-secondary">{research.methods.join(', ')}</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-medium mb-4">Key Findings</h3>
-          <p class="text-secondary">{research.findings}</p>
         </div>
         <div>
           <h3 class="text-xl font-medium mb-4">Key Insights</h3>
@@ -74,8 +70,8 @@ const galleryClass = getGalleryClass(layout);
   )}
 
   {project.slug === 'finance-app-redesign' && (
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">Background</h2>
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Background</h2>
       <p class="text-secondary text-lg leading-relaxed mb-6">
         CRSMI is an internally built data management and reporting platform used by account managers and clients. The platform allows users to manipulate and interrogate data as they please, offering a standard set of reports which can then be expanded further down the line. (Similar to how google analytics works).
       </p>
@@ -98,17 +94,15 @@ const galleryClass = getGalleryClass(layout);
   )}
 
   {project.slug === 'payment-portal-redesign' && (
-    <section class="mb-16">
+    <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">Background</h2>
       <p class="text-secondary text-lg leading-relaxed mb-6">
         MYCRS is a payment portal allowing debtors to make payments on debts from other businesses. In 2013 the site was originally designed as a desktop first portal, with only secondary consideration for mobile. By late 2019, consumer behaviour had shifted dramatically, with 95% of traffic now coming from mobile devices.
       </p>
       <p class="text-secondary text-lg leading-relaxed mb-6">
-        To address this, I partnered with the development team to redesign the experience for mobile users and re establish MYCRS as a market leading platform. Our goals were to improve conversion rates, prioritise accessibility, improve customer satisfaction, and ensure the system was scalable for future enhancements.
+        To address this, I partnered with the development team to redesign the experience for mobile users and re establish MYCRS as a market leading platform. Our goals were to improve conversion rates, prioritise accessibility, improve customer satisfaction and ensure the system was scalable for future enhancements.
       </p>
-      <p class="text-secondary text-lg leading-relaxed mb-4">
-        While CRS offers a range of services, the core business model follows a simple flow:
-      </p>
+      <p class="text-secondary text-lg leading-relaxed mb-4">While CRS offers a range of services, the core business model follows a simple flow:</p>
       <ol class="space-y-3 text-secondary text-lg mb-8 list-decimal list-inside">
         <li>A customer purchases a product or service but cannot or does not pay.</li>
         <li>The company attempts to collect the debt but is unsuccessful.</li>
@@ -121,6 +115,26 @@ const galleryClass = getGalleryClass(layout);
   {process && (
     <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Process</h2>
+      {process.details && (
+        <div class="mb-12">
+          <div class="prose prose-lg max-w-none">
+            {process.details.split('\n\n').map(paragraph => (
+              paragraph.includes('*') ? (
+                <ul class="space-y-2 text-secondary text-lg">
+                  {paragraph.split('\n').filter(line => line.startsWith('*')).map(item => (
+                    <li class="flex items-start">
+                      <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                      <span>{item.substring(2)}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p class="text-secondary text-lg leading-relaxed mb-6">{paragraph}</p>
+              )
+            ))}
+          </div>
+        </div>
+      )}
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {process.steps.map(step => (
           <div class="bg-gray-50 p-8 rounded-lg">
@@ -141,6 +155,28 @@ const galleryClass = getGalleryClass(layout);
       <p class="text-secondary text-lg leading-relaxed">
         After I had a clearer scope of the project, I created a design system for the site (and other sites in the business) to use. This included colours, fonts, buttons, inputs, graphs, tables and layout conventions. I also worked closely with the development team to implement new features such as notifications, a quick onboarding feature and a dark mode. Before QAing and testing each feature before deployment.
       </p>
+    </section>
+  )}
+
+  {outcomes && (
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Outcomes</h2>
+      <div class="prose prose-lg max-w-none">
+        {outcomes.content.split('\n\n').map(paragraph => (
+          paragraph.includes('*') ? (
+            <ul class="space-y-3 text-secondary text-lg mb-8">
+              {paragraph.split('\n').filter(line => line.startsWith('*')).map(item => (
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>{item.substring(2)}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="text-secondary text-lg leading-relaxed mb-6">{paragraph}</p>
+          )
+        ))}
+      </div>
     </section>
   )}
 
