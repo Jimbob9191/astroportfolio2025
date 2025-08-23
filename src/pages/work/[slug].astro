@@ -302,6 +302,49 @@ const galleryClass = getGalleryClass(layout);
             class="w-full h-full object-cover"
             loading="lazy"
           />
+
+    <script>
+      // Initialize problem gallery for E-commerce case study
+      const problemGalleryEcommerce = document.querySelector('#problem-gallery-ecommerce');
+      
+      if (problemGalleryEcommerce) {
+        const problemGalleryEcommerceItems = problemGalleryEcommerce.querySelectorAll('.problem-gallery-ecommerce-item');
+        
+        problemGalleryEcommerceItems.forEach((item, index) => {
+          item.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const options = {
+              gallery: problemGalleryEcommerce,
+              dataSource: Array.from(problemGalleryEcommerceItems).map(galleryItem => ({
+                src: galleryItem.href,
+                width: parseInt(galleryItem.getAttribute('data-pswp-width')),
+                height: parseInt(galleryItem.getAttribute('data-pswp-height')),
+                msrc: galleryItem.querySelector('img').src
+              })),
+              index,
+              showHideAnimationType: 'fade',
+              showAnimationDuration: 300,
+              hideAnimationDuration: 300,
+              bgOpacity: 0.8,
+              spacing: 0.1,
+              allowPanToNext: true,
+              maxSpreadZoom: 2,
+              getDoubleTapZoom: (isMouseClick, item) => isMouseClick ? 2 : 1,
+              pinchToClose: true,
+              closeOnScroll: false,
+              closeOnVerticalDrag: true,
+              wheelToZoom: true,
+              padding: { top: 20, bottom: 20, left: 20, right: 20 },
+              fit: 'contain'
+            };
+            
+            const lightbox = new PhotoSwipe(options);
+            lightbox.init();
+          });
+        });
+      }
+    </script>
         </a>
       ))}
     </div>
