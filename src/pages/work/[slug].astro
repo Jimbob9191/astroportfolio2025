@@ -29,6 +29,7 @@ const galleryClass = getGalleryClass(layout);
 ---
 
 <CaseStudyLayout title={title} slug={slug}>
+  <!-- 1. BACKGROUND -->
   {project.slug === 'payment-portal-redesign' && (
     <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">Background</h2>
@@ -63,6 +64,45 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
+  {project.slug === 'finance-app-redesign' && (
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">Background</h2>
+      <p class="text-secondary text-lg leading-relaxed mb-6">
+        CRSMI is an internally built data management and reporting platform used by account managers and clients. The platform allows users to manipulate and interrogate data as they please, offering a standard set of reports which can then be expanded further down the line.
+      </p>
+      <p class="text-secondary text-lg leading-relaxed mb-4">While coeo offers a range of services, the core business model follows a simple flow:</p>
+      <ol class="space-y-3 text-secondary text-lg mb-8 list-decimal list-inside">
+        <li>A client engages COEO for debt recovery services.</li>
+        <li>Account managers use CRSMI to track and manage client portfolios.</li>
+        <li>coeo then delivers results and insights back to clients through the same portal.</li>
+      </ol>
+    </section>
+  )}
+
+  <!-- 2. THE PROBLEM -->
+  {project.problem && (
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">The Problem</h2>
+      <div class="prose prose-lg max-w-none">
+        {project.problem.split('\n\n').map(paragraph => (
+          paragraph.includes('*') ? (
+            <ul class="space-y-3 text-secondary text-lg mb-8">
+              {paragraph.split('\n').filter(line => line.startsWith('*')).map(item => (
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>{item.substring(2)}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="text-secondary text-lg leading-relaxed mb-6">{paragraph}</p>
+          )
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Problem gallery images for specific case studies -->
   {project.slug === 'ecommerce-replatforming' && (
     <section class="mb-16">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="problem-gallery-ecommerce">
@@ -161,28 +201,106 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
-  {project.problem && (
+  {project.slug === 'payment-portal-redesign' && (
     <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">The Problem</h2>
-      <div class="prose prose-lg max-w-none">
-        {project.problem.split('\n\n').map(paragraph => (
-          paragraph.includes('*') ? (
-            <ul class="space-y-3 text-secondary text-lg mb-8">
-              {paragraph.split('\n').filter(line => line.startsWith('*')).map(item => (
-                <li class="flex items-start">
-                  <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                  <span>{item.substring(2)}</span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p class="text-secondary text-lg leading-relaxed mb-6">{paragraph}</p>
-          )
-        ))}
+      <div class="grid grid-cols-1 gap-8" id="problem-gallery-payment">
+        <a 
+          href="/mycrsimages/mycrs-2.webp"
+          class="block img-hover rounded-lg overflow-hidden problem-gallery-payment-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/mycrsimages/mycrs-2.webp" 
+            alt="MYCRS original payment portal showing outdated design and accessibility issues" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
       </div>
     </section>
   )}
 
+  {project.slug === 'metamask-onboarding' && (
+    <section class="mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="problem-gallery">
+        <a 
+          href="/metamaskimages/metamask-2.webp"
+          class="block img-hover rounded-lg overflow-hidden problem-gallery-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/metamaskimages/metamask-2.webp" 
+            alt="MetaMask original onboarding screens showing inconsistent styling" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+        <a 
+          href="/metamaskimages/metamask-3.webp"
+          class="block img-hover rounded-lg overflow-hidden problem-gallery-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/metamaskimages/metamask-3.webp" 
+            alt="MetaMask onboarding flow analysis and issues" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </section>
+  )}
+
+  {project.slug === 'finance-app-redesign' && (
+    <section class="mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="background-gallery">
+        <a 
+          href="/crsmiimages/crsmi-2.webp"
+          class="block img-hover rounded-lg overflow-hidden background-gallery-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/crsmiimages/crsmi-2.webp" 
+            alt="CRSMI original interface showing design inconsistencies" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+        <a 
+          href="/crsmiimages/crsmi-3.webp"
+          class="block img-hover rounded-lg overflow-hidden background-gallery-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/crsmiimages/crsmi-3.webp" 
+            alt="CRSMI platform analysis and user flow issues" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+        <a 
+          href="/crsmiimages/crsmi-4.webp"
+          class="block img-hover rounded-lg overflow-hidden background-gallery-item w-full"
+          data-pswp-width="1260"
+          data-pswp-height="750"
+        >
+          <img 
+            src="/crsmiimages/crsmi-4.webp" 
+            alt="CRSMI component audit and design system planning" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </section>
+  )}
+
+  <!-- 3. RESEARCH & DISCOVERY -->
   {research && (
     <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Research & Discovery</h2>
@@ -203,6 +321,7 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
+  <!-- Research gallery images for specific case studies -->
   {project.slug === 'ecommerce-replatforming' && (
     <section class="mb-20">
       <div class="grid grid-cols-1 gap-8" id="research-gallery-ecommerce">
@@ -263,21 +382,7 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
-  {project.slug === 'finance-app-redesign' && (
-    <section class="mb-20">
-      <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">Background</h2>
-      <p class="text-secondary text-lg leading-relaxed mb-6">
-        CRSMI is an internally built data management and reporting platform used by account managers and clients. The platform allows users to manipulate and interrogate data as they please, offering a standard set of reports which can then be expanded further down the line.
-      </p>
-      <p class="text-secondary text-lg leading-relaxed mb-4">While coeo offers a range of services, the core business model follows a simple flow:</p>
-      <ol class="space-y-3 text-secondary text-lg mb-8 list-decimal list-inside">
-        <li>A client engages COEO for debt recovery services.</li>
-        <li>Account managers use CRSMI to track and manage client portfolios.</li>
-        <li>coeo then delivers results and insights back to clients through the same portal.</li>
-      </ol>
-    </section>
-  )}
-
+  <!-- 4. PROCESS -->
   {process && (
     <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Process</h2>
@@ -312,6 +417,7 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
+  <!-- 5. OUTCOMES -->
   {outcomes && (
     <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Outcomes</h2>
@@ -334,6 +440,55 @@ const galleryClass = getGalleryClass(layout);
     </section>
   )}
 
+  <!-- 6. PROJECT GALLERY -->
+  {galleryImages && galleryImages.length > 0 && (
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Project Gallery</h2>
+      <div class={galleryClass} id="gallery">
+        {galleryImages.map((image, index) => (
+          <a 
+            href={image.large}
+            class="block img-hover rounded-lg overflow-hidden gallery-item"
+            data-pswp-width={image.width}
+            data-pswp-height={image.height}
+          >
+            <img 
+              src={image.thumbnail} 
+              alt={image.alt} 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Special solution section for MetaMask -->
+  {project.slug === 'metamask-onboarding' && (
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">The Solution</h2>
+      <p class="text-secondary text-lg leading-relaxed mb-6">
+        In order to help alleviate some of the issues mentioned above, I did the following:
+      </p>
+      <ul class="space-y-4 text-secondary text-lg">
+        <li class="flex items-start">
+          <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+          Set a clear type hierarchy.
+        </li>
+        <li class="flex items-start">
+          <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+          Consolidate the styling of inputs and buttons.
+        </li>
+        <li class="flex items-start">
+          <span class="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+          Adjust the colour scheme to inspire trust.
+        </li>
+      </ul>
+    </section>
+  )}
+
+  <!-- 7. IMPACT & RESULTS -->
   {metrics && project.slug !== 'metamask-onboarding' && (
     <section class="mb-20">
       <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Impact & Results</h2>
