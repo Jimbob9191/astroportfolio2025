@@ -45,7 +45,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'ecommerce-replatforming',
     title: 'Replatforming and White Labeling an Ecommerce Store for Market Expansion',
-    thumbnail: '/ecommerceimages/ecommerce-1.webp',
+    thumbnail: '/jones/jones-10.webp',
     heroImage: '/jones/jones-10.webp',
     categories: ['Product Strategy', 'UX/UI Design', 'E-commerce'],
     overview: 'A comprehensive replatforming project that transformed a legacy e-commerce system into a scalable, white-label solution, enabling rapid market expansion across multiple brands and territories.',
