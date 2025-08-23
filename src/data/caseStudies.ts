@@ -259,24 +259,7 @@ export const caseStudies: CaseStudy[] = [
       ]
     },
     process: {
-      steps: [
-        {
-          title: 'Discovery',
-          description: 'Conducted stakeholder interviews and analyzed existing user data to understand pain points and opportunities.'
-        },
-        {
-          title: 'Research',
-          description: 'Performed user interviews and usability testing to gather insights about user needs and pain points.'
-        },
-        {
-          title: 'Design',
-          description: 'Restructured user flows to be more intuitive and established a consistent design system, consolidating the existing style for clarity and coherence.'
-        },
-        {
-          title: 'Testing',
-          description: 'Conducted quick user testing sessions internally using prototypes and wireframes to get early feedback before implementation.'
-        }
-      ],
+      steps: [],
       details: 'As the lead designer on the project, I was responsible for shaping the user experience by gathering insights and restructuring content to better serve both internal teams and clients. My approach combined research, testing and iterative design. Focusing on reducing complexity and improving usability, I went about this by doing the following:\n\n* Partnered with account managers to understand the information clients most frequently request, then surfaced these priorities through the homepage and navigation.\n* Conducted card-sorting exercises with internal teams to reorganise reports, reducing cognitive load and making it easier for users to locate key content.\n* Leveraged Hotjar heat mapping to identify which tools were most used and where users encountered friction, informing design refinements.\n* Analysed competitor platforms that handle complex data to establish best practices and opportunities for differentiation.\n* Designed and validated end-to-end user journeys, ensuring clear pathways to critical reports and insights.\n* Facilitated prototype testing sessions with account managers to validate design decisions and gather actionable feedback.'
     },
     outcomes: {
