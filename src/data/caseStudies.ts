@@ -236,52 +236,45 @@ export const caseStudies: CaseStudy[] = [
     heroImage: '/crsmiimages/crsmi-1.webp',
     categories: ['UX/UI Design', 'Product Strategy', 'B2B Software'],
     overview: 'A comprehensive redesign of a client management portal, improving workflow efficiency and user experience for professional service teams.',
-    problem: 'Having been used for a number of years, with features slowly being added throughout — the site has grown in capabilities but has lost consistency in its design and functionality. As features were added to the site, no thought was given to their layout and how they are accessed — leading to a menu filled with mismatched reports and capabilities. These non-standardised forms and page layouts make for a very disjointed experience and trying to use the site on a page that isn\'t 16:9 made for an even worse time.',
+    problem: 'Over time, the CRSMI site had grown through incremental feature additions. While these expanded its capabilities, they also introduced significant inconsistency across design and functionality. Features were added without a clear structure or information hierarchy, resulting in a cluttered menu of mismatched reports and tools. Inconsistent page layouts and non-standardised forms created a fragmented user experience, which became even more frustrating on devices and screens outside of a 16:9 ratio.\n\nTo address these challenges, the project set out to rebuild the client reporting functionality from the ground up. The aim was to establish a unified design language, streamline navigation and make features more intuitive to access.',
     approach: 'I conducted extensive user research with account managers and client service teams to identify pain points, created optimized user flows and wireframes, and designed a new interface that prioritizes workflow efficiency and data accessibility.',
     outcome: 'The redesign resulted in a 45% reduction in task completion time, a 30% reduction in support tickets, and significantly improved user satisfaction scores among professional service teams.',
     role: 'UX/UI Design',
     layout: 'grid',
     timeline: '3 months',
-    client: 'coeo',
+    client: 'coeo / Finance',
     team: ['UX Designer', 'UI Designer', '2 Developers', 'Product Manager'],
     tools: ['Figma', 'Maze', 'UserTesting', 'Principle'],
     research: {
-      methods: ['User Interviews', 'Usability Testing', 'Analytics Review'],
-      findings: 'Through our research, we discovered that account managers struggled with fragmented client information across multiple systems and found the client communication history difficult to navigate. The portal\'s information architecture needed significant improvement.',
+      methods: ['User Interviews', 'Usability Testing', 'Analytics Review', 'Heat Mapping', 'Card Sorting'],
+      findings: 'Through our research, we discovered that account managers struggled with fragmented client information across multiple systems and found the client communication history difficult to navigate. The portal had become outdated and ineffective, with inconsistent design patterns that reduced user trust and efficiency. Users were often unable to complete essential tasks smoothly, leading to decreased satisfaction and productivity.',
       insights: [
-        '87% of users found the navigation confusing',
-        'Users wanted better client data organization and search functionality',
-        'Mobile usage was increasing but the experience wasn\'t optimized for field work'
+        'Clients found the portal\'s dark theme dated and difficult to use, particularly when trying to read tables and graphs. This reduced overall readability and trust in the platform.',
+        'Locating specific reports within the menu was time consuming and confusing. Many clients abandoned their search altogether, opting to contact their account manager instead, undermining the purpose of the self service portal.',
+        'The absence of sort and filter options meant clients couldn\'t easily customise views or focus on the data most relevant to them, leading to frustration and inefficiency.',
+        'Users were often unaware when new features were released. As a result, development efforts were underutilised, with valuable resources spent on features that went unnoticed.',
+        'Tables and data were presented with poor spacing and layout, making them difficult to scan and interpret quickly.',
+        'Adding or removing users from client accounts required manual intervention from the support team, rather than giving clients direct control - slowing down workflows.',
+        'Most account management happened on laptops during office hours, where the portal\'s layout felt cramped and failed to adapt well to smaller screens.'
       ]
     },
     process: {
-      steps: [
-        {
-          title: 'Discovery',
-          description: 'Conducted stakeholder interviews and analyzed existing user data to understand pain points and opportunities.'
-        },
-        {
-          title: 'Research',
-          description: 'Performed user interviews and usability testing to gather insights about user needs and pain points.'
-        },
-        {
-          title: 'Design',
-          description: 'Created wireframes, prototypes, and high-fidelity designs based on research findings and user feedback.'
-        },
-        {
-          title: 'Testing',
-          description: 'Conducted iterative testing sessions to validate design decisions and gather feedback for improvements.'
-        }
-      ]
+      steps: [],
+      details: 'As the lead designer on the project, I was responsible for shaping the user experience by gathering insights and restructuring content to better serve both internal teams and clients. My approach combined research, testing and iterative design. Focusing on reducing complexity and improving usability, I went about this by doing the following:\n\n* Partnered with account managers to understand the information clients most frequently request, then surfaced these priorities through the homepage and navigation.\n* Conducted card-sorting exercises with internal teams to reorganise reports, reducing cognitive load and making it easier for users to locate key content.\n* Leveraged Hotjar heat mapping to identify which tools were most used and where users encountered friction, informing design refinements.\n* Analysed competitor platforms that handle complex data to establish best practices and opportunities for differentiation.\n* Designed and validated end-to-end user journeys, ensuring clear pathways to critical reports and insights.\n* Facilitated prototype testing sessions with account managers to validate design decisions and gather actionable feedback.'
+    },
+    outcomes: {
+      content: 'I worked with the development team and key stakeholders to improve the user experience and take our platform back to a market leading position as it had been in the past. Taking into account accessibility, user satisfaction and future expandability. After shipping the first iteration of the new portal we saw an immediate improvement in user satisfaction and task completion times. We also continued to track user behaviour and users on the new portal were significantly more efficient at completing their daily tasks.\n\n* We simplified the platform\'s navigation by reducing menu items by 30% and grouping features into intuitive categories that better align with user mental models.\n* We built a comprehensive design system that standardised all UI components, ensuring consistency across the platform and accelerating development of new features. This system was later extended to other internal tools used by customer service and others, creating a seamless experience across the organisation.\n* We introduced clearer, more intuitive data visualisations and reporting tools, enabling users to quickly interpret client performance and make more informed decisions.\n* We implemented responsive design principles so the platform delivers a smooth, consistent experience across all devices—supporting the growing number of users accessing it via mobile.\n* We added powerful search and filtering capabilities, allowing users to quickly locate client information and reports, cutting down on administrative time.\n* We gave users the ability to manage their own teams—adding and removing members, and adjusting access levels instantly, without relying on admin support.\n* We introduced a centralised notifications area, keeping users informed about new report types, portfolio performance updates, and the latest published content from Coeo.'
     },
     metrics: {
       before: {
         taskCompletionTime: '15 min avg',
         userSatisfaction: '65%',
+        supportTickets: 'Baseline'
       },
       after: {
         taskCompletionTime: '8 min avg',
         userSatisfaction: '92%',
+        supportTickets: '-30%'
       }
     },
     galleryImages: [
