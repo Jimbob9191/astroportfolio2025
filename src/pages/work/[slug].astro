@@ -164,27 +164,27 @@ const galleryClass = getGalleryClass(layout);
       ))}
     </div>
   </section>
-    {project.slug === 'payment-portal-redesign' && (
-      <section class="mb-16">
-        <h2 class="text-2xl md:text-3xl font-display font-medium mb-6">Background</h2>
-        <p class="text-secondary text-lg leading-relaxed mb-6">
-          MYCRS is a payment portal allowing debtors to make payments on debts from other businesses. In 2013 the site was originally designed as a desktop first portal, with only secondary consideration for mobile. By late 2019, consumer behaviour had shifted dramatically, with 95% of traffic now coming from mobile devices.
-        </p>
-        <p class="text-secondary text-lg leading-relaxed mb-6">
-          To address this, I partnered with the development team to redesign the experience for mobile users and re establish MYCRS as a market leading platform. Our goals were to improve conversion rates, prioritise accessibility, improve customer satisfaction, and ensure the system was scalable for future enhancements.
-        </p>
-        <p class="text-secondary text-lg leading-relaxed mb-4">
-          While CRS offers a range of services, the core business model follows a simple flow:
-        </p>
-        <ol class="space-y-3 text-secondary text-lg mb-8 list-decimal list-inside">
-          <li>A customer purchases a product or service but cannot or does not pay.</li>
-          <li>The company attempts to collect the debt but is unsuccessful.</li>
-          <li>The debt is referred to CRS.</li>
-          <li>CRS engages with the customer, primarily through digital channels, to recover the balance, earning a commission on successful collections.</li>
-        </ol>
-      </section>
-    )}
+    
 
+  {metrics && project.slug !== 'metamask-onboarding' && (
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-display font-medium mb-8">Impact & Results</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div>
+          <h3 class="text-xl font-medium mb-6">Before</h3>
+          <dl class="space-y-4">
+            {Object.entries(metrics.before).map(([key, value]) => (
+              <div>
+                <dt class="text-secondary">{key.replace(/([A-Z])/g, ' $1').trim()}</dt>
+                <dd class="text-2xl font-display font-medium">{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-6">After</h3>
+          <dl class="space-y-4">
+            {Object.entries(metrics.after).map(([key, value]) => (
               <div>
                 <dt class="text-secondary">{key.replace(/([A-Z])/g, ' $1').trim()}</dt>
                 <dd class="text-2xl font-display font-medium">{value}</dd>
