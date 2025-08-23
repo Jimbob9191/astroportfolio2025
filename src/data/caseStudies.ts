@@ -273,7 +273,9 @@ export const caseStudies: CaseStudy[] = [
         'Accessibility barriers, preventing some customers from using the service at all.',
         'Technical instability, undermining user trust.',
         'Reputation damage through poor online reviews.',
-        'Increased operational costs, as dissatisfied users turned to the call centre.'
+        'Increased operational costs, as dissatisfied users turned to the call centre.',
+        'Most customer interactions took place via SMS and email, typically accessed on a customer\'s mobile device during the workday or shortly after. To support this behaviour, a quick and seamless login process is essential to ensure an efficient and frictionless user journey.',
+        'Before login, customers were given just enough information to contact CRS, but not enough to build the trust needed to make payments directly, leading most to reach out by email or phone first.'
       ]
     },
     process: {
