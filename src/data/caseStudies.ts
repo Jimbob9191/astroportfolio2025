@@ -246,7 +246,7 @@ export const caseStudies: CaseStudy[] = [
     team: ['UX Designer', 'UI Designer', '2 Developers', 'Product Manager'],
     tools: ['Figma', 'Maze', 'UserTesting', 'Principle'],
     research: {
-      methods: ['User Interviews', 'Usability Testing', 'Analytics Review'],
+      methods: ['User Interviews', 'Usability Testing', 'Analytics Review', 'Heat Mapping', 'Card Sorting'],
       findings: 'Through our research, we discovered that account managers struggled with fragmented client information across multiple systems and found the client communication history difficult to navigate. The portal had become outdated and ineffective, with inconsistent design patterns that reduced user trust and efficiency. Users were often unable to complete essential tasks smoothly, leading to decreased satisfaction and productivity.',
       insights: [
         'Account managers did not immediately recognize the updated interface patterns and often dismissed new features as unreliable or confusing. This led to reduced adoption of new tools and lower engagement with the platform.',
