@@ -136,6 +136,34 @@ export const caseStudies: CaseStudy[] = [
         width: 1260,
         height: 750,
         alt: 'Multi-brand platform capabilities and market expansion'
+      },
+      {
+        thumbnail: '/jones/jb-desktop-homepage.webp',
+        large: '/jones/jb-desktop-homepage.webp',
+        width: 1260,
+        height: 750,
+        alt: 'Jones Bootmaker desktop homepage design showcasing brand identity'
+      },
+      {
+        thumbnail: '/jones/jb-desktop-collection.webp',
+        large: '/jones/jb-desktop-collection.webp',
+        width: 1260,
+        height: 750,
+        alt: 'Jones Bootmaker desktop collection page with product listings'
+      },
+      {
+        thumbnail: '/jones/jb-desktop-navigation.webp',
+        large: '/jones/jb-desktop-navigation.webp',
+        width: 1260,
+        height: 750,
+        alt: 'Jones Bootmaker desktop navigation and menu system'
+      },
+      {
+        thumbnail: '/jones/jb-desktop-minicart.webp',
+        large: '/jones/jb-desktop-minicart.webp',
+        width: 1260,
+        height: 750,
+        alt: 'Jones Bootmaker desktop mini cart and checkout experience'
       }
     ]
   },
