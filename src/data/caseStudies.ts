@@ -96,46 +96,32 @@ export const caseStudies: CaseStudy[] = [
     },
     galleryImages: [
       {
-        thumbnail: '/ecommerceimages/ecommerce-2.webp',
-        large: '/ecommerceimages/ecommerce-2.webp',
+        thumbnail: '/jones/jb-desktop-homepage.webp',
+        large: '/jones/jb-desktop-homepage.webp',
         width: 1260,
         height: 750,
-        alt: 'E-commerce platform architecture and technical planning'
+        alt: 'Jones Bootmaker desktop homepage design showcasing brand identity'
       },
       {
-        thumbnail: '/ecommerceimages/ecommerce-3.webp',
-        large: '/ecommerceimages/ecommerce-3.webp',
+        thumbnail: '/jones/jb-desktop-collection.webp',
+        large: '/jones/jb-desktop-collection.webp',
         width: 1260,
         height: 750,
-        alt: 'White-label design system and brand customization capabilities'
+        alt: 'Jones Bootmaker desktop collection page with product listings'
       },
       {
-        thumbnail: '/ecommerceimages/ecommerce-4.webp',
-        large: '/ecommerceimages/ecommerce-4.webp',
+        thumbnail: '/jones/jb-desktop-navigation.webp',
+        large: '/jones/jb-desktop-navigation.webp',
         width: 1260,
         height: 750,
-        alt: 'User journey mapping and experience optimization'
+        alt: 'Jones Bootmaker desktop navigation and menu system'
       },
       {
-        thumbnail: '/ecommerceimages/ecommerce-5.webp',
-        large: '/ecommerceimages/ecommerce-5.webp',
+        thumbnail: '/jones/jb-desktop-minicart.webp',
+        large: '/jones/jb-desktop-minicart.webp',
         width: 1260,
         height: 750,
-        alt: 'Mobile-first checkout process redesign'
-      },
-      {
-        thumbnail: '/ecommerceimages/ecommerce-6.webp',
-        large: '/ecommerceimages/ecommerce-6.webp',
-        width: 1260,
-        height: 750,
-        alt: 'Performance optimization and technical improvements'
-      },
-      {
-        thumbnail: '/ecommerceimages/ecommerce-7.webp',
-        large: '/ecommerceimages/ecommerce-7.webp',
-        width: 1260,
-        height: 750,
-        alt: 'Multi-brand platform capabilities and market expansion'
+        alt: 'Jones Bootmaker desktop mini cart and checkout experience'
       }
     ]
   },
